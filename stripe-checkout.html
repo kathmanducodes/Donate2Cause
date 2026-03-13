@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stripe Checkout | Donate2Cause</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="https://js.stripe.com/v3/"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+<body class="bg-stone-50 min-h-screen flex items-center justify-center p-4">
+  <div class="bg-white rounded-[2rem] p-8 shadow-2xl max-w-md w-full">
+    <div class="text-center mb-6">
+      <div class="flex justify-center mb-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" alt="Stripe" class="h-8">
+      </div>
+      <h1 class="text-2xl font-semibold text-zinc-900">Donate to Cause</h1>
+      <p id="cause-name" class="text-zinc-500 mt-1">Loading...</p>
+    </div>
+
+    <div class="bg-zinc-50 rounded-xl p-4 mb-6">
+      <div class="flex justify-between items-center">
+        <span class="text-zinc-600">Donation Amount</span>
+        <span id="donation-amount" class="text-xl font-bold text-zinc-900">Rs0</span>
+      </div>
+    </div>
+
+    <div id="card-element" class="border border-zinc-200 rounded-lg p-4 mb-6">
+    </div>
+
+    <div id="card-errors" class="text-red-500 text-sm mb-4"></div>
+
+    <button id="pay-button" class="w-full py-4 rounded-full bg-lime-400 text-emerald-950 font-bold hover:bg-lime-300 transition disabled:opacity-50" disabled>
+      <span id="btn-text">Loading...</span>
+    </button>
+
+    <p class="text-xs text-zinc-400 text-center mt-4">
+      Test mode: Use card 4242 4242 4242 4242, any future date, any CVC
+    </p>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const amount = params.get('amount') || '1000';
+    const cause = params.get('cause') || 'Unknown';
+    const donorName = params.get('donor') || '';
+    const donorEmail = params.get('email') || '';
+
+    document.getElementById('cause-name').textContent = cause;
+    document.getElementById('donation-amount').textContent = 'Rs' + parseInt(amount).toLocaleString();
+    document.getElementById('btn-text').textContent = 'Pay Rs' + parseInt(amount).toLocaleString();
+    document.getElementById('pay-button').disabled = false;
+
+    const stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+    const elements = stripe.elements();
+    
+    const card = elements.create('card', {
+      style: {
+        base: {
+          fontSize: '16px',
+          color: '#18181b',
+          '::placeholder': { color: '#a1a1aa' }
+        }
+      }
+    });
+    card.mount('#card-element');
+
+    card.on('change', function(event) {
+      const displayError = document.getElementById('card-errors');
+      if (event.error) {
+        displayError.textContent = event.error.message;
+      } else {
+        displayError.textContent = '';
+      }
+    });
+
+    document.getElementById('pay-button').addEventListener('click', async function() {
+      const btn = document.getElementById('pay-button');
+      const btnText = document.getElementById('btn-text');
+      
+      btn.disabled = true;
+      btnText.textContent = 'Processing...';
+
+      // For demo purposes, show success (real implementation needs backend)
+      // Stripe requires backend to create PaymentIntent for security
+      setTimeout(() => {
+        const baseUrl = new URLSearchParams(window.location.search).get('baseUrl') || '';
+        window.location.href = (baseUrl || '.') + '/payment-success.html?result=success&gateway=stripe&amount=' + amount + '&cause=' + cause;
+      }, 1500);
+    });
+  </script>
+</body>
+</html>

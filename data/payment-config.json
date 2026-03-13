@@ -1,0 +1,38 @@
+{
+  "gateways": {
+    "esewa": {
+      "enabled": true,
+      "mode": "test",
+      "merchantId": "EPAYTEST",
+      "secretKey": "8gBm/:&EnhH.1/q",
+      "apiUrl": "https://rc-epay.esewa.com.np/api/epay/main/v2/form",
+      "baseUrl": "https://donate2cause.com"
+    },
+    "khalti": {
+      "enabled": true,
+      "mode": "test",
+      "publicKey": "test_public_key_dc74e0fd57cb46cd93832aee0a390234",
+      "baseUrl": "https://donate2cause.com"
+    },
+    "stripe": {
+      "enabled": true,
+      "mode": "test",
+      "publishableKey": "pk_test_TYooMQauvdEDq54NiTphI7jx",
+      "secretKey": "sk_test_xxxx",
+      "paymentUrl": "https://checkout.stripe.com/c/pay/cs_test_demo",
+      "baseUrl": "https://donate2cause.com"
+    },
+    "paypal": {
+      "enabled": true,
+      "mode": "test",
+      "clientId": "AczJ0cV16B2DybNmDJBH4xNnGcnGkP6M1xGqJvKqKqtU5sR5cB8QvYQ6C1xGqJvKqKqtU5sR5cB",
+      "baseUrl": "https://donate2cause.com"
+    }
+  },
+  "currency": "NPR",
+  "defaultAmounts": [500, 1000, 2000, 5000],
+  "organization": {
+    "name": "Donate2Cause",
+    "tagline": "Building a stronger Nepal together"
+  }
+}

@@ -145,6 +145,7 @@
     </section>
 
     <section id="cause-content" class="py-12 lg:py-16 px-6 lg:px-8">
+      <span id="cause-cause-title" class="hidden"></span>
       <div class="mx-auto max-w-7xl">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div class="lg:col-span-2 space-y-12">
@@ -154,9 +155,7 @@
               </div>
             </div>
 
-            <div id="cause-updates">
-            </div>
-
+            <!-- Beneficiary -->
             <div class="bg-zinc-50 rounded-[2rem] p-8">
               <h3 class="text-xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">Beneficiary</h3>
               <div class="flex items-center gap-4">
@@ -167,6 +166,21 @@
                   <div id="beneficiary-name" class="font-semibold text-zinc-900">Priya Sharma</div>
                   <div id="beneficiary-info" class="text-sm text-zinc-500">8 years old • Kavrepalanchok, Bagmati</div>
                 </div>
+              </div>
+            </div>
+
+            <!-- Updates -->
+            <div id="cause-updates">
+            </div>
+
+            <!-- Fund Utilization Section (for completed campaigns) -->
+            <div id="fund-utilization" class="hidden">
+            </div>
+
+            <!-- Recent Donations Section -->
+            <div id="recent-donations" class="bg-zinc-50 rounded-[2rem] p-8">
+              <h3 class="text-xl font-semibold text-zinc-900 mb-6" style="font-family: 'Playfair Display', serif;">Recent Donations</h3>
+              <div id="donations-list" class="space-y-4">
               </div>
             </div>
           </div>
@@ -187,7 +201,7 @@
                 </div>
               </div>
 
-              <div class="flex items-center justify-between text-sm text-zinc-500 mb-8 pb-8 border-b border-zinc-100">
+              <div class="flex items-center justify-between text-sm text-zinc-500 mb-6 pb-6 border-b border-zinc-100">
                 <span id="donor-count" class="flex items-center gap-2">
                   <iconify-icon icon="solar:users-group-rounded" class="text-lg"></iconify-icon>
                   142 donors
@@ -198,16 +212,17 @@
                 </span>
               </div>
 
-              <div class="space-y-4 mb-6">
-                <button class="w-full py-4 rounded-full bg-lime-400 text-emerald-950 font-bold text-lg hover:bg-lime-300 transition hover:-translate-y-0.5 shadow-lg shadow-lime-400/25">
-                  Donate Now
-                </button>
+              <!-- Top Donors -->
+              <div id="top-donors" class="mb-8 pb-8 border-b border-zinc-100">
+                <h4 class="text-sm font-semibold text-zinc-900 mb-3">Top Donors</h4>
+                <div id="top-donors-list" class="space-y-2 text-sm">
+                </div>
               </div>
 
-              <div class="grid grid-cols-3 gap-3 mb-6">
-                <button class="donation-amount py-3 rounded-full border-2 border-zinc-200 text-zinc-700 font-medium hover:border-lime-400 hover:text-lime-600 transition">Rs500</button>
-                <button class="donation-amount py-3 rounded-full border-2 border-zinc-200 text-zinc-700 font-medium hover:border-lime-400 hover:text-lime-600 transition">Rs1,000</button>
-                <button class="donation-amount py-3 rounded-full border-2 border-zinc-200 text-zinc-700 font-medium hover:border-lime-400 hover:text-lime-600 transition">Rs2,000</button>
+              <div class="space-y-4 mb-6">
+                <button class="donate-btn w-full py-4 rounded-full bg-lime-400 text-emerald-950 font-bold text-lg hover:bg-lime-300 transition hover:-translate-y-0.5 shadow-lg shadow-lime-400/25">
+                  Donate Now
+                </button>
               </div>
 
               <div class="flex items-center justify-center gap-4 mb-6">
@@ -217,9 +232,9 @@
                 <button class="flex items-center gap-2 text-zinc-500 hover:text-lime-500 transition">
                   <iconify-icon icon="logos:whatsapp-icon" class="text-xl"></iconify-icon>
                 </button>
-                <button class="flex items-center gap-2 text-zinc-500 hover:text-lime-500 transition">
+                <button id="copy-link-btn" class="flex items-center gap-2 text-zinc-500 hover:text-lime-500 transition">
                   <iconify-icon icon="solar:link-bold" class="text-lg"></iconify-icon>
-                  <span class="text-sm">Copy Link</span>
+                  <span class="text-sm" id="copy-link-text">Copy Link</span>
                 </button>
               </div>
 
@@ -232,6 +247,75 @@
         </div>
       </div>
     </section>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="fixed inset-0 hidden" style="z-index: 9999;">
+      <div class="absolute inset-0 bg-black/70" id="modal-backdrop"></div>
+      <div class="flex items-center justify-center min-h-screen p-4">
+        <div class="payment-modal-content bg-white rounded-[2rem] p-6 shadow-2xl w-full max-w-lg relative">
+          <button id="modal-close" class="absolute -top-3 -right-3 w-10 h-10 flex items-center justify-center rounded-full bg-zinc-900 hover:bg-zinc-800 transition shadow-lg">
+            <iconify-icon icon="solar:close-linear" class="text-xl text-white"></iconify-icon>
+          </button>
+          
+          <div class="text-center mb-4">
+            <h3 class="text-lg font-semibold text-zinc-900" style="font-family: 'Playfair Display', serif;">Complete Your Donation</h3>
+            <p id="payment-cause-title" class="text-xs text-zinc-500 mt-1">Support this cause</p>
+          </div>
+
+          <div class="mb-3">
+            <label class="text-xs text-zinc-500 mb-1 block">Your Name (Optional)</label>
+            <input type="text" id="donor-name" placeholder="Enter your name" class="w-full px-3 py-2 rounded-lg border border-zinc-200 focus:outline-none focus:border-lime-400 text-sm">
+          </div>
+
+          <div class="mb-3">
+            <label class="text-xs text-zinc-500 mb-1 block">Your Email (Optional)</label>
+            <input type="email" id="donor-email" placeholder="Enter your email" class="w-full px-3 py-2 rounded-lg border border-zinc-200 focus:outline-none focus:border-lime-400 text-sm">
+          </div>
+
+          <div class="mb-3">
+            <label class="text-xs text-zinc-500 mb-1 block">Select Amount</label>
+            <div class="grid grid-cols-4 gap-2 mb-2">
+              <button type="button" class="amount-btn py-2 rounded-lg border-2 border-zinc-200 text-sm font-medium hover:border-lime-400 transition" data-amount="500">Rs500</button>
+              <button type="button" class="amount-btn py-2 rounded-lg border-2 border-zinc-200 text-sm font-medium hover:border-lime-400 transition" data-amount="1000">Rs1,000</button>
+              <button type="button" class="amount-btn py-2 rounded-lg border-2 border-zinc-200 text-sm font-medium hover:border-lime-400 transition" data-amount="2000">Rs2,000</button>
+              <button type="button" class="amount-btn py-2 rounded-lg border-2 border-zinc-200 text-sm font-medium hover:border-lime-400 transition" data-amount="5000">Rs5,000</button>
+            </div>
+            <input type="number" id="custom-amount" placeholder="Or enter custom amount" class="w-full px-3 py-2 rounded-lg border border-zinc-200 focus:outline-none focus:border-lime-400 text-sm">
+          </div>
+
+          <div class="mb-4">
+            <label class="text-xs text-zinc-500 mb-2 block">Payment Method</label>
+            <div class="flex gap-2">
+              <label class="flex-1 flex items-center justify-center gap-2 p-3 rounded-xl border-2 border-zinc-200 cursor-pointer hover:border-lime-400 transition bg-zinc-50">
+                <input type="radio" name="gateway" value="esewa" class="text-lime-500">
+                <span class="font-medium text-sm">eSewa</span>
+              </label>
+              <label class="flex-1 flex items-center justify-center gap-2 p-3 rounded-xl border-2 border-zinc-200 cursor-pointer hover:border-lime-400 transition bg-zinc-50">
+                <input type="radio" name="gateway" value="khalti" class="text-lime-500">
+                <span class="font-medium text-sm">Khalti</span>
+              </label>
+              <!-- <label class="flex-1 flex items-center justify-center gap-2 p-3 rounded-xl border-2 border-zinc-200 cursor-pointer hover:border-lime-400 transition bg-zinc-50">
+                <input type="radio" name="gateway" value="stripe" class="text-lime-500">
+                <span class="font-medium text-sm">Card</span>
+              </label> -->
+              <label class="flex-1 flex items-center justify-center gap-2 p-3 rounded-xl border-2 border-zinc-200 cursor-pointer hover:border-lime-400 transition bg-zinc-50">
+                <input type="radio" name="gateway" value="paypal" class="text-lime-500">
+                <span class="font-medium text-sm">PayPal</span>
+              </label>
+            </div>
+          </div>
+
+          <button id="proceed-payment" class="w-full py-3 rounded-full bg-lime-400 text-emerald-950 font-bold hover:bg-lime-300 transition">
+            Proceed to Pay
+          </button>
+
+          <p class="text-[10px] text-zinc-400 text-center mt-3">
+            <iconify-icon icon="solar:shield-check-linear" class="inline mr-1"></iconify-icon>
+            Secure payment
+          </p>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="bg-zinc-950 text-zinc-400 py-16 px-6 lg:px-8 overflow-hidden relative z-10">
@@ -266,8 +350,12 @@
     </div>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="https://khalti.s3.ap-south-1.amazonaws.com/KPG/dist/2020.12.17.0.0.0/khalti-checkout.iffe.js"></script>
+  <script src="js/scripts.js"></script>
   <script src="js/explore.js"></script>
+  <script src="js/payment.js"></script>
 
 </body>
 </html>

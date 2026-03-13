@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Failed | Donate2Cause</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+<body class="bg-stone-50 min-h-screen flex items-center justify-center">
+  <div class="text-center p-8">
+    <div class="w-24 h-24 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+      <iconify-icon icon="solar:close-circle-bold" class="text-5xl text-red-500"></iconify-icon>
+    </div>
+    
+    <h1 class="text-3xl font-semibold text-zinc-900 mb-3">Payment Failed</h1>
+    <p class="text-lg text-zinc-500 mb-2">Something went wrong during payment processing.</p>
+    <p class="text-sm text-zinc-400 mb-8">Please try again or contact support.</p>
+    
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <button onclick="goBack()" class="inline-flex items-center justify-center gap-2 rounded-full bg-lime-400 px-8 py-3 font-medium text-emerald-950 hover:bg-lime-300 transition">
+        Try Again
+        <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+      </button>
+      <a href="index.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-zinc-100 px-8 py-3 font-medium text-zinc-700 hover:bg-zinc-200 transition">
+        Back to Home
+      </a>
+    </div>
+  </div>
+  
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

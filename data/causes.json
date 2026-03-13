@@ -27,15 +27,28 @@
       "updates": [
         {
           "date": "2026-03-10",
-          "title": "Surgery scheduled",
-          "content": "Good news! The surgery has been scheduled for next week. Thank you all for your support!"
+          "title": "Surgery scheduled for next week",
+          "content": "Good news! The surgery has been scheduled for next week at Bir Hospital. Thank you all for your support!"
         },
         {
           "date": "2026-03-05",
           "title": "Medical reports confirmed",
           "content": "All medical reports have been verified by the hospital. We're ready to proceed with the surgery."
         }
-      ]
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Rajesh Kumar", "amount": 10000, "timestamp": "2026-03-13T11:30:00Z" },
+        { "id": "d2", "donorName": "Anonymous", "amount": 5000, "timestamp": "2026-03-13T10:15:00Z" },
+        { "id": "d3", "donorName": "Priya Dai", "amount": 2500, "timestamp": "2026-03-13T09:00:00Z" },
+        { "id": "d4", "donorName": "Anonymous", "amount": 1000, "timestamp": "2026-03-13T08:45:00Z" },
+        { "id": "d5", "donorName": "Sanjay", "amount": 500, "timestamp": "2026-03-13T07:30:00Z" },
+        { "id": "d6", "donorName": "Anonymous", "amount": 2000, "timestamp": "2026-03-12T22:00:00Z" },
+        { "id": "d7", "donorName": "Meera", "amount": 1500, "timestamp": "2026-03-12T18:30:00Z" },
+        { "id": "d8", "donorName": "Anonymous", "amount": 500, "timestamp": "2026-03-12T15:00:00Z" },
+        { "id": "d9", "donorName": "Binod", "amount": 3000, "timestamp": "2026-03-12T12:00:00Z" },
+        { "id": "d10", "donorName": "Anonymous", "amount": 1000, "timestamp": "2026-03-12T09:30:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-002",
@@ -51,7 +64,6 @@
       "featured": false,
       "beneficiary": {
         "name": "Kaski Rural School",
-        "age": null,
         "location": "Kaski, Gandaki"
       },
       "organizer": {
@@ -64,10 +76,18 @@
       "updates": [
         {
           "date": "2026-03-08",
-          "title": "Books ordered",
+          "title": "Books ordered for library",
           "content": "We've ordered 200 books for the library. Thank you for making this possible!"
         }
-      ]
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 5000, "timestamp": "2026-03-13T10:00:00Z" },
+        { "id": "d2", "donorName": "Deepa", "amount": 2000, "timestamp": "2026-03-13T08:30:00Z" },
+        { "id": "d3", "donorName": "Anonymous", "amount": 1000, "timestamp": "2026-03-12T20:00:00Z" },
+        { "id": "d4", "donorName": "Santosh", "amount": 500, "timestamp": "2026-03-12T16:00:00Z" },
+        { "id": "d5", "donorName": "Anonymous", "amount": 2500, "timestamp": "2026-03-11T14:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-003",
@@ -83,7 +103,6 @@
       "featured": false,
       "beneficiary": {
         "name": "Sindhuli Village Community",
-        "age": null,
         "location": "Sindhuli, Province 3"
       },
       "organizer": {
@@ -93,7 +112,19 @@
       },
       "imageUrl": "assets/community_development.png",
       "createdAt": "2026-02-15",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-10",
+          "title": "Site survey completed",
+          "content": "Our engineering team has completed the site survey. We've identified the optimal location for the well."
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 2000, "timestamp": "2026-03-13T09:00:00Z" },
+        { "id": "d2", "donorName": "Niraj", "amount": 1000, "timestamp": "2026-03-12T15:00:00Z" },
+        { "id": "d3", "donorName": "Anonymous", "amount": 500, "timestamp": "2026-03-11T10:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-004",
@@ -109,7 +140,6 @@
       "featured": true,
       "beneficiary": {
         "name": "Flood Affected Families",
-        "age": null,
         "location": "Sindhuli, Province 3"
       },
       "organizer": {
@@ -130,7 +160,18 @@
           "title": "Medical camp organized",
           "content": "A medical camp was organized today. 120 patients received free medical consultation and medicines."
         }
-      ]
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 25000, "timestamp": "2026-03-13T11:00:00Z" },
+        { "id": "d2", "donorName": "Dr. Sharma", "amount": 10000, "timestamp": "2026-03-13T10:30:00Z" },
+        { "id": "d3", "donorName": "Anonymous", "amount": 5000, "timestamp": "2026-03-13T09:00:00Z" },
+        { "id": "d4", "donorName": "Ramesh Dai", "amount": 3000, "timestamp": "2026-03-13T08:00:00Z" },
+        { "id": "d5", "donorName": "Anonymous", "amount": 2000, "timestamp": "2026-03-12T22:00:00Z" },
+        { "id": "d6", "donorName": "Sunita", "amount": 5000, "timestamp": "2026-03-12T18:00:00Z" },
+        { "id": "d7", "donorName": "Anonymous", "amount": 1000, "timestamp": "2026-03-12T14:00:00Z" },
+        { "id": "d8", "donorName": "Kabir", "amount": 2000, "timestamp": "2026-03-12T10:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-005",
@@ -156,7 +197,18 @@
       },
       "imageUrl": "assets/education_rural.png",
       "createdAt": "2026-02-01",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-11",
+          "title": "Selection process underway",
+          "content": "We are currently reviewing applications from students across 5 districts. Winners will be announced soon."
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 5000, "timestamp": "2026-03-13T07:00:00Z" },
+        { "id": "d2", "donorName": "Anita", "amount": 2000, "timestamp": "2026-03-12T12:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-006",
@@ -188,7 +240,16 @@
           "title": "First chemo session completed",
           "content": "Radhika has successfully completed her first chemotherapy session. Thank you all for your prayers and support!"
         }
-      ]
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 15000, "timestamp": "2026-03-13T11:45:00Z" },
+        { "id": "d2", "donorName": "Dr. Poudel", "amount": 10000, "timestamp": "2026-03-13T10:00:00Z" },
+        { "id": "d3", "donorName": "Anonymous", "amount": 5000, "timestamp": "2026-03-13T08:30:00Z" },
+        { "id": "d4", "donorName": "Sarita", "amount": 3000, "timestamp": "2026-03-12T20:00:00Z" },
+        { "id": "d5", "donorName": "Anonymous", "amount": 2000, "timestamp": "2026-03-12T16:00:00Z" },
+        { "id": "d6", "donorName": "Kiran", "amount": 5000, "timestamp": "2026-03-12T12:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-007",
@@ -204,7 +265,6 @@
       "featured": false,
       "beneficiary": {
         "name": "Gorkha Village Community",
-        "age": null,
         "location": "Gorkha, Gandaki"
       },
       "organizer": {
@@ -214,7 +274,18 @@
       },
       "imageUrl": "assets/community_development.png",
       "createdAt": "2026-01-15",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-09",
+          "title": "Government approval received",
+          "content": "We've received approval from the District Engineering Office. Construction to begin next month."
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 5000, "timestamp": "2026-03-13T06:00:00Z" },
+        { "id": "d2", "donorName": "Guru", "amount": 1000, "timestamp": "2026-03-11T14:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-008",
@@ -230,7 +301,6 @@
       "featured": false,
       "beneficiary": {
         "name": "Shanti Old Age Home",
-        "age": null,
         "location": "Lalitpur"
       },
       "organizer": {
@@ -243,10 +313,28 @@
       "updates": [
         {
           "date": "2026-03-07",
-          "title": "Medical checkup completed",
-          "content": "Monthly medical checkup completed for all residents. Everyone is in good health!"
+          "title": "Monthly medical checkup completed",
+          "content": "All 20 residents received their monthly health checkup. Everyone is in good health!"
         }
-      ]
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 3000, "timestamp": "2026-03-13T09:30:00Z" },
+        { "id": "d2", "donorName": "Mamata", "amount": 2000, "timestamp": "2026-03-12T17:00:00Z" },
+        { "id": "d3", "donorName": "Anonymous", "amount": 1000, "timestamp": "2026-03-12T11:00:00Z" },
+        { "id": "d4", "donorName": "Raj Kumar", "amount": 500, "timestamp": "2026-03-11T20:00:00Z" }
+      ],
+      "fundUtilization": {
+        "status": "completed",
+        "utilizationPercent": 95,
+        "expenses": [
+          { "category": "Food & Groceries", "amount": 85000, "description": "Monthly food supplies for 20 residents" },
+          { "category": "Medical Care", "amount": 45000, "description": "Medicines and doctor visits" },
+          { "category": "Utilities", "amount": 25000, "description": "Electricity, water, and gas" },
+          { "category": "Staff Salaries", "amount": 20000, "description": "Caregiver wages" }
+        ],
+        "endStory": "<p>We are deeply grateful to all our donors who supported the Shanti Old Age Home this month. With your generous contributions, we were able to provide:</p><p><strong>Full Medical Coverage:</strong> All 20 residents received comprehensive health checkups and necessary medications.</p><p><strong>Nutritious Meals:</strong> Three healthy meals daily with special dietary care for elderly with diabetes and hypertension.</p><p><p><strong>Comfortable Living:</strong> New blankets, winter clothing, and hygiene supplies.</p><p>Your donations have made a real difference in the lives of our elderly residents. Thank you for your continued support!</p>",
+        "completedAt": "2026-03-10"
+      }
     },
     {
       "id": "cause-009",
@@ -266,11 +354,23 @@
       },
       "organizer": {
         "name": "HPCIDBC Volunteers",
+        "relationship": "Volunteer Group",
         "verified": true
       },
       "imageUrl": "https://images.unsplash.com/photo-1621451537084-482c73073a0f",
       "createdAt": "2026-03-01",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-12",
+          "title": "First cleanup drive successful",
+          "content": "Over 50 volunteers participated in our first cleanup drive. We collected 200kg of waste!"
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 1000, "timestamp": "2026-03-13T08:00:00Z" },
+        { "id": "d2", "donorName": "Environment Lover", "amount": 500, "timestamp": "2026-03-12T14:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-010",
@@ -290,11 +390,23 @@
       },
       "organizer": {
         "name": "Nepal Red Cross Society",
+        "relationship": "NGO",
         "verified": true
       },
       "imageUrl": "https://images.unsplash.com/photo-1615461066841-6116ecaabb04",
       "createdAt": "2026-03-05",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-11",
+          "title": "Blood donation camp success",
+          "content": "Collected 45 units of blood at yesterday's camp in Bharatpur. Thank you donors!"
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 2000, "timestamp": "2026-03-13T07:00:00Z" },
+        { "id": "d2", "donorName": "Health Worker", "amount": 1000, "timestamp": "2026-03-12T10:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-011",
@@ -314,11 +426,24 @@
       },
       "organizer": {
         "name": "Nutritional Rehabilitation Home",
+        "relationship": "NGO",
         "verified": true
       },
       "imageUrl": "https://images.unsplash.com/photo-1594498259353-60a51566df39",
       "createdAt": "2026-02-28",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-12",
+          "title": "Distribution to 50 families completed",
+          "content": "Successfully distributed Lito flour to 50 families in Mahottari. Children showing improvement!"
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 3000, "timestamp": "2026-03-13T10:30:00Z" },
+        { "id": "d2", "donorName": "Dr. Karki", "amount": 5000, "timestamp": "2026-03-13T09:00:00Z" },
+        { "id": "d3", "donorName": "Anonymous", "amount": 1000, "timestamp": "2026-03-12T18:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-012",
@@ -338,11 +463,22 @@
       },
       "organizer": {
         "name": "Moving Mountains Nepal",
+        "relationship": "NGO",
         "verified": true
       },
       "imageUrl": "https://images.unsplash.com/photo-1509062522246-3755977927d7",
       "createdAt": "2026-02-15",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-08",
+          "title": "Materials procured",
+          "content": "All construction materials have been purchased. Team to begin repairs next week."
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 5000, "timestamp": "2026-03-13T06:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-013",
@@ -362,11 +498,23 @@
       },
       "organizer": {
         "name": "KAT Centre Volunteer Group",
+        "relationship": "Volunteer Group",
         "verified": true
       },
       "imageUrl": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b",
       "createdAt": "2026-03-07",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-12",
+          "title": "50 dogs vaccinated",
+          "content": "Successfully vaccinated 50 street dogs in Jawalakhel area this week."
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Animal Lover", "amount": 1000, "timestamp": "2026-03-13T08:00:00Z" },
+        { "id": "d2", "donorName": "Anonymous", "amount": 500, "timestamp": "2026-03-12T12:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-014",
@@ -386,11 +534,22 @@
       },
       "organizer": {
         "name": "Oxfam Partner Network",
+        "relationship": "NGO",
         "verified": true
       },
       "imageUrl": "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8",
       "createdAt": "2026-03-01",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-10",
+          "title": "Training sessions completed",
+          "content": "Completed farming techniques training for 25 women in the cooperative."
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 2000, "timestamp": "2026-03-12T15:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-015",
@@ -410,11 +569,24 @@
       },
       "organizer": {
         "name": "Vision Nepal Foundation",
+        "relationship": "NGO",
         "verified": true
       },
       "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
       "createdAt": "2026-03-08",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-12",
+          "title": "150 elderly screened",
+          "content": "Over 150 elderly residents attended the screening camp. 45 require surgery."
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 5000, "timestamp": "2026-03-13T11:00:00Z" },
+        { "id": "d2", "donorName": "Eye Doctor", "amount": 10000, "timestamp": "2026-03-13T09:00:00Z" },
+        { "id": "d3", "donorName": "Anonymous", "amount": 2000, "timestamp": "2026-03-12T20:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-016",
@@ -434,11 +606,23 @@
       },
       "organizer": {
         "name": "Bir Social Service Unit",
+        "relationship": "Hospital Unit",
         "verified": true
       },
       "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae",
       "createdAt": "2026-03-01",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-11",
+          "title": "50 patients assisted this month",
+          "content": "The fund has already helped 50 emergency patients receive critical medicines."
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 3000, "timestamp": "2026-03-13T10:00:00Z" },
+        { "id": "d2", "donorName": "Generous Soul", "amount": 5000, "timestamp": "2026-03-12T16:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-017",
@@ -458,11 +642,24 @@
       },
       "organizer": {
         "name": "Relief Nepal",
+        "relationship": "NGO",
         "verified": true
       },
       "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b",
       "createdAt": "2026-03-01",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-12",
+          "title": "Foundation work completed",
+          "content": "Foundation for all 6 classrooms is complete. Walls going up next week."
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 10000, "timestamp": "2026-03-13T11:30:00Z" },
+        { "id": "d2", "donorName": "Education First", "amount": 15000, "timestamp": "2026-03-13T08:00:00Z" },
+        { "id": "d3", "donorName": "Anonymous", "amount": 5000, "timestamp": "2026-03-12T22:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-018",
@@ -482,11 +679,22 @@
       },
       "organizer": {
         "name": "Bright Village Initiative",
+        "relationship": "NGO",
         "verified": true
       },
       "imageUrl": "https://images.unsplash.com/photo-1509391366360-fe5bb658582f",
       "createdAt": "2026-02-20",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-09",
+          "title": "Solar panels ordered",
+          "content": "12 high-quality solar panels have been ordered from a local supplier."
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 2000, "timestamp": "2026-03-12T14:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-019",
@@ -506,11 +714,22 @@
       },
       "organizer": {
         "name": "Heritage Conservation Group",
+        "relationship": "Heritage Organization",
         "verified": true
       },
       "imageUrl": "https://images.unsplash.com/photo-1540959733332-e94e270b2d42",
       "createdAt": "2026-02-25",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-07",
+          "title": "Structural assessment complete",
+          "content": "Heritage engineers have completed the structural assessment. Restoration plan approved."
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Heritage Fan", "amount": 3000, "timestamp": "2026-03-13T07:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-020",
@@ -530,11 +749,22 @@
       },
       "organizer": {
         "name": "Ability Nepal Foundation",
+        "relationship": "NGO",
         "verified": true
       },
       "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
       "createdAt": "2026-03-05",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-11",
+          "title": "Laptops received",
+          "content": "10 refurbished laptops have been received. Classes to begin next week."
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 5000, "timestamp": "2026-03-12T11:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-021",
@@ -554,11 +784,23 @@
       },
       "organizer": {
         "name": "Girls First Nepal",
+        "relationship": "NGO",
         "verified": true
       },
       "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae",
       "createdAt": "2026-03-10",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-12",
+          "title": "Installation complete in 3 schools",
+          "content": "Vending machines installed in 3 schools. 2 more to go!"
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 2000, "timestamp": "2026-03-13T10:00:00Z" },
+        { "id": "d2", "donorName": "Women Rights", "amount": 3000, "timestamp": "2026-03-12T19:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-022",
@@ -578,11 +820,22 @@
       },
       "organizer": {
         "name": "Himalayan Health Care",
+        "relationship": "NGO",
         "verified": true
       },
       "imageUrl": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144",
       "createdAt": "2026-03-02",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-11",
+          "title": "Oxygen cylinders refilled",
+          "content": "3 oxygen cylinders refilled and delivered to the health post."
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Trek Guide", "amount": 2000, "timestamp": "2026-03-13T08:00:00Z" }
+      ],
+      "fundUtilization": null
     },
     {
       "id": "cause-023",
@@ -602,11 +855,22 @@
       },
       "organizer": {
         "name": "Inclusion Nepal",
+        "relationship": "NGO",
         "verified": true
       },
       "imageUrl": "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289",
       "createdAt": "2026-03-10",
-      "updates": []
+      "updates": [
+        {
+          "date": "2026-03-12",
+          "title": "Wheelchair models selected",
+          "content": "Selected the most suitable all-terrain models after testing multiple options."
+        }
+      ],
+      "donations": [
+        { "id": "d1", "donorName": "Anonymous", "amount": 5000, "timestamp": "2026-03-13T09:00:00Z" }
+      ],
+      "fundUtilization": null
     }
   ],
   "categories": [

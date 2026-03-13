@@ -494,6 +494,8 @@ const CauseDetail = {
     }
 
     titleEl.textContent = cause.title || 'Cause';
+    const causeCauseTitleEl = document.getElementById('cause-cause-title');
+    if (causeCauseTitleEl) causeCauseTitleEl.textContent = cause.title || 'Donation';
     imageEl.src = cause.imageUrl || 'assets/medical_emergency.png';
     imageEl.onerror = function() {
       this.onerror = null;
@@ -566,6 +568,152 @@ const CauseDetail = {
     
     if (beneficiaryNameEl) beneficiaryNameEl.textContent = beneficiaryName;
     if (beneficiaryInfoEl) beneficiaryInfoEl.textContent = beneficiaryInfo;
+
+    this.renderRecentDonations(cause);
+    this.renderTopDonors(cause);
+    this.renderFundUtilization(cause);
+  },
+
+  formatCurrency(amount) {
+    return new Intl.NumberFormat('en-NP', {
+      style: 'currency',
+      currency: 'NPR',
+      maximumFractionDigits: 0
+    }).format(amount).replace('NPR', 'Rs');
+  },
+
+  getTimeAgo(timestamp) {
+    const now = new Date();
+    const then = new Date(timestamp);
+    const diffMs = now - then;
+    const diffMins = Math.floor(diffMs / 60000);
+    const diffHours = Math.floor(diffMs / 3600000);
+    const diffDays = Math.floor(diffMs / 86400000);
+
+    if (diffMins < 1) return 'Just now';
+    if (diffMins < 60) return `${diffMins} min ago`;
+    if (diffHours < 24) return `${diffHours} hour${diffHours > 1 ? 's' : ''} ago`;
+    if (diffDays < 7) return `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
+    return then.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  },
+
+  anonymizeName(name) {
+    if (name === 'Anonymous') {
+      return 'Anonymous' + Math.floor(Math.random() * 900 + 100);
+    }
+    if (name.includes(' ')) {
+      const parts = name.split(' ');
+      return parts[0] + ' ' + parts[1].charAt(0) + '.';
+    }
+    return name;
+  },
+
+  renderTopDonors(cause) {
+    const container = document.getElementById('top-donors-list');
+    if (!container) return;
+
+    const topDonors = (cause.donations || [])
+      .sort((a, b) => b.amount - a.amount)
+      .slice(0, 5);
+
+    if (topDonors.length === 0) {
+      container.innerHTML = '<p class="text-zinc-400 text-xs">Be the first donor!</p>';
+      return;
+    }
+
+    container.innerHTML = topDonors.map(d => `
+      <div class="flex items-center justify-between">
+        <span class="text-zinc-600">${this.anonymizeName(d.donorName)}</span>
+        <span class="font-semibold text-zinc-900">Rs${d.amount.toLocaleString()}</span>
+      </div>
+    `).join('');
+  },
+
+  renderRecentDonations(cause) {
+    const container = document.getElementById('donations-list');
+    if (!container) return;
+
+    const recentDonations = (cause.donations || [])
+      .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
+      .slice(0, 10);
+
+    if (recentDonations.length === 0) {
+      container.innerHTML = '<p class="text-zinc-400 text-center py-4">No donations yet. Be the first!</p>';
+      return;
+    }
+
+    container.innerHTML = recentDonations.map(d => `
+      <div class="flex items-center gap-3 p-3 bg-white rounded-xl">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-lime-100 text-lime-600">
+          <iconify-icon icon="solar:heart-bold" class="text-lg"></iconify-icon>
+        </div>
+        <div class="flex-1">
+          <div class="text-sm font-medium text-zinc-900">${this.anonymizeName(d.donorName)}</div>
+          <div class="text-xs text-zinc-400">${this.getTimeAgo(d.timestamp)}</div>
+        </div>
+        <div class="font-semibold text-zinc-900">Rs${d.amount.toLocaleString()}</div>
+      </div>
+    `).join('');
+  },
+
+  renderFundUtilization(cause) {
+    const container = document.getElementById('fund-utilization');
+    if (!container) return;
+
+    const utilization = cause.fundUtilization;
+
+    if (!utilization || utilization.status !== 'completed') {
+      container.classList.add('hidden');
+      return;
+    }
+
+    container.classList.remove('hidden');
+
+    container.innerHTML = `
+      <div class="bg-emerald-50 rounded-[2rem] p-8">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500 text-white">
+            <iconify-icon icon="solar:chart-bold" class="text-xl"></iconify-icon>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-zinc-900" style="font-family: 'Playfair Display', serif;">Fund Utilization</h3>
+            <p class="text-sm text-emerald-600">Campaign Completed</p>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <div class="flex items-center justify-between text-sm mb-2">
+            <span class="text-zinc-600">Total Utilized</span>
+            <span class="font-bold text-emerald-600">${utilization.utilizationPercent}%</span>
+          </div>
+          <div class="h-4 bg-emerald-100 rounded-full overflow-hidden">
+            <div class="h-full bg-emerald-500 rounded-full transition-all" style="width: ${utilization.utilizationPercent}%"></div>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="text-sm font-semibold text-zinc-900 mb-3">Expense Breakdown</h4>
+          <div class="space-y-3">
+            ${(utilization.expenses || []).map(exp => `
+              <div class="flex items-center justify-between p-3 bg-white rounded-xl">
+                <div>
+                  <div class="text-sm font-medium text-zinc-900">${exp.category}</div>
+                  <div class="text-xs text-zinc-400">${exp.description}</div>
+                </div>
+                <div class="font-semibold text-zinc-900">Rs${exp.amount.toLocaleString()}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.classList.add('hidden')" class="text-sm font-medium text-emerald-600 hover:text-emerald-700">
+          Read End Story →
+        </button>
+        <div class="hidden mt-4 p-4 bg-white rounded-xl">
+          <div class="prose prose-sm max-w-none text-zinc-600">${utilization.endStory || ''}</div>
+        </div>
+      </div>
+    `;
   }
 };
 
@@ -575,5 +723,46 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (document.getElementById('cause-content')) {
     CauseDetail.init();
+  }
+  
+  // Copy Link functionality
+  const copyLinkBtn = document.getElementById('copy-link-btn');
+  const copyLinkText = document.getElementById('copy-link-text');
+  if (copyLinkBtn) {
+    copyLinkBtn.addEventListener('click', async () => {
+      const url = window.location.href;
+      try {
+        await navigator.clipboard.writeText(url);
+        
+        // Show success feedback
+        const originalHTML = copyLinkBtn.innerHTML;
+        copyLinkBtn.classList.add('text-lime-500');
+        copyLinkBtn.innerHTML = `
+          <iconify-icon icon="solar:check-circle-bold" class="text-lg"></iconify-icon>
+          <span class="text-sm">Copied!</span>
+        `;
+        
+        // Reset after 2 seconds
+        setTimeout(() => {
+          copyLinkBtn.classList.remove('text-lime-500');
+          copyLinkBtn.innerHTML = originalHTML;
+        }, 2000);
+        
+      } catch (err) {
+        console.error('Failed to copy:', err);
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = url;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        
+        copyLinkText.textContent = 'Copied!';
+        setTimeout(() => {
+          copyLinkText.textContent = 'Copy Link';
+        }, 2000);
+      }
+    });
   }
 });

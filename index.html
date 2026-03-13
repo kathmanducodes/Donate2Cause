@@ -40,7 +40,7 @@
         gsap.ticker.lagSmoothing(0);
       }
 
-      // Prevent "double smooth" with the existing anchor handler in scripts.js.
+      // Prevent "double smooth" with the existing anchor handler in js/scripts.js.
       document.addEventListener('click', (e) => {
         const anchor = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
         if (!anchor) return;
@@ -762,6 +762,6 @@
     </div>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script src="js/scripts.js"></script>
 
 </body>
