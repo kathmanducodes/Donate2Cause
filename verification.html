@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verification Process | Donate2Cause</title>
+  <meta name="description" content="Learn about Donate2Cause's rigorous verification process for campaigns and beneficiaries.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-stone-50 text-zinc-900 antialiased relative">
+
+  <canvas id="noise-canvas" class="noise-overlay"></canvas>
+
+  <!-- Header -->
+  <header class="relative z-20 bg-white/70 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+      <div class="flex items-center gap-2">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-950 text-lime-300">
+          <iconify-icon icon="solar:hand-heart-bold" class="text-xl"></iconify-icon>
+        </div>
+        <a href="index.html" class="text-2xl font-bold tracking-tighter text-zinc-950" style="font-family: Inter, sans-serif;">Donate2Cause</a>
+      </div>
+      
+      <nav class="hidden lg:flex items-center gap-10">
+        <a href="index.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Home</a>
+        <a href="about.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">About</a>
+        <a href="explore.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Causes</a>
+        <a href="verification.html" class="text-sm font-medium text-zinc-950">Verification</a>
+        <a href="contact.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center">
+        <a href="explore.html" class="hidden lg:inline-flex items-center gap-2 rounded-full bg-zinc-950 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-800 transition">
+          Donate Now
+        </a>
+        <button data-mobile-nav-toggle class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-zinc-100 transition lg:hidden">
+          <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl text-zinc-900"></iconify-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div data-mobile-nav class="fixed inset-0 z-50 bg-zinc-950/95 backdrop-blur-lg transform translate-x-full transition-transform duration-500 lg:hidden">
+    <div class="flex flex-col h-full p-8">
+      <div class="flex items-center justify-between mb-12">
+        <div class="flex items-center gap-2">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-lime-400 text-emerald-950">
+            <iconify-icon icon="solar:hand-heart-bold" class="text-xl"></iconify-icon>
+          </div>
+          <span class="text-2xl font-bold tracking-tighter text-white" style="font-family: Inter, sans-serif;">Donate2Cause</span>
+        </div>
+        <button data-mobile-nav-close class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-zinc-800 transition">
+          <iconify-icon icon="solar:close-linear" class="text-2xl text-white"></iconify-icon>
+        </button>
+      </div>
+      
+      <nav class="flex flex-col gap-6">
+        <a href="index.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Home</a>
+        <a href="about.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">About</a>
+        <a href="explore.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Causes</a>
+        <a href="verification.html" class="text-xl font-semibold text-lime-400">Verification</a>
+        <a href="contact.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Contact</a>
+      </nav>
+
+      <div class="mt-auto">
+        <a href="explore.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-lime-400 w-full px-6 py-4 text-base font-bold text-emerald-950 transition hover:bg-lime-300">
+          Donate Now
+          <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[50vh] flex items-center bg-zinc-950 text-white py-28 px-6 lg:px-8 z-10 overflow-hidden">
+    <div class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 rounded-full bg-zinc-800/40 blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-64 h-64 rounded-full bg-zinc-900/50 blur-3xl pointer-events-none"></div>
+    
+    <div class="mx-auto max-w-7xl w-full text-center relative z-10">
+      <div class="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/50 px-4 py-2 text-sm font-medium text-lime-200 mb-8">
+        <span class="h-2 w-2 rounded-full bg-lime-400"></span>
+        Our Commitment
+      </div>
+      <h1 class="text-5xl lg:text-7xl font-semibold tracking-tight leading-tight" style="font-family: 'Playfair Display', serif;">
+        100% Verification <br>Process
+      </h1>
+      <p class="mt-6 text-xl text-zinc-400 max-w-2xl mx-auto" style="font-family: Inter, sans-serif;">
+        Every campaign undergoes rigorous manual vetting to ensure your donations reach the right people.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why Verification Matters -->
+  <section class="relative py-28 px-6 lg:px-8 bg-[#f8f7f3] z-10">
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-lime-100/60 blur-[100px] pointer-events-none"></div>
+    
+    <div class="mx-auto max-w-7xl w-full relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-6xl font-semibold tracking-tight text-zinc-950 leading-tight" style="font-family: 'Playfair Display', serif;">
+          Why Verification Matters
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-[2rem] p-10 shadow-xl">
+          <div class="w-14 h-14 rounded-2xl bg-red-100 flex items-center justify-center mb-6">
+            <iconify-icon icon="solar:shield-warning-linear" class="text-2xl text-red-500"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">Prevents Fraud</h3>
+          <p class="text-zinc-600 leading-relaxed">Our rigorous checks ensure that only legitimate causes receive funding, protecting donors from scams.</p>
+        </div>
+        
+        <div class="bg-white rounded-[2rem] p-10 shadow-xl">
+          <div class="w-14 h-14 rounded-2xl bg-lime-100 flex items-center justify-center mb-6">
+            <iconify-icon icon="solar:eye-linear" class="text-2xl text-lime-500"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">Ensures Transparency</h3>
+          <p class="text-zinc-600 leading-relaxed">Every verified campaign provides confidence that funds will be used for the stated purpose.</p>
+        </div>
+        
+        <div class="bg-white rounded-[2rem] p-10 shadow-xl">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center mb-6">
+            <iconify-icon icon="solar:users-group-two-rounded" class="text-2xl text-emerald-500"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">Builds Trust</h3>
+          <p class="text-zinc-600 leading-relaxed">Verification creates a trustworthy ecosystem where donors and beneficiaries can connect with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verification Steps -->
+  <section class="relative py-28 px-6 lg:px-8 bg-zinc-950 text-white z-10">
+    <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
+    
+    <div class="mx-auto max-w-7xl w-full relative z-10">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/50 backdrop-blur px-4 py-2 text-sm font-medium text-lime-200 mb-8">
+          <span class="h-2 w-2 rounded-full bg-lime-400"></span>
+          Our Process
+        </div>
+        <h2 class="text-4xl lg:text-6xl font-semibold tracking-tight" style="font-family: 'Playfair Display', serif;">
+          How We Verify Campaigns
+        </h2>
+      </div>
+      
+      <div class="space-y-8">
+        <div class="relative rounded-[2rem] bg-zinc-900/60 border border-zinc-800/80 p-10 hover:bg-zinc-800/60 transition duration-500">
+          <div class="absolute -top-6 left-10 w-14 h-14 rounded-2xl bg-lime-400 flex items-center justify-center shadow-xl shadow-lime-400/20">
+            <span class="text-xl font-bold text-emerald-950">1</span>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4 mt-2" style="font-family: 'Playfair Display', serif;">Identity Verification</h3>
+          <p class="text-zinc-400 leading-relaxed mb-4">Campaign organizers must submit government-issued identification (Citizenship Certificate, Passport, or Driver's License). Our team verifies the authenticity of these documents and matches them against the applicant.</p>
+          <ul class="list-disc pl-6 text-zinc-500 space-y-2">
+            <li>Valid Nepali ID (for Nepal-based organizers)</li>
+            <li>Valid passport (for diaspora organizers)</li>
+            <li>Selfie with ID for face verification</li>
+          </ul>
+        </div>
+        
+        <div class="relative rounded-[2rem] bg-zinc-900/60 border border-zinc-800/80 p-10 hover:bg-zinc-800/60 transition duration-500">
+          <div class="absolute -top-6 left-10 w-14 h-14 rounded-2xl bg-lime-400 flex items-center justify-center shadow-xl shadow-lime-400/20">
+            <span class="text-xl font-bold text-emerald-950">2</span>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4 mt-2" style="font-family: 'Playfair Display', serif;">Need Assessment</h3>
+          <p class="text-zinc-400 leading-relaxed mb-4">We evaluate the legitimacy and urgency of the cause through detailed documentation and third-party verification.</p>
+          <ul class="list-disc pl-6 text-zinc-500 space-y-2">
+            <li>Medical reports and cost estimates (for medical campaigns)</li>
+            <li>School/institution documents (for education campaigns)</li>
+            <li>Damage assessments and quotes (for disaster relief)</li>
+            <li>Community impact statements</li>
+          </ul>
+        </div>
+        
+        <div class="relative rounded-[2rem] bg-zinc-900/60 border border-zinc-800/80 p-10 hover:bg-zinc-800/60 transition duration-500">
+          <div class="absolute -top-6 left-10 w-14 h-14 rounded-2xl bg-lime-400 flex items-center justify-center shadow-xl shadow-lime-400/20">
+            <span class="text-xl font-bold text-emerald-950">3</span>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4 mt-2" style="font-family: 'Playfair Display', serif;">Beneficiary Confirmation</h3>
+          <p class="text-zinc-400 leading-relaxed mb-4">We directly contact the intended beneficiary (or their legal guardian) to confirm their consent and need.</p>
+          <ul class="list-disc pl-6 text-zinc-500 space-y-2">
+            <li>Direct phone/video call with beneficiary</li>
+            <li>Written consent from beneficiary or guardian</li>
+            <li>Verification of bank account ownership</li>
+          </ul>
+        </div>
+        
+        <div class="relative rounded-[2rem] bg-zinc-900/60 border border-zinc-800/80 p-10 hover:bg-zinc-800/60 transition duration-500">
+          <div class="absolute -top-6 left-10 w-14 h-14 rounded-2xl bg-lime-400 flex items-center justify-center shadow-xl shadow-lime-400/20">
+            <span class="text-xl font-bold text-emerald-950">4</span>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4 mt-2" style="font-family: 'Playfair Display', serif;">Campaign Approval</h3>
+          <p class="text-zinc-400 leading-relaxed mb-4">Once all checks pass, our verification committee reviews the application and grants final approval.</p>
+          <ul class="list-disc pl-6 text-zinc-500 space-y-2">
+            <li>Multi-stage internal review</li>
+            <li>Cross-reference with previous campaigns</li>
+            <li>Final approval by verification team lead</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Verify -->
+  <section class="relative py-28 px-6 lg:px-8 bg-[#f8f7f3] z-10">
+    <div class="mx-auto max-w-7xl w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full border border-lime-200 bg-lime-50 px-4 py-2 text-sm font-medium text-emerald-700 mb-8 shadow-sm">
+            <span class="h-2 w-2 rounded-full bg-lime-500"></span>
+            What We Verify
+          </div>
+          <h2 class="text-4xl lg:text-5xl font-semibold tracking-tight text-zinc-950 leading-tight mb-8" style="font-family: 'Playfair Display', serif;">
+            Every detail matters in building trust
+          </h2>
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-lime-400 flex items-center justify-center">
+                <iconify-icon icon="solar:document-check-linear" class="text-xl text-emerald-900"></iconify-icon>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-zinc-900 mb-1">Document Authenticity</h4>
+                <p class="text-zinc-600">All submitted documents are verified for authenticity and consistency.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-lime-400 flex items-center justify-center">
+                <iconify-icon icon="solar:map-point-linear" class="text-xl text-emerald-900"></iconify-icon>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-zinc-900 mb-1">Location Verification</h4>
+                <p class="text-zinc-600">We confirm the physical location of beneficiaries through multiple methods.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-lime-400 flex items-center justify-center">
+                <iconify-icon icon="solar:card-pos-linear" class="text-xl text-emerald-900"></iconify-icon>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-zinc-900 mb-1">Bank Account Ownership</h4>
+                <p class="text-zinc-600">Beneficiary bank accounts are verified to ensure funds reach the right person.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-lime-400 flex items-center justify-center">
+                <iconify-icon icon="solar:shield-check-linear" class="text-xl text-emerald-900"></iconify-icon>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-zinc-900 mb-1">Background Checks</h4>
+                <p class="text-zinc-600">We screen campaign organizers against fraud databases and previous campaign history.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-square group">
+          <img src="assets/payment_security.png" alt="Verification Process" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/70 via-transparent to-transparent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="relative py-20 px-6 lg:px-8 bg-zinc-950 text-white z-10">
+    <div class="mx-auto max-w-7xl w-full">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight" style="font-family: 'Playfair Display', serif;">
+          Verified Campaign Badges
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-zinc-900/60 border border-zinc-800/80 rounded-[2rem] p-8 text-center">
+          <div class="w-16 h-16 rounded-full bg-lime-400/20 flex items-center justify-center mx-auto mb-6">
+            <iconify-icon icon="solar:badge-check-linear" class="text-3xl text-lime-400"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2" style="font-family: 'Playfair Display', serif;">Verified</h3>
+          <p class="text-zinc-400 text-sm">Campaign has passed identity and document verification</p>
+        </div>
+        
+        <div class="bg-zinc-900/60 border border-zinc-800/80 rounded-[2rem] p-8 text-center">
+          <div class="w-16 h-16 rounded-full bg-lime-400/20 flex items-center justify-center mx-auto mb-6">
+            <iconify-icon icon="solar:shield-check-linear" class="text-3xl text-lime-400"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2" style="font-family: 'Playfair Display', serif;">Trusted</h3>
+          <p class="text-zinc-400 text-sm">Campaign organizer has successfully completed previous campaigns</p>
+        </div>
+        
+        <div class="bg-zinc-900/60 border border-zinc-800/80 rounded-[2rem] p-8 text-center">
+          <div class="w-16 h-16 rounded-full bg-lime-400/20 flex items-center justify-center mx-auto mb-6">
+            <iconify-icon icon="solar:stars-minimalistic-linear" class="text-3xl text-lime-400"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2" style="font-family: 'Playfair Display', serif;">Vetted</h3>
+          <p class="text-zinc-400 text-sm">Campaign has undergone thorough need assessment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="relative py-28 px-6 lg:px-8 bg-[#f8f7f3] z-10">
+    <div class="mx-auto max-w-4xl w-full">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-semibold tracking-tight text-zinc-950" style="font-family: 'Playfair Display', serif;">
+          Frequently Asked Questions
+        </h2>
+      </div>
+      
+      <div class="space-y-6">
+        <div class="bg-white rounded-[2rem] p-8 shadow-lg">
+          <h3 class="text-lg font-semibold text-zinc-900 mb-3">How long does the verification process take?</h3>
+          <p class="text-zinc-600">Typically 2-5 business days. Complex cases may take longer. We work diligently to verify campaigns while maintaining accuracy.</p>
+        </div>
+        
+        <div class="bg-white rounded-[2rem] p-8 shadow-lg">
+          <h3 class="text-lg font-semibold text-zinc-900 mb-3">What happens if my campaign fails verification?</h3>
+          <p class="text-zinc-600">We provide detailed feedback on what was missing or needed. You can resubmit with the required information.</p>
+        </div>
+        
+        <div class="bg-white rounded-[2rem] p-8 shadow-lg">
+          <h3 class="text-lg font-semibold text-zinc-900 mb-3">Is my personal information safe?</h3>
+          <p class="text-zinc-600">Yes. We use industry-standard encryption and security measures. Your data is only used for verification purposes and is never shared with third parties without consent.</p>
+        </div>
+        
+        <div class="bg-white rounded-[2rem] p-8 shadow-lg">
+          <h3 class="text-lg font-semibold text-zinc-900 mb-3">Can I report a suspicious campaign?</h3>
+          <p class="text-zinc-600">Absolutely. If you see anything suspicious, please contact us immediately at support@donate2cause.com. We take all reports seriously.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="relative py-28 px-6 lg:px-8 bg-zinc-950 z-10 overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-zinc-950">
+       <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(163,230,53,0.15),transparent_70%)] opacity-60"></div>
+    </div>
+    
+    <div class="mx-auto max-w-4xl text-center relative z-10">
+      <h2 class="text-4xl lg:text-6xl font-semibold tracking-tight text-white leading-tight mb-8" style="font-family: 'Playfair Display', serif;">
+        Ready to create a verified campaign?
+      </h2>
+      <p class="text-xl text-zinc-400 max-w-2xl mx-auto mb-12">
+        Join hundreds of verified campaign organizers who have made a real difference in Nepal.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <a href="explore.html" class="group inline-flex items-center gap-4 rounded-full bg-lime-300 px-10 py-5 text-lg font-bold text-emerald-950 transition duration-500 hover:-translate-y-1 hover:bg-white">
+          Start a Fundraiser
+          <iconify-icon icon="solar:arrow-right-linear" class="text-xl transition group-hover:translate-x-1"></iconify-icon>
+        </a>
+        <a href="contact.html" class="inline-flex items-center gap-4 rounded-full bg-zinc-900 border border-zinc-800 px-10 py-5 text-lg font-bold text-white transition duration-500 hover:bg-zinc-800">
+          Contact Support
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-950 text-zinc-400 py-16 px-6 lg:px-8 overflow-hidden relative z-10 border-t border-zinc-900">
+    <div class="mx-auto max-w-7xl w-full flex flex-col items-center text-center">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-950 text-lime-300 shadow-sm border border-emerald-900/50">
+          <iconify-icon icon="solar:hand-heart-linear" class="text-xl"></iconify-icon>
+        </div>
+        <span class="text-2xl font-bold tracking-tight text-white" style="font-family: Inter, sans-serif;">Donate2Cause</span>
+      </div>
+      
+      <div class="flex flex-wrap gap-8 border-t border-zinc-900 pt-8 w-full justify-center">
+        <a href="terms.html" class="hover:text-lime-300 transition text-sm">Terms of Service</a>
+        <a href="privacy.html" class="hover:text-lime-300 transition text-sm">Privacy Policy</a>
+        <a href="verification.html" class="hover:text-lime-300 transition text-sm">Verification Process</a>
+        <a href="contact.html" class="hover:text-lime-300 transition text-sm">Contact Us</a>
+      </div>
+      <p class="mt-8 text-sm text-zinc-600">© 2026 Donate2Cause. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

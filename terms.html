@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service | Donate2Cause</title>
+  <meta name="description" content="Terms of Service for Donate2Cause - Nepal's trusted crowdfunding platform.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-stone-50 text-zinc-900 antialiased relative">
+
+  <canvas id="noise-canvas" class="noise-overlay"></canvas>
+
+  <!-- Header -->
+  <header class="relative z-20 bg-white/70 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+      <div class="flex items-center gap-2">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-950 text-lime-300">
+          <iconify-icon icon="solar:hand-heart-bold" class="text-xl"></iconify-icon>
+        </div>
+        <a href="index.html" class="text-2xl font-bold tracking-tighter text-zinc-950" style="font-family: Inter, sans-serif;">Donate2Cause</a>
+      </div>
+      
+      <nav class="hidden lg:flex items-center gap-10">
+        <a href="index.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Home</a>
+        <a href="about.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">About</a>
+        <a href="explore.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Causes</a>
+        <a href="verification.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Verification</a>
+        <a href="contact.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center">
+        <a href="explore.html" class="hidden lg:inline-flex items-center gap-2 rounded-full bg-zinc-950 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-800 transition">
+          Donate Now
+        </a>
+        <button data-mobile-nav-toggle class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-zinc-100 transition lg:hidden">
+          <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl text-zinc-900"></iconify-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div data-mobile-nav class="fixed inset-0 z-50 bg-zinc-950/95 backdrop-blur-lg transform translate-x-full transition-transform duration-500 lg:hidden">
+    <div class="flex flex-col h-full p-8">
+      <div class="flex items-center justify-between mb-12">
+        <div class="flex items-center gap-2">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-lime-400 text-emerald-950">
+            <iconify-icon icon="solar:hand-heart-bold" class="text-xl"></iconify-icon>
+          </div>
+          <span class="text-2xl font-bold tracking-tighter text-white" style="font-family: Inter, sans-serif;">Donate2Cause</span>
+        </div>
+        <button data-mobile-nav-close class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-zinc-800 transition">
+          <iconify-icon icon="solar:close-linear" class="text-2xl text-white"></iconify-icon>
+        </button>
+      </div>
+      
+      <nav class="flex flex-col gap-6">
+        <a href="index.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Home</a>
+        <a href="about.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">About</a>
+        <a href="explore.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Causes</a>
+        <a href="verification.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Verification</a>
+        <a href="contact.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Contact</a>
+      </nav>
+
+      <div class="mt-auto">
+        <a href="explore.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-lime-400 w-full px-6 py-4 text-base font-bold text-emerald-950 transition hover:bg-lime-300">
+          Donate Now
+          <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[50vh] flex items-center bg-zinc-950 text-white py-28 px-6 lg:px-8 z-10 overflow-hidden">
+    <div class="mx-auto max-w-7xl w-full text-center relative z-10">
+      <h1 class="text-5xl lg:text-7xl font-semibold tracking-tight leading-tight" style="font-family: 'Playfair Display', serif;">
+        Terms of Service
+      </h1>
+      <p class="mt-6 text-xl text-zinc-400 max-w-2xl mx-auto" style="font-family: Inter, sans-serif;">
+        Please read these terms carefully before using Donate2Cause platform.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="relative py-20 px-6 lg:px-8 bg-[#f8f7f3] z-10">
+    <div class="mx-auto max-w-4xl w-full">
+      <div class="bg-white rounded-[2rem] p-10 lg:p-16 shadow-xl">
+        <div class="prose prose-lg max-w-none text-zinc-600">
+          <p class="text-sm text-zinc-400 mb-8">Last updated: March 2026</p>
+
+          <h2 class="text-2xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">1. Acceptance of Terms</h2>
+          <p class="mb-6">By accessing and using Donate2Cause ("we," "our," or "us"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by these terms, please do not use this service.</p>
+
+          <h2 class="text-2xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">2. Description of Service</h2>
+          <p class="mb-6">Donate2Cause is a crowdfunding platform that connects donors with verified causes in Nepal. We provide a marketplace for individuals and organizations to create fundraising campaigns for medical emergencies, education, community development, and other charitable purposes.</p>
+
+          <h2 class="text-2xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">3. User Eligibility</h2>
+          <p class="mb-6">You must be at least 18 years of age to create a campaign or make a donation. By using this platform, you represent and warrant that you have the right, authority, and capacity to enter into this agreement.</p>
+
+          <h2 class="text-2xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">4. Campaign Creation</h2>
+          <p class="mb-4">When creating a campaign, you agree to:</p>
+          <ul class="list-disc pl-6 mb-6 space-y-2">
+            <li>Provide accurate and complete information about your cause</li>
+            <li>Submit to our verification process as outlined in our Verification Policy</li>
+            <li>Use funds raised solely for the stated purpose</li>
+            <li>Provide regular updates on campaign progress</li>
+            <li>Comply with all applicable laws and regulations</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">5. Donations and Payments</h2>
+          <p class="mb-4">All donations are final and non-refundable except in exceptional circumstances. By making a donation, you understand that:</p>
+          <ul class="list-disc pl-6 mb-6 space-y-2">
+            <li>Your donation is made voluntarily</li>
+            <li>You receive no goods or services in exchange (for charitable donations)</li>
+            <li>Platform fees may apply to cover operational costs</li>
+            <li>Donations are processed through secure third-party payment processors</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">6. Verification Process</h2>
+          <p class="mb-6">All campaigns undergo our verification process which includes identity verification, need assessment, and beneficiary confirmation. We reserve the right to reject or remove any campaign that does not meet our standards or violates these terms.</p>
+
+          <h2 class="text-2xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">7. Prohibited Activities</h2>
+          <p class="mb-4">You may not use our platform to:</p>
+          <ul class="list-disc pl-6 mb-6 space-y-2">
+            <li>Create fraudulent or misleading campaigns</li>
+            <li>Misuse funds for purposes other than stated</li>
+            <li>Harass, abuse, or harm others</li>
+            <li>Violate any applicable laws or regulations</li>
+            <li>Attempt to circumvent our verification process</li>
+            <li>Collect or store personal information about other users</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">8. Intellectual Property</h2>
+          <p class="mb-6">All content on this platform, including logos, designs, and software, is the property of Donate2Cause and is protected by intellectual property laws. You may not copy, modify, or distribute our content without permission.</p>
+
+          <h2 class="text-2xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">9. Limitation of Liability</h2>
+          <p class="mb-6">Donate2Cause is not responsible for any damage or loss arising from your use of this platform. We do not guarantee that campaigns will achieve their goals or that funds will be used as promised by campaign organizers.</p>
+
+          <h2 class="text-2xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">10. Indemnification</h2>
+          <p class="mb-6">You agree to indemnify and hold harmless Donate2Cause from any claims, damages, or expenses arising from your use of this platform or violation of these terms.</p>
+
+          <h2 class="text-2xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">11. Modification of Terms</h2>
+          <p class="mb-6">We reserve the right to modify these terms at any time. Your continued use of the platform after changes constitutes acceptance of the new terms.</p>
+
+          <h2 class="text-2xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">12. Governing Law</h2>
+          <p class="mb-6">These terms shall be governed by and construed in accordance with the laws of Nepal. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of Nepali courts.</p>
+
+          <h2 class="text-2xl font-semibold text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">13. Contact Information</h2>
+          <p class="mb-6">If you have any questions about these Terms of Service, please contact us at <a href="mailto:support@donate2cause.com" class="text-lime-500 hover:underline">support@donate2cause.com</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-950 text-zinc-400 py-16 px-6 lg:px-8 overflow-hidden relative z-10 border-t border-zinc-900">
+    <div class="mx-auto max-w-7xl w-full flex flex-col items-center text-center">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-950 text-lime-300 shadow-sm border border-emerald-900/50">
+          <iconify-icon icon="solar:hand-heart-linear" class="text-xl"></iconify-icon>
+        </div>
+        <span class="text-2xl font-bold tracking-tight text-white" style="font-family: Inter, sans-serif;">Donate2Cause</span>
+      </div>
+      
+      <div class="flex flex-wrap gap-8 border-t border-zinc-900 pt-8 w-full justify-center">
+        <a href="terms.html" class="hover:text-lime-300 transition text-sm">Terms of Service</a>
+        <a href="privacy.html" class="hover:text-lime-300 transition text-sm">Privacy Policy</a>
+        <a href="verification.html" class="hover:text-lime-300 transition text-sm">Verification Process</a>
+        <a href="contact.html" class="hover:text-lime-300 transition text-sm">Contact Us</a>
+      </div>
+      <p class="mt-8 text-sm text-zinc-600">© 2026 Donate2Cause. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

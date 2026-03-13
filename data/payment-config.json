@@ -30,7 +30,7 @@
     }
   },
   "currency": "NPR",
-  "defaultAmounts": [500, 1000, 2000, 5000],
+  "defaultAmounts": [100, 1000, 2000, 5000],
   "organization": {
     "name": "Donate2Cause",
     "tagline": "Building a stronger Nepal together"

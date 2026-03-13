@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Donate2Cause</title>
+  <meta name="description" content="Learn about Donate2Cause - Nepal's trusted crowdfunding platform for medical emergencies, education, and community development.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-stone-50 text-zinc-900 antialiased relative">
+
+  <canvas id="noise-canvas" class="noise-overlay"></canvas>
+
+  <!-- Header -->
+  <header class="relative z-20 bg-white/70 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+      <div class="flex items-center gap-2">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-950 text-lime-300">
+          <iconify-icon icon="solar:hand-heart-bold" class="text-xl"></iconify-icon>
+        </div>
+        <a href="index.html" class="text-2xl font-bold tracking-tighter text-zinc-950" style="font-family: Inter, sans-serif;">Donate2Cause</a>
+      </div>
+      
+      <nav class="hidden lg:flex items-center gap-10">
+        <a href="index.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Home</a>
+        <a href="about.html" class="text-sm font-medium text-zinc-950">About</a>
+        <a href="explore.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Causes</a>
+        <a href="verification.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Verification</a>
+        <a href="contact.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center">
+        <a href="explore.html" class="hidden lg:inline-flex items-center gap-2 rounded-full bg-zinc-950 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-800 transition">
+          Donate Now
+        </a>
+        <button data-mobile-nav-toggle class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-zinc-100 transition lg:hidden">
+          <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl text-zinc-900"></iconify-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div data-mobile-nav class="fixed inset-0 z-50 bg-zinc-950/95 backdrop-blur-lg transform translate-x-full transition-transform duration-500 lg:hidden">
+    <div class="flex flex-col h-full p-8">
+      <div class="flex items-center justify-between mb-12">
+        <div class="flex items-center gap-2">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-lime-400 text-emerald-950">
+            <iconify-icon icon="solar:hand-heart-bold" class="text-xl"></iconify-icon>
+          </div>
+          <span class="text-2xl font-bold tracking-tighter text-white" style="font-family: Inter, sans-serif;">Donate2Cause</span>
+        </div>
+        <button data-mobile-nav-close class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-zinc-800 transition">
+          <iconify-icon icon="solar:close-linear" class="text-2xl text-white"></iconify-icon>
+        </button>
+      </div>
+      
+      <nav class="flex flex-col gap-6">
+        <a href="index.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Home</a>
+        <a href="about.html" class="text-xl font-semibold text-lime-400">About</a>
+        <a href="explore.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Causes</a>
+        <a href="verification.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Verification</a>
+        <a href="contact.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Contact</a>
+      </nav>
+
+      <div class="mt-auto">
+        <a href="explore.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-lime-400 w-full px-6 py-4 text-base font-bold text-emerald-950 transition hover:bg-lime-300">
+          Donate Now
+          <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[60vh] flex items-center bg-zinc-950 text-white py-28 px-6 lg:px-8 z-10 overflow-hidden">
+    <div class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 rounded-full bg-zinc-800/40 blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-64 h-64 rounded-full bg-zinc-900/50 blur-3xl pointer-events-none"></div>
+    
+    <div class="mx-auto max-w-7xl w-full text-center relative z-10">
+      <div class="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/50 px-4 py-2 text-sm font-medium text-lime-200 mb-8">
+        <span class="h-2 w-2 rounded-full bg-lime-400"></span>
+        About Us
+      </div>
+      <h1 class="text-5xl lg:text-7xl font-semibold tracking-tight leading-tight" style="font-family: 'Playfair Display', serif;">
+        Building a stronger, <br>more resilient Nepal.
+      </h1>
+      <p class="mt-6 text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed" style="font-family: Inter, sans-serif;">
+        We believe in the power of community to transform lives. Donate2Cause bridges the gap between those who need help and those who want to help.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="relative py-28 px-6 lg:px-8 bg-[#f8f7f3] z-10">
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-lime-100/60 blur-[100px] pointer-events-none"></div>
+    
+    <div class="mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-20 items-center z-10 relative">
+      <div>
+        <h2 class="text-4xl lg:text-5xl font-semibold tracking-tight text-zinc-950 leading-tight mb-8" style="font-family: 'Playfair Display', serif;">
+          Our Mission
+        </h2>
+        <div class="space-y-6">
+          <p class="text-lg text-zinc-600 leading-relaxed">
+            At Donate2Cause, we are committed to creating a transparent, secure, and accessible platform that connects donors with verified causes across Nepal.
+          </p>
+          <p class="text-lg text-zinc-600 leading-relaxed">
+            We aim to rebuild trust in charitable giving by implementing rigorous verification processes, ensuring every rupee donated makes a real impact.
+          </p>
+          <p class="text-lg text-zinc-600 leading-relaxed">
+            Our platform empowers families in need, enables the diaspora to support their homeland, and fosters a culture of transparent giving in Nepal.
+          </p>
+        </div>
+      </div>
+      <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-square group">
+        <img src="assets/community_development.png" alt="Our Mission" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/70 via-transparent to-transparent"></div>
+        <div class="absolute bottom-10 left-10 right-10">
+          <div class="flex items-center gap-4">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-lime-400 text-emerald-950">
+              <iconify-icon icon="solar:hand-heart-bold" class="text-2xl"></iconify-icon>
+            </div>
+            <span class="text-white font-semibold text-lg" style="font-family: 'Playfair Display', serif;">Donate2Cause</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="relative py-28 px-6 lg:px-8 bg-zinc-950 text-white z-10">
+    <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
+    
+    <div class="mx-auto max-w-7xl w-full relative z-10">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/50 backdrop-blur px-4 py-2 text-sm font-medium text-lime-200 mb-8">
+          <span class="h-2 w-2 rounded-full bg-lime-400"></span>
+          Our Values
+        </div>
+        <h2 class="text-4xl lg:text-6xl font-semibold tracking-tight" style="font-family: 'Playfair Display', serif;">
+          What drives us forward
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="relative rounded-[2rem] bg-zinc-900/60 border border-zinc-800/80 p-10 hover:bg-zinc-800/60 transition duration-500 group hover:-translate-y-2">
+          <div class="absolute -top-6 left-10 w-14 h-14 rounded-2xl bg-lime-400 flex items-center justify-center shadow-xl shadow-lime-400/20">
+            <iconify-icon icon="solar:shield-check-linear" class="text-2xl text-emerald-950"></iconify-icon>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4 mt-4" style="font-family: 'Playfair Display', serif;">Trust & Transparency</h3>
+          <p class="text-zinc-400 leading-relaxed">Every campaign is verified, every donation is tracked, and every update is shared. We believe in complete transparency.</p>
+        </div>
+        
+        <div class="relative rounded-[2rem] bg-zinc-900/60 border border-zinc-800/80 p-10 hover:bg-zinc-800/60 transition duration-500 group hover:-translate-y-2">
+          <div class="absolute -top-6 left-10 w-14 h-14 rounded-2xl bg-lime-400 flex items-center justify-center shadow-xl shadow-lime-400/20">
+            <iconify-icon icon="solar:users-group-two-rounded" class="text-2xl text-emerald-950"></iconify-icon>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4 mt-4" style="font-family: 'Playfair Display', serif;">Community First</h3>
+          <p class="text-zinc-400 leading-relaxed">We are stronger together. Our platform connects individuals, families, and organizations to create meaningful change.</p>
+        </div>
+        
+        <div class="relative rounded-[2rem] bg-zinc-900/60 border border-zinc-800/80 p-10 hover:bg-zinc-800/60 transition duration-500 group hover:-translate-y-2">
+          <div class="absolute -top-6 left-10 w-14 h-14 rounded-2xl bg-lime-400 flex items-center justify-center shadow-xl shadow-lime-400/20">
+            <iconify-icon icon="solar: globe-2-linear" class="text-2xl text-emerald-950"></iconify-icon>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4 mt-4" style="font-family: 'Playfair Display', serif;">Borderless Giving</h3>
+          <p class="text-zinc-400 leading-relaxed">Location should never be a barrier to helping. We enable Nepalis abroad to support their homeland with ease.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="relative py-28 px-6 lg:px-8 bg-[#f8f7f3] z-10">
+    <div class="mx-auto max-w-7xl w-full">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-5xl lg:text-6xl font-bold text-lime-500 mb-2">82%</div>
+          <p class="text-zinc-600 text-sm">Campaigns reach goal<br>within 30 days</p>
+        </div>
+        <div class="text-center">
+          <div class="text-5xl lg:text-6xl font-bold text-lime-500 mb-2">2,587</div>
+          <p class="text-zinc-600 text-sm">Beneficiaries helped<br>directly</p>
+        </div>
+        <div class="text-center">
+          <div class="text-5xl lg:text-6xl font-bold text-lime-500 mb-2">450+</div>
+          <p class="text-zinc-600 text-sm">Community projects<br>backed</p>
+        </div>
+        <div class="text-center">
+          <div class="text-5xl lg:text-6xl font-bold text-lime-500 mb-2">NPR 48M+</div>
+          <p class="text-zinc-600 text-sm">Total funds<br>transferred</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="relative py-28 px-6 lg:px-8 bg-zinc-950 text-white z-10">
+    <div class="mx-auto max-w-7xl w-full relative z-10">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/50 backdrop-blur px-4 py-2 text-sm font-medium text-lime-200 mb-8">
+          <span class="h-2 w-2 rounded-full bg-lime-400"></span>
+          Our Team
+        </div>
+        <h2 class="text-4xl lg:text-6xl font-semibold tracking-tight" style="font-family: 'Playfair Display', serif;">
+          The people behind the mission
+        </h2>
+        <p class="mt-6 text-xl text-zinc-400 max-w-2xl mx-auto">
+          A dedicated team of Nepali professionals committed to transforming charitable giving in Nepal.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="relative rounded-[2rem] bg-zinc-900/60 border border-zinc-800/80 p-8 text-center group hover:-translate-y-2 transition duration-500">
+          <div class="w-24 h-24 rounded-full bg-zinc-800 mx-auto mb-6 flex items-center justify-center">
+            <iconify-icon icon="solar:user-rounded" class="text-4xl text-zinc-600"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2" style="font-family: 'Playfair Display', serif;">Dedicated Team</h3>
+          <p class="text-zinc-400 text-sm">Our team combines expertise in technology, finance, and social impact to build the best platform for Nepal.</p>
+        </div>
+        
+        <div class="relative rounded-[2rem] bg-zinc-900/60 border border-zinc-800/80 p-8 text-center group hover:-translate-y-2 transition duration-500">
+          <div class="w-24 h-24 rounded-full bg-zinc-800 mx-auto mb-6 flex items-center justify-center">
+            <iconify-icon icon="solar:hand-heart-linear" class="text-4xl text-zinc-600"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2" style="font-family: 'Playfair Display', serif;">Local Expertise</h3>
+          <p class="text-zinc-400 text-sm">We understand Nepal's unique challenges and opportunities, enabling us to create solutions that work.</p>
+        </div>
+        
+        <div class="relative rounded-[2rem] bg-zinc-900/60 border border-zinc-800/80 p-8 text-center group hover:-translate-y-2 transition duration-500">
+          <div class="w-24 h-24 rounded-full bg-zinc-800 mx-auto mb-6 flex items-center justify-center">
+            <iconify-icon icon="solar:stars-minimalistic-linear" class="text-4xl text-zinc-600"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2" style="font-family: 'Playfair Display', serif;">Proven Track Record</h3>
+          <p class="text-zinc-400 text-sm">With millions in funds transferred and thousands of lives impacted, we deliver on our promises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="relative py-28 px-6 lg:px-8 bg-zinc-950 z-10 overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-zinc-950">
+       <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(163,230,53,0.15),transparent_70%)] opacity-60"></div>
+    </div>
+    
+    <div class="mx-auto max-w-4xl text-center relative z-10">
+      <h2 class="text-4xl lg:text-6xl font-semibold tracking-tight text-white leading-tight mb-8" style="font-family: 'Playfair Display', serif;">
+        Join us in building a better Nepal
+      </h2>
+      <p class="text-xl text-zinc-400 max-w-2xl mx-auto mb-12">
+        Whether you're a donor, a family in need, or a partner organization—we welcome you to be part of the change.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <a href="explore.html" class="group inline-flex items-center gap-4 rounded-full bg-lime-300 px-10 py-5 text-lg font-bold text-emerald-950 transition duration-500 hover:-translate-y-1 hover:bg-white">
+          Start a Fundraiser
+          <iconify-icon icon="solar:arrow-right-linear" class="text-xl transition group-hover:translate-x-1"></iconify-icon>
+        </a>
+        <a href="contact.html" class="inline-flex items-center gap-4 rounded-full bg-zinc-900 border border-zinc-800 px-10 py-5 text-lg font-bold text-white transition duration-500 hover:bg-zinc-800">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-950 text-zinc-400 py-16 px-6 lg:px-8 overflow-hidden relative z-10 border-t border-zinc-900">
+    <div class="mx-auto max-w-7xl w-full flex flex-col items-center text-center">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-950 text-lime-300 shadow-sm border border-emerald-900/50">
+          <iconify-icon icon="solar:hand-heart-linear" class="text-xl"></iconify-icon>
+        </div>
+        <span class="text-2xl font-bold tracking-tight text-white" style="font-family: Inter, sans-serif;">Donate2Cause</span>
+      </div>
+      
+      <div class="flex flex-wrap gap-8 border-t border-zinc-900 pt-8 w-full justify-center">
+        <a href="terms.html" class="hover:text-lime-300 transition text-sm">Terms of Service</a>
+        <a href="privacy.html" class="hover:text-lime-300 transition text-sm">Privacy Policy</a>
+        <a href="verification.html" class="hover:text-lime-300 transition text-sm">Verification Process</a>
+        <a href="contact.html" class="hover:text-lime-300 transition text-sm">Contact Us</a>
+      </div>
+      <p class="mt-8 text-sm text-zinc-600">© 2026 Donate2Cause. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

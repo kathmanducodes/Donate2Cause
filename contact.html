@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Donate2Cause</title>
+  <meta name="description" content="Contact Donate2Cause - Nepal's trusted crowdfunding platform. Get in touch with our team.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-stone-50 text-zinc-900 antialiased relative">
+
+  <canvas id="noise-canvas" class="noise-overlay"></canvas>
+
+  <!-- Header -->
+  <header class="relative z-20 bg-white/70 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+      <div class="flex items-center gap-2">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-950 text-lime-300">
+          <iconify-icon icon="solar:hand-heart-bold" class="text-xl"></iconify-icon>
+        </div>
+        <a href="index.html" class="text-2xl font-bold tracking-tighter text-zinc-950" style="font-family: Inter, sans-serif;">Donate2Cause</a>
+      </div>
+      
+      <nav class="hidden lg:flex items-center gap-10">
+        <a href="index.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Home</a>
+        <a href="about.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">About</a>
+        <a href="explore.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Causes</a>
+        <a href="verification.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Verification</a>
+        <a href="contact.html" class="text-sm font-medium text-zinc-950">Contact</a>
+      </nav>
+
+      <div class="flex items-center">
+        <a href="explore.html" class="hidden lg:inline-flex items-center gap-2 rounded-full bg-zinc-950 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-800 transition">
+          Donate Now
+        </a>
+        <button data-mobile-nav-toggle class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-zinc-100 transition lg:hidden">
+          <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl text-zinc-900"></iconify-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div data-mobile-nav class="fixed inset-0 z-50 bg-zinc-950/95 backdrop-blur-lg transform translate-x-full transition-transform duration-500 lg:hidden">
+    <div class="flex flex-col h-full p-8">
+      <div class="flex items-center justify-between mb-12">
+        <div class="flex items-center gap-2">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-lime-400 text-emerald-950">
+            <iconify-icon icon="solar:hand-heart-bold" class="text-xl"></iconify-icon>
+          </div>
+          <span class="text-2xl font-bold tracking-tighter text-white" style="font-family: Inter, sans-serif;">Donate2Cause</span>
+        </div>
+        <button data-mobile-nav-close class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-zinc-800 transition">
+          <iconify-icon icon="solar:close-linear" class="text-2xl text-white"></iconify-icon>
+        </button>
+      </div>
+      
+      <nav class="flex flex-col gap-6">
+        <a href="index.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Home</a>
+        <a href="about.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">About</a>
+        <a href="explore.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Causes</a>
+        <a href="verification.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Verification</a>
+        <a href="contact.html" class="text-xl font-semibold text-lime-400">Contact</a>
+      </nav>
+
+      <div class="mt-auto">
+        <a href="explore.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-lime-400 w-full px-6 py-4 text-base font-bold text-emerald-950 transition hover:bg-lime-300">
+          Donate Now
+          <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[50vh] flex items-center bg-zinc-950 text-white py-28 px-6 lg:px-8 z-10 overflow-hidden">
+    <div class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 rounded-full bg-zinc-800/40 blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-64 h-64 rounded-full bg-zinc-900/50 blur-3xl pointer-events-none"></div>
+    
+    <div class="mx-auto max-w-7xl w-full text-center relative z-10">
+      <h1 class="text-5xl lg:text-7xl font-semibold tracking-tight leading-tight" style="font-family: 'Playfair Display', serif;">
+        Get in Touch
+      </h1>
+      <p class="mt-6 text-xl text-zinc-400 max-w-2xl mx-auto" style="font-family: Inter, sans-serif;">
+        Have questions? We'd love to hear from you. Our team is here to help.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Options -->
+  <section class="relative py-28 px-6 lg:px-8 bg-[#f8f7f3] z-10">
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-lime-100/60 blur-[100px] pointer-events-none"></div>
+    
+    <div class="mx-auto max-w-7xl w-full relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div class="bg-white rounded-[2rem] p-10 shadow-xl text-center">
+          <div class="w-16 h-16 rounded-2xl bg-lime-100 flex items-center justify-center mx-auto mb-6">
+            <iconify-icon icon="solar:mail-linear" class="text-2xl text-lime-500"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-semibold text-zinc-900 mb-2" style="font-family: 'Playfair Display', serif;">Email Us</h3>
+          <p class="text-zinc-600 mb-4">For general inquiries and support</p>
+          <a href="mailto:support@donate2cause.com" class="text-lime-500 font-medium hover:underline">support@donate2cause.com</a>
+        </div>
+        
+        <div class="bg-white rounded-[2rem] p-10 shadow-xl text-center">
+          <div class="w-16 h-16 rounded-2xl bg-lime-100 flex items-center justify-center mx-auto mb-6">
+            <iconify-icon icon="solar:phone-linear" class="text-2xl text-lime-500"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-semibold text-zinc-900 mb-2" style="font-family: 'Playfair Display', serif;">Call Us</h3>
+          <p class="text-zinc-600 mb-4">Mon-Fri, 9AM-6PM NPT</p>
+          <a href="tel:+97712345678" class="text-lime-500 font-medium hover:underline">+977 1-2345678</a>
+        </div>
+        
+        <div class="bg-white rounded-[2rem] p-10 shadow-xl text-center">
+          <div class="w-16 h-16 rounded-2xl bg-lime-100 flex items-center justify-center mx-auto mb-6">
+            <iconify-icon icon="solar:chat-square-like-linear" class="text-2xl text-lime-500"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-semibold text-zinc-900 mb-2" style="font-family: 'Playfair Display', serif;">Live Chat</h3>
+          <p class="text-zinc-600 mb-4">Quick answers, anytime</p>
+          <button class="text-lime-500 font-medium hover:underline">Start Chat</button>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="bg-white rounded-[2rem] p-10 lg:p-16 shadow-xl">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">
+            Send us a Message
+          </h2>
+          <p class="text-zinc-600 max-w-xl mx-auto">
+            Fill out the form below and we'll get back to you as soon as possible.
+          </p>
+        </div>
+        
+        <form class="max-w-2xl mx-auto space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="firstName" class="block text-sm font-medium text-zinc-700 mb-2">First Name</label>
+              <input type="text" id="firstName" name="firstName" class="w-full rounded-full bg-zinc-50 border border-zinc-200 px-6 py-3 text-zinc-900 focus:outline-none focus:border-lime-400 transition" placeholder="John" required>
+            </div>
+            <div>
+              <label for="lastName" class="block text-sm font-medium text-zinc-700 mb-2">Last Name</label>
+              <input type="text" id="lastName" name="lastName" class="w-full rounded-full bg-zinc-50 border border-zinc-200 px-6 py-3 text-zinc-900 focus:outline-none focus:border-lime-400 transition" placeholder="Doe" required>
+            </div>
+          </div>
+          
+          <div>
+            <label for="email" class="block text-sm font-medium text-zinc-700 mb-2">Email Address</label>
+            <input type="email" id="email" name="email" class="w-full rounded-full bg-zinc-50 border border-zinc-200 px-6 py-3 text-zinc-900 focus:outline-none focus:border-lime-400 transition" placeholder="john@example.com" required>
+          </div>
+          
+          <div>
+            <label for="phone" class="block text-sm font-medium text-zinc-700 mb-2">Phone Number (Optional)</label>
+            <input type="tel" id="phone" name="phone" class="w-full rounded-full bg-zinc-50 border border-zinc-200 px-6 py-3 text-zinc-900 focus:outline-none focus:border-lime-400 transition" placeholder="+977 98XXXXXXXX">
+          </div>
+          
+          <div>
+            <label for="subject" class="block text-sm font-medium text-zinc-700 mb-2">Subject</label>
+            <select id="subject" name="subject" class="w-full rounded-full bg-zinc-50 border border-zinc-200 px-6 py-3 text-zinc-900 focus:outline-none focus:border-lime-400 transition" required>
+              <option value="">Select a topic</option>
+              <option value="general">General Inquiry</option>
+              <option value="support">Campaign Support</option>
+              <option value="donation">Donation Question</option>
+              <option value="verification">Verification Status</option>
+              <option value="partnership">Partnership Opportunity</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div>
+            <label for="message" class="block text-sm font-medium text-zinc-700 mb-2">Message</label>
+            <textarea id="message" name="message" rows="5" class="w-full rounded-[2rem] bg-zinc-50 border border-zinc-200 px-6 py-4 text-zinc-900 focus:outline-none focus:border-lime-400 transition resize-none" placeholder="How can we help you?" required></textarea>
+          </div>
+          
+          <div class="flex items-start gap-3">
+            <input type="checkbox" id="newsletter" name="newsletter" class="mt-1 w-5 h-5 rounded border-zinc-300 text-lime-500 focus:ring-lime-400">
+            <label for="newsletter" class="text-sm text-zinc-600">I would like to receive updates about Donate2Cause campaigns and news.</label>
+          </div>
+          
+          <button type="submit" class="w-full rounded-full bg-zinc-950 px-8 py-4 text-base font-bold text-white hover:bg-zinc-800 transition duration-300">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Office Location -->
+  <section class="relative py-28 px-6 lg:px-8 bg-zinc-950 text-white z-10">
+    <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
+    
+    <div class="mx-auto max-w-7xl w-full relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/50 backdrop-blur px-4 py-2 text-sm font-medium text-lime-200 mb-8">
+            <span class="h-2 w-2 rounded-full bg-lime-400"></span>
+            Our Office
+          </div>
+          <h2 class="text-4xl lg:text-5xl font-semibold tracking-tight leading-tight mb-8" style="font-family: 'Playfair Display', serif;">
+            Headquartered in Nepal
+          </h2>
+          
+          <div class="space-y-8">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center">
+                <iconify-icon icon="solar:map-point-linear" class="text-xl text-lime-400"></iconify-icon>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-white mb-1">Address</h4>
+                <p class="text-zinc-400">Donate2Cause Inc.<br>Kathmandu, Nepal</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center">
+                <iconify-icon icon="solar:mail-linear" class="text-xl text-lime-400"></iconify-icon>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-white mb-1">Email</h4>
+                <p class="text-zinc-400">info@donate2cause.com</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center">
+                <iconify-icon icon="solar:phone-linear" class="text-xl text-lime-400"></iconify-icon>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-white mb-1">Phone</h4>
+                <p class="text-zinc-400">+977 1-2345678</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center">
+                <iconify-icon icon="solar:clock-linear" class="text-xl text-lime-400"></iconify-icon>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-white mb-1">Business Hours</h4>
+                <p class="text-zinc-400">Sunday - Friday: 9AM - 6PM (NPT)<br>Saturday: Closed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative rounded-[2.5rem] overflow-hidden aspect-square bg-zinc-900 shadow-2xl">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center p-10">
+              <div class="w-20 h-20 rounded-2xl bg-lime-400/20 flex items-center justify-center mx-auto mb-6">
+                <iconify-icon icon="solar:map-point-linear" class="text-4xl text-lime-400"></iconify-icon>
+              </div>
+              <p class="text-zinc-400">Kathmandu, Nepal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media -->
+  <section class="relative py-20 px-6 lg:px-8 bg-[#f8f7f3] z-10">
+    <div class="mx-auto max-w-4xl w-full text-center">
+      <h2 class="text-2xl lg:text-3xl font-semibold tracking-tight text-zinc-900 mb-8" style="font-family: 'Playfair Display', serif;">
+        Connect With Us
+      </h2>
+      <div class="flex justify-center gap-6">
+        <a href="#" class="w-14 h-14 rounded-full bg-zinc-900 flex items-center justify-center text-white hover:bg-lime-400 hover:text-emerald-950 transition">
+          <iconify-icon icon="logos:facebook" class="text-xl"></iconify-icon>
+        </a>
+        <a href="#" class="w-14 h-14 rounded-full bg-zinc-900 flex items-center justify-center text-white hover:bg-lime-400 hover:text-emerald-950 transition">
+          <iconify-icon icon="logos:twitter" class="text-xl"></iconify-icon>
+        </a>
+        <a href="#" class="w-14 h-14 rounded-full bg-zinc-900 flex items-center justify-center text-white hover:bg-lime-400 hover:text-emerald-950 transition">
+          <iconify-icon icon="logos:instagram-icon" class="text-xl"></iconify-icon>
+        </a>
+        <a href="#" class="w-14 h-14 rounded-full bg-zinc-900 flex items-center justify-center text-white hover:bg-lime-400 hover:text-emerald-950 transition">
+          <iconify-icon icon="logos:linkedin-icon" class="text-xl"></iconify-icon>
+        </a>
+        <a href="#" class="w-14 h-14 rounded-full bg-zinc-900 flex items-center justify-center text-white hover:bg-lime-400 hover:text-emerald-950 transition">
+          <iconify-icon icon="logos:youtube" class="text-xl"></iconify-icon>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-950 text-zinc-400 py-16 px-6 lg:px-8 overflow-hidden relative z-10 border-t border-zinc-900">
+    <div class="mx-auto max-w-7xl w-full flex flex-col items-center text-center">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-950 text-lime-300 shadow-sm border border-emerald-900/50">
+          <iconify-icon icon="solar:hand-heart-linear" class="text-xl"></iconify-icon>
+        </div>
+        <span class="text-2xl font-bold tracking-tight text-white" style="font-family: Inter, sans-serif;">Donate2Cause</span>
+      </div>
+      
+      <div class="flex flex-wrap gap-8 border-t border-zinc-900 pt-8 w-full justify-center">
+        <a href="terms.html" class="hover:text-lime-300 transition text-sm">Terms of Service</a>
+        <a href="privacy.html" class="hover:text-lime-300 transition text-sm">Privacy Policy</a>
+        <a href="verification.html" class="hover:text-lime-300 transition text-sm">Verification Process</a>
+        <a href="contact.html" class="hover:text-lime-300 transition text-sm">Contact Us</a>
+      </div>
+      <p class="mt-8 text-sm text-zinc-600">© 2026 Donate2Cause. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
