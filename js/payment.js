@@ -188,7 +188,7 @@ const Payment = {
     const donor = this.getDonorInfo();
     const amount = this.currentAmount;
     const transactionUuid = this.generateTransactionId();
-    const baseUrl = esewa.baseUrl || window.location.origin;
+    const baseUrl = window.location.origin;
     
     const signature = this.generateESewaSignature(amount, transactionUuid, esewa.merchantId, esewa.secretKey);
 
@@ -249,7 +249,7 @@ const Payment = {
     const donor = this.getDonorInfo();
     const amount = this.currentAmount;
     const causeTitle = document.getElementById('cause-cause-title')?.textContent || 'Donation';
-    const baseUrl = khalti.baseUrl || window.location.origin;
+    const baseUrl = window.location.origin;
 
     if (window.KhaltiCheckout) {
       const config = {
@@ -301,7 +301,7 @@ const Payment = {
     const stripe = this.config.gateways.stripe;
     const donor = this.getDonorInfo();
     const amount = this.currentAmount;
-    const baseUrl = stripe.baseUrl || window.location.origin;
+    const baseUrl = window.location.origin;
 
     const params = new URLSearchParams({
       amount: amount,
@@ -327,7 +327,7 @@ const Payment = {
     const donor = this.getDonorInfo();
     const amount = this.currentAmount;
     const causeId = this.currentCause;
-    const baseUrl = paypal.baseUrl || window.location.origin;
+    const baseUrl = window.location.origin;
     const causeTitle = document.getElementById('cause-cause-title')?.textContent || 'Donation';
 
     this.closeModal();
