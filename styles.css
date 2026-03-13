@@ -1,0 +1,283 @@
+html, body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+:root {
+  --fluid-xs: clamp(0.75rem, 1.2vw, 0.875rem);
+  --fluid-sm: clamp(0.875rem, 1.5vw, 1rem);
+  --fluid-base: clamp(1rem, 2vw, 1.125rem);
+  --fluid-lg: clamp(1.125rem, 2.5vw, 1.25rem);
+  --fluid-xl: clamp(1.25rem, 3vw, 1.5rem);
+  --fluid-2xl: clamp(1.5rem, 4vw, 1.875rem);
+  --fluid-3xl: clamp(1.875rem, 5vw, 2.25rem);
+  --fluid-4xl: clamp(2.25rem, 6vw, 3rem);
+  --fluid-5xl: clamp(3rem, 8vw, 4rem);
+  --fluid-6xl: clamp(3.75rem, 10vw, 4.5rem);
+  --fluid-7xl: clamp(4.5rem, 12vw, 6rem);
+  --fluid-8xl: clamp(6rem, 15vw, 7.5rem);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(1.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+.fallback-mode .reveal, .no-js .reveal {
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fallback-mode .reveal.active, .no-js .reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.no-js .reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.blob {
+  will-change: transform;
+}
+.blob-1, .blob-3, .blob-5 {
+  border-radius: 40% 60% 70% 30% / 40% 60% 30% 70%;
+}
+.blob-2, .blob-4, .blob-6 {
+  border-radius: 50% 50% 60% 40% / 40% 60% 50% 50%;
+}
+
+@keyframes breatheMorph1 {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.15) rotate(180deg); }
+  100% { transform: scale(1) rotate(360deg); }
+}
+
+@keyframes breatheMorph2 {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(-180deg); }
+  100% { transform: scale(1) rotate(-360deg); }
+}
+
+.blob-1 { animation: breatheMorph1 24s ease-in-out infinite; opacity: 0.6; }
+.blob-2 { animation: breatheMorph2 28s ease-in-out infinite alternate; opacity: 0.5; }
+.blob-3 { animation: breatheMorph1 32s ease-in-out infinite reverse; opacity: 0.6; }
+.blob-4 { animation: breatheMorph2 22s ease-in-out infinite; opacity: 0.5; }
+.blob-5 { animation: breatheMorph1 26s ease-in-out infinite alternate; opacity: 0.6; }
+.blob-6 { animation: breatheMorph2 30s ease-in-out infinite reverse; opacity: 0.5; }
+
+@media (prefers-reduced-motion) {
+  .blob { animation: none; transform: none; }
+}
+
+.parallax-layer {
+  will-change: transform;
+}
+
+.scroll-parallax-wrapper {
+  will-change: transform;
+}
+
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  animation: noiseAnim 0.2s infinite steps(2);
+}
+
+@keyframes noiseAnim {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-10px, -10px); }
+}
+
+.hero-title-wrapper {
+  overflow: hidden;
+  display: block;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transform: translateY(100%);
+}
+
+.hero-title-line {
+  display: block;
+  transform: translateY(100%);
+}
+
+.gsap-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.gsap-image-scale {
+  overflow: hidden;
+}
+
+.gsap-img-scale {
+  transform: scale(1.3);
+}
+
+/* Enhanced Organic 3D Blobs */
+.blob-container {
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.blob-3d {
+  width: 100%;
+  height: 100%;
+  animation: blobRotate3D 15s infinite linear;
+  box-shadow: inset -20px -20px 40px rgba(0,0,0,0.1), inset 20px 20px 40px rgba(255,255,255,0.5), 0 20px 40px rgba(0,0,0,0.1);
+  background: linear-gradient(135deg, rgba(163,230,53,0.45), rgba(16,185,129,0.25));
+  backdrop-filter: blur(8px);
+}
+
+.blob-alt {
+  animation-duration: 20s;
+  animation-direction: reverse;
+  background: linear-gradient(225deg, rgba(20,184,166,0.25), rgba(163,230,53,0.35));
+}
+
+.blob-alt2 {
+  animation-duration: 18s;
+  background: linear-gradient(45deg, rgba(16,185,129,0.35), rgba(6,78,59,0.15));
+}
+
+.dark-section .blob-3d {
+  background: linear-gradient(135deg, rgba(163,230,53,0.18), rgba(16,185,129,0.08));
+  box-shadow: inset -20px -20px 40px rgba(0,0,0,0.3), inset 20px 20px 40px rgba(255,255,255,0.05);
+}
+.dark-section .blob-alt {
+  background: linear-gradient(225deg, rgba(20,184,166,0.12), rgba(163,230,53,0.18));
+}
+.dark-section .blob-alt2 {
+  background: linear-gradient(45deg, rgba(16,185,129,0.18), rgba(6,78,59,0.08));
+}
+
+@keyframes blobRotate3D {
+  0% { transform: rotate(0deg) rotate3d(1, 1, 1, 0deg); }
+  50% { transform: rotate(180deg) rotate3d(1, 1, 1, 180deg); }
+  100% { transform: rotate(360deg) rotate3d(1, 1, 1, 360deg); }
+}
+
+.scroll-title-wrapper {
+  overflow: hidden;
+  display: block;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transform: translateY(100%);
+}
+
+/* Section depth enhancement */
+section {
+  position: relative;
+}
+
+/* Floating elements animation */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes floatX {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+
+.float-y {
+  animation: floatY 6s ease-in-out infinite;
+}
+
+.float-x {
+  animation: floatX 8s ease-in-out infinite;
+}
+
+/* Enhanced depth for sections */
+[data-section-depth="0"] { z-index: 10; }
+[data-section-depth="1"] { z-index: 9; }
+[data-section-depth="2"] { z-index: 8; }
+
+/* Glow effects */
+.glow-lime {
+  box-shadow: 0 0 60px rgba(163, 230, 53, 0.3);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 60px rgba(16, 185, 129, 0.3);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fafaf9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a8a29e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #78716c;
+}
+
+/* Dark section scrollbar */
+.dark-section::-webkit-scrollbar-track {
+  background: #18181b;
+}
+
+.dark-section::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+}
+
+.dark-section::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #a3e635, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Shimmer effect for CTAs */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}

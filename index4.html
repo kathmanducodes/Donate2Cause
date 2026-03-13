@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate2Cause | Nepal's Trusted Crowdfunding Platform</title>
+  <meta name="description" content="Empowering Nepal through verified crowdfunding for medical emergencies, education, and community development. Secure donations via eSewa, Khalti, and international gateways.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-stone-50 text-zinc-900 antialiased relative">
+
+  <canvas id="noise-canvas" class="noise-overlay"></canvas>
+
+
+
+  <!-- Hero Section (Fits Screen) -->
+  <div class="relative min-h-[100svh] flex flex-col overflow-hidden z-10">
+    <header class="relative z-20 bg-white/70 backdrop-blur-md">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+        <div class="flex items-center gap-2">
+           <div class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-950 text-lime-300">
+            <iconify-icon icon="solar:hand-heart-bold" class="text-xl"></iconify-icon>
+          </div>
+          <span class="text-2xl font-bold tracking-tighter text-zinc-950" style="font-family: Inter, sans-serif;">Donate2Cause</span>
+        </div>
+        
+        <nav class="hidden lg:flex items-center gap-10">
+          <a href="#" class="text-sm font-semibold text-zinc-950 border-b-2 border-zinc-950 pb-1">Home</a>
+          <a href="#about" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">About</a>
+          <a href="#medical" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Causes</a>
+          <a href="#how-it-works" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">How It Works</a>
+          <a href="#start" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Contact</a>
+        </nav>
+
+        <div class="flex items-center">
+          <button class="flex h-10 w-12 flex-col items-center justify-center gap-1.5 rounded-full hover:bg-zinc-100 transition">
+            <div class="h-[2px] w-6 bg-zinc-900"></div>
+            <div class="h-[2px] w-6 bg-zinc-900"></div>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="relative flex-1 flex flex-col">
+      <div class="absolute inset-0 -z-10">
+        <img src="assets/hero_himalayas.png" alt="Himalayan mountain range sunrise" class="w-full h-full object-cover opacity-20" fetchpriority="high" decoding="async">
+      </div>
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(190,242,100,0.18),transparent_32%),radial-gradient(circle_at_left,rgba(16,185,129,0.08),transparent_28%),linear-gradient(to_bottom,rgba(250,250,249,0.8),#f8f7f3)]"></div>
+      
+      <!-- 3D Parallax Objects: Hero -->
+      <div class="scroll-parallax-wrapper absolute top-[15%] left-[10%] z-0" data-scroll-speed="-0.14">
+        <div class="parallax-layer" data-speed="0.08">
+          <div class="blob-container"><div class="blob-3d" style="border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;"></div></div>
+        </div>
+      </div>
+      <div class="scroll-parallax-wrapper absolute top-[60%] right-[10%] z-0 opacity-80" data-scroll-speed="0.18">
+        <div class="parallax-layer" data-speed="-0.05">
+          <div class="blob-container" style="transform: scale(0.6)"><div class="blob-3d blob-alt" style="border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;"></div></div>
+        </div>
+      </div>
+      <div class="scroll-parallax-wrapper absolute bottom-[10%] left-[25%] z-0 opacity-60" data-scroll-speed="0.1">
+        <div class="parallax-layer" data-speed="0.04">
+          <div class="blob-container" style="transform: scale(0.8)"><div class="blob-3d blob-alt2" style="border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;"></div></div>
+        </div>
+      </div>
+
+      <section class="mx-auto w-full max-w-7xl px-6 lg:px-8 relative z-10 flex h-full flex-col py-10 lg:py-12">
+        <div class="parallax-layer mx-auto max-w-4xl text-center animate-[fadeInUp_0.9s_ease-out_forwards]" style="opacity:0;transform:translateY(1.5rem);" data-speed="0.015">
+          <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/80 px-4 py-2 text-sm font-medium text-zinc-600 shadow-sm backdrop-blur">
+            <span class="h-2 w-2 rounded-full bg-lime-400"></span>
+            Start a Fundraiser
+          </div>
+
+          <h1 class="mx-auto max-w-5xl text-5xl font-semibold leading-[1.1] tracking-tight text-zinc-950 sm:text-6xl lg:text-[4.5rem]" style="font-family: 'Playfair Display', serif;">
+            <span class="hero-title-wrapper">Great futures are built</span>
+            <span class="hero-title-wrapper">with a small charity</span>
+          </h1>
+
+          <p class="mx-auto mt-4 max-w-2xl text-base font-normal leading-relaxed text-zinc-500 sm:text-lg" style="font-family: Inter, sans-serif;">
+            The world's largest social fundraising platform, <br>optimized for your charity in a more easy way.
+          </p>
+
+          <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <button class="group inline-flex items-center gap-3 rounded-full bg-zinc-950 px-6 py-3.5 text-base font-medium text-white shadow-2xl transition duration-300 hover:-translate-y-0.5 hover:bg-zinc-800">
+              Donate now
+              <iconify-icon icon="solar:arrow-right-linear" class="text-base transition group-hover:translate-x-1"></iconify-icon>
+            </button>
+            <button class="group inline-flex items-center gap-3 rounded-full bg-zinc-100 px-6 py-3.5 text-base font-medium text-zinc-900 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-zinc-200">
+              <span class="flex h-7 w-7 items-center justify-center rounded-full bg-white text-zinc-900 shadow-sm group-hover:scale-110 transition">
+                <iconify-icon icon="solar:play-bold" class="text-sm"></iconify-icon>
+              </span>
+              Watch Video
+            </button>
+          </div>
+        </div>
+        <div class="relative mt-auto pt-8 grid grid-cols-1 gap-4 lg:grid-cols-12">
+          <!-- Card 1 & 2 Wrapper (Track 1) -->
+          <div class="space-y-4 lg:col-span-2">
+            <!-- Card 1: Stat Card (65% in reference) -->
+            <div class="parallax-layer" data-speed="0.03">
+              <a href="#medical" class="group block rounded-[2.5rem] bg-[#062e24] p-6 text-white shadow-2xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[-1deg] animate-[fadeInUp_1s_ease-out_0.1s_forwards]" style="opacity:0;transform:translateY(1.5rem);">
+                <div class="mb-4">
+                  <span class="text-xs font-semibold uppercase tracking-widest text-lime-400 opacity-80">Success Rate</span>
+                </div>
+                <div class="mb-6 flex flex-col">
+                  <span class="text-6xl font-bold tracking-tighter text-lime-300 transition-transform duration-500 group-hover:scale-110 origin-left" style="font-family: Inter, sans-serif;">82%</span>
+                  <p class="mt-4 text-xs font-medium leading-relaxed text-emerald-100/60 uppercase tracking-wider">
+                    of medical campaigns reach their goal within 30 days.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-bold uppercase tracking-widest opacity-80 current-status">Direct Impact</span>
+                  <span class="flex h-10 w-10 items-center justify-center rounded-full bg-lime-300 text-emerald-950 transition group-hover:rotate-45">
+                    <iconify-icon icon="solar:arrow-right-up-linear" class="text-xl"></iconify-icon>
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 2: Iconic Text Card (Let them be heard in reference) -->
+            <div class="parallax-layer" data-speed="-0.02">
+              <a href="#how-it-works" class="group block rounded-[2.5rem] bg-zinc-950 p-6 text-white shadow-2xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[1deg] animate-[fadeInUp_1s_ease-out_0.2s_forwards]" style="opacity:0;transform:translateY(1.5rem);">
+                <div class="flex items-center gap-4 mb-4">
+                   <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-900 border border-zinc-800 text-lime-300">
+                    <iconify-icon icon="solar:smile-circle-linear" class="text-2xl"></iconify-icon>
+                  </div>
+                  <h3 class="text-2xl font-semibold leading-[1.1] tracking-tight" style="font-family: 'Playfair Display', serif;">The Spirit of <br>Sewa</h3>
+                </div>
+                <p class="text-sm text-zinc-500 transition duration-300 group-hover:text-zinc-300">Transforming traditional giving into digital transparency.</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Large Image Card (Health Girl in reference) (Track 2) -->
+          <div class="lg:col-span-3 lg:pt-12">
+            <div class="parallax-layer h-full" data-speed="0.04">
+              <a href="#medical" class="group block relative h-full overflow-hidden rounded-[2.5rem] bg-zinc-900 shadow-2xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[-0.5deg] animate-[fadeInUp_1s_ease-out_0.25s_forwards] gsap-image-scale" style="opacity:0;transform:translateY(1.5rem);">
+                <img src="assets/medical_emergency.png" alt="Medical emergency relief" class="h-[20rem] lg:h-full w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 gsap-img-scale">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                <div class="absolute left-6 top-6">
+                  <span class="rounded-full bg-black/30 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-white backdrop-blur-md">Health</span>
+                </div>
+                <div class="absolute bottom-8 left-8 right-8">
+                  <h3 class="max-w-xs text-3xl font-semibold leading-tight tracking-tight text-white mb-2" style="font-family: 'Playfair Display', serif;">
+                    Medical aid for 2,587 families in rural Nepal.
+                  </h3>
+                  <div class="w-12 h-1 bg-lime-400 mt-4 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4: Community Support Card (Join 5000+ in reference) (Track 3) -->
+          <div class="lg:col-span-2 lg:pt-24 mt-auto">
+            <div class="parallax-layer" data-speed="-0.03">
+              <a href="#community" class="group block relative overflow-hidden rounded-[2.5rem] bg-zinc-100 p-8 shadow-xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[1deg] animate-[fadeInUp_1s_ease-out_0.35s_forwards] text-center" style="opacity:0;transform:translateY(1.5rem);">
+                <div class="relative z-10 h-[12rem] flex flex-col justify-between">
+                  <div>
+                    <h3 class="text-3xl font-bold leading-tight tracking-tight text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">
+                      Join 5,000+ People Give
+                    </h3>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-bold uppercase tracking-widest text-zinc-500">Join Community</span>
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-900 text-white transition group-hover:rotate-45">
+                      <iconify-icon icon="solar:arrow-right-up-linear" class="text-lg"></iconify-icon>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5: Large Image Card (Education Image in reference) (Track 4) -->
+          <div class="lg:col-span-3 lg:pt-12">
+            <div class="parallax-layer h-full" data-speed="0.035">
+              <a href="#education" class="group block relative h-full overflow-hidden rounded-[2.5rem] bg-zinc-800 shadow-2xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[0.5deg] animate-[fadeInUp_1s_ease-out_0.45s_forwards] gsap-image-scale" style="opacity:0;transform:translateY(1.5rem);">
+                <img src="assets/education_rural.png" alt="Education development" class="h-[20rem] lg:h-full w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 gsap-img-scale">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                <div class="absolute left-6 top-6">
+                  <span class="rounded-full bg-black/30 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-white backdrop-blur-md">Education</span>
+                </div>
+                <div class="absolute bottom-8 left-8 right-8">
+                  <h3 class="max-w-xs text-3xl font-semibold leading-tight tracking-tight text-white mb-2" style="font-family: 'Playfair Display', serif;">
+                    Sponsor food, education for youth in Humla.
+                  </h3>
+                   <div class="w-12 h-1 bg-lime-400 mt-4 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 6 & 7 Wrapper (Track 5) -->
+          <div class="space-y-4 lg:col-span-2">
+            <!-- Card 6: Image Card (Hands in reference) -->
+            <div class="parallax-layer" data-speed="-0.025">
+              <a href="#about" class="group block relative overflow-hidden rounded-[2.5rem] bg-lime-400 p-0 shadow-2xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[1deg] animate-[fadeInUp_1s_ease-out_0.55s_forwards]" style="opacity:0;transform:translateY(1.5rem);">
+                <div class="relative h-[16rem]">
+                  <img src="assets/community_development.png" alt="Explore more" class="absolute inset-0 h-full w-full object-cover mix-blend-multiply opacity-40 grayscale group-hover:grayscale-0 transition duration-700">
+                  <div class="absolute inset-0 bg-gradient-to-t from-lime-600/60 to-transparent"></div>
+                  <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+                    <span class="text-xs font-bold uppercase tracking-widest text-[#062e24]">Explore More</span>
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#062e24] text-lime-300 transition group-hover:rotate-45">
+                      <iconify-icon icon="solar:arrow-right-up-linear" class="text-xl"></iconify-icon>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 7: Final CTA Card (Your home in reference) -->
+            <div class="parallax-layer" data-speed="0.02">
+              <a href="#trust" class="group block rounded-[2.5rem] bg-[#0d120e] p-7 text-lime-100 shadow-2xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[-1deg] animate-[fadeInUp_1s_ease-out_0.65s_forwards]" style="opacity:0;transform:translateY(1.5rem);">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 text-lime-300 border border-white/10 group-hover:border-lime-300/30 transition duration-500">
+                  <iconify-icon icon="solar:heart-angle-linear" class="text-2xl"></iconify-icon>
+                </div>
+                <h3 class="text-2xl font-semibold leading-tight tracking-tight mb-2" style="font-family: 'Playfair Display', serif;">Your home <br>for help.</h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Sections with Scroll Reveal -->
+  
+  <section id="medical" class="relative min-h-[90svh] flex items-center bg-emerald-950/90 text-white py-24 px-6 lg:px-8 z-10 overflow-hidden dark-section">
+    <div class="absolute top-0 right-0 -mr-48 -mt-48 w-96 h-96 rounded-full bg-emerald-900/40 blur-3xl pointer-events-none"></div>
+    
+    <!-- 3D Parallax Objects: Disaster Relief -->
+    <div class="scroll-parallax-wrapper absolute top-[20%] right-[10%] z-0 opacity-50" data-scroll-speed="0.16">
+      <div class="parallax-layer" data-speed="0.06">
+        <div class="blob-container" style="transform: scale(1.2)"><div class="blob-3d blob-alt" style="border-radius: 50% 50% 60% 40% / 60% 40% 50% 60%;"></div></div>
+      </div>
+    </div>
+    <div class="scroll-parallax-wrapper absolute bottom-[15%] left-[5%] z-0 opacity-40" data-scroll-speed="-0.12">
+      <div class="parallax-layer" data-speed="-0.04">
+        <div class="blob-container" style="transform: scale(0.7)"><div class="blob-3d" style="border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;"></div></div>
+      </div>
+    </div>
+    <div class="mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+      <div>
+        <div class="reveal inline-flex items-center gap-2 rounded-full border border-emerald-800/50 bg-emerald-900/30 px-4 py-2 text-sm font-medium text-emerald-200 backdrop-blur mb-8">
+          <span class="h-2 w-2 rounded-full bg-lime-400"></span>
+          Emergency Response
+        </div>
+        <h2 class="text-5xl lg:text-7xl font-semibold tracking-tight text-lime-200 leading-tight" style="font-family: 'Playfair Display', serif;">
+          <span class="scroll-title-wrapper">Medical</span>
+          <span class="scroll-title-wrapper">Emergencies.</span>
+        </h2>
+        <p class="reveal mt-6 text-lg text-emerald-50/70 max-w-lg leading-relaxed" style="font-family: Inter, sans-serif;">
+          Helping families cover critical surgeries and life-saving treatments when every second counts. Your immediate response provides hope and healing to those affected.
+        </p>
+        <div class="reveal mt-10 flex items-center gap-6">
+          <button class="rounded-full bg-lime-300 px-8 py-4 text-base font-medium text-emerald-950 transition hover:bg-lime-400 shadow-lg shadow-lime-300/20">
+            View Medical Appeals
+          </button>
+        </div>
+      </div>
+      <div class="reveal gsap-image-scale relative rounded-3xl overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] bg-emerald-900/50 aspect-square lg:aspect-[4/3]" style="transition-delay: 200ms;">
+        <img src="assets/medical_emergency.png" alt="Medical emergency relief" class="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 gsap-img-scale">
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="relative min-h-[70svh] flex flex-col justify-center bg-zinc-950/95 text-white py-24 px-6 lg:px-8 border-t border-zinc-800 z-10 overflow-hidden dark-section">
+    <!-- 3D Parallax Objects: Let Them Be Heard -->
+    <div class="scroll-parallax-wrapper absolute top-[30%] left-[15%] z-0 opacity-60" data-scroll-speed="-0.14">
+      <div class="parallax-layer" data-speed="0.05">
+        <div class="blob-container" style="transform: scale(0.9)"><div class="blob-3d blob-alt2" style="border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;"></div></div>
+      </div>
+    </div>
+    <div class="scroll-parallax-wrapper absolute bottom-[20%] right-[15%] z-0 opacity-50" data-scroll-speed="0.2">
+      <div class="parallax-layer" data-speed="-0.03">
+        <div class="blob-container" style="transform: scale(1.1)"><div class="blob-3d" style="border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;"></div></div>
+      </div>
+    </div>
+    
+    <div class="mx-auto max-w-6xl w-full z-10 relative text-center">
+      <iconify-icon icon="solar:history-linear" class="reveal text-5xl text-lime-300 mb-6"></iconify-icon>
+      <h2 class="text-4xl lg:text-6xl font-semibold tracking-tight leading-tight" style="font-family: 'Playfair Display', serif;">
+        <span class="scroll-title-wrapper">How Donate2Cause</span>
+        <span class="scroll-title-wrapper">Works</span>
+      </h2>
+      
+      <div class="reveal mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div class="rounded-[2rem] bg-zinc-900/60 border border-zinc-800/80 p-8 hover:bg-zinc-800/80 transition duration-300">
+           <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-800 text-lime-300 text-xl font-bold">1</div>
+           <h3 class="text-2xl font-semibold text-white mb-3" style="font-family: 'Playfair Display', serif;">Create</h3>
+           <p class="text-zinc-400 leading-relaxed">Launch your campaign in minutes. Tell your story with photos and verification documents.</p>
+        </div>
+        <div class="rounded-[2rem] bg-zinc-900/60 border border-zinc-800/80 p-8 hover:bg-zinc-800/80 transition duration-300">
+           <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-800 text-lime-300 text-xl font-bold">2</div>
+           <h3 class="text-2xl font-semibold text-white mb-3" style="font-family: 'Playfair Display', serif;">Share</h3>
+           <p class="text-zinc-400 leading-relaxed">Use built-in tools to reach donors across Facebook, Viber, and WhatsApp instantly.</p>
+        </div>
+        <div class="rounded-[2rem] bg-zinc-900/60 border border-zinc-800/80 p-8 hover:bg-zinc-800/80 transition duration-300">
+           <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-800 text-lime-300 text-xl font-bold">3</div>
+           <h3 class="text-2xl font-semibold text-white mb-3" style="font-family: 'Playfair Display', serif;">Impact</h3>
+           <p class="text-zinc-400 leading-relaxed">Funds are transferred securely to verified beneficiaries with real-time transparency reports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="relative min-h-[90svh] flex items-center bg-[#f8f7f3] py-24 px-6 lg:px-8 z-10 overflow-hidden">
+    <!-- 3D Parallax Objects: Education -->
+    <div class="scroll-parallax-wrapper absolute top-[25%] right-[20%] z-0 opacity-40" data-scroll-speed="0.14">
+      <div class="parallax-layer" data-speed="-0.06">
+        <div class="blob-container" style="transform: scale(0.8)"><div class="blob-3d" style="border-radius: 50% 50% 30% 70% / 60% 40% 60% 40%;"></div></div>
+      </div>
+    </div>
+    <div class="scroll-parallax-wrapper absolute bottom-[20%] left-[10%] z-0 opacity-30" data-scroll-speed="-0.1">
+      <div class="parallax-layer" data-speed="0.05">
+        <div class="blob-container"><div class="blob-3d blob-alt" style="border-radius: 40% 60% 50% 50% / 40% 50% 60% 50%;"></div></div>
+      </div>
+    </div>
+    
+    <div class="mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center z-10 relative">
+      <div class="reveal gsap-image-scale order-2 lg:order-1 relative rounded-[2rem] overflow-hidden shadow-2xl aspect-[4/5] lg:aspect-square group">
+        <img src="assets/education_rural.png" alt="Rural Nepal classroom" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 gsap-img-scale" decoding="async" loading="lazy">
+      </div>
+      <div class="order-1 lg:order-2" style="transition-delay: 200ms;">
+        <h2 class="text-5xl lg:text-7xl font-semibold tracking-tight text-zinc-950 leading-tight mb-4" style="font-family: 'Playfair Display', serif;">
+          <span class="scroll-title-wrapper">Education</span>
+          <span class="scroll-title-wrapper">for All.</span>
+        </h2>
+        <p class="reveal mt-6 text-lg text-zinc-600 max-w-lg leading-relaxed" style="font-family: Inter, sans-serif;">
+          Supporting scholarships, school infrastructure, and digital literacy for Nepal’s youth. A well-equipped classroom gives every child the power to build the future of their communities.
+        </p>
+        <div class="reveal mt-10">
+          <button class="inline-flex items-center gap-3 rounded-full bg-zinc-950 px-8 py-4 text-base font-medium text-white shadow-lg shadow-zinc-950/20 transition duration-300 hover:-translate-y-0.5 hover:bg-zinc-800">
+            Support Students
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="community-dev" class="relative min-h-[90svh] flex items-center bg-zinc-950 text-white py-24 px-6 lg:px-8 z-10 overflow-hidden dark-section">
+    <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
+    <!-- 3D Parallax Objects: Community -->
+    <div class="scroll-parallax-wrapper absolute top-[20%] left-[10%] z-0 opacity-40" data-scroll-speed="0.16">
+      <div class="parallax-layer" data-speed="0.055">
+        <div class="blob-container" style="transform: scale(1.1)"><div class="blob-3d" style="border-radius: 40% 60% 30% 70% / 40% 50% 60% 40%;"></div></div>
+      </div>
+    </div>
+    
+    <div class="mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center z-10 relative">
+      <div>
+        <div class="reveal inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/50 backdrop-blur px-4 py-2 text-sm font-medium text-lime-200 mb-8 shadow-sm">
+          <span class="h-2 w-2 rounded-full bg-lime-400"></span>
+          Direct Impact
+        </div>
+        <h2 class="text-5xl lg:text-7xl font-semibold tracking-tight text-white leading-tight mb-4" style="font-family: 'Playfair Display', serif;">
+          <span class="scroll-title-wrapper">Community</span>
+          <span class="scroll-title-wrapper">Development.</span>
+        </h2>
+        <div class="reveal flex items-baseline gap-2 mb-6">
+          <span class="text-3xl font-bold text-lime-300">450+</span>
+          <span class="text-zinc-400">Local Initiatives funded across 7 provinces.</span>
+        </div>
+        <p class="reveal mt-6 text-lg text-zinc-400 max-w-lg leading-relaxed" style="font-family: Inter, sans-serif;">
+          Investing in clean water projects, disaster relief logistics, and sustainable farming in rural districts. We empower local leaders to solve community-specific challenges.
+        </p>
+        <div class="reveal mt-10">
+          <button class="inline-flex items-center gap-3 rounded-full bg-lime-300 px-8 py-4 text-base font-medium text-emerald-950 transition hover:bg-lime-400 shadow-xl shadow-lime-300/10">
+            Local Impact Report
+            <iconify-icon icon="solar:document-text-linear" class="text-xl"></iconify-icon>
+          </button>
+        </div>
+      </div>
+      <div class="reveal gsap-image-scale relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-zinc-900 aspect-square group">
+        <img src="assets/community_development.png" alt="Community project in Nepal" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 gsap-img-scale opacity-90">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trust" class="relative bg-[#f0f1ed] border-y border-zinc-200 py-32 px-6 lg:px-8 z-10 overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] rounded-full bg-white/40 blur-[120px] pointer-events-none"></div>
+    
+    <div class="mx-auto max-w-4xl text-center z-10 relative">
+      <iconify-icon icon="solar:shield-check-linear" class="reveal text-5xl text-emerald-600 mb-8"></iconify-icon>
+      <h2 class="text-4xl lg:text-5xl font-semibold tracking-tight text-zinc-900 leading-tight" style="font-family: 'Playfair Display', serif;">
+        <span class="scroll-title-wrapper">100% Verification</span>
+        <span class="scroll-title-wrapper">&amp; Secure Payments.</span>
+      </h2>
+      <p class="reveal mt-6 text-lg text-zinc-600 max-w-2xl mx-auto leading-relaxed" style="font-family: Inter, sans-serif;">
+        Every campaign is manually vetted to ensure your contributions reach the intended recipient. Backed by seamless integration with <b>eSewa, Khalti</b>, and international gateways for localized, secure payments anywhere in the world.
+      </p>
+      <div class="reveal mt-12 flex flex-wrap justify-center items-center gap-8">
+        <div class="flex items-center gap-3 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-500">
+          <div class="h-10 w-10 rounded-xl bg-white shadow-sm flex items-center justify-center p-2">
+            <iconify-icon icon="fa-solid:shield-alt" class="text-emerald-600 text-xl"></iconify-icon>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-widest text-zinc-500">Anti-Fraud Engine</span>
+        </div>
+        <div class="flex items-center gap-3 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-500">
+          <div class="h-10 w-10 rounded-xl bg-white shadow-sm flex items-center justify-center p-2">
+            <iconify-icon icon="logos:pci-dss" class="text-xl"></iconify-icon>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-widest text-zinc-500">PCI Compliant</span>
+        </div>
+        <div class="flex items-center gap-3 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-500">
+           <img src="https://esewa.com.np/common/images/esewa_logo.png" alt="eSewa" class="h-6 object-contain">
+        </div>
+        <div class="flex items-center gap-3 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-500">
+           <img src="https://khalti.com/static/khalti-logo.png" alt="Khalti" class="h-6 object-contain">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="relative min-h-[90svh] flex items-center bg-[#f8f7f3] py-24 px-6 lg:px-8 z-10 overflow-hidden">
+    <!-- 3D Parallax Objects: About -->
+    <div class="scroll-parallax-wrapper absolute top-[15%] left-[20%] z-0 opacity-30" data-scroll-speed="-0.12">
+      <div class="parallax-layer" data-speed="-0.04">
+        <div class="blob-container" style="transform: scale(0.9)"><div class="blob-3d blob-alt2" style="border-radius: 60% 40% 40% 60% / 50% 50% 50% 50%;"></div></div>
+      </div>
+    </div>
+
+    <div class="mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center z-10 relative">
+      <div>
+        <div class="reveal inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/50 backdrop-blur px-4 py-2 text-sm font-medium text-zinc-600 mb-8 shadow-sm">
+          Market Opportunity
+        </div>
+        <h2 class="text-5xl lg:text-7xl font-semibold tracking-tight text-zinc-950 leading-tight" style="font-family: 'Playfair Display', serif;">
+          <span class="scroll-title-wrapper">Bridging the</span>
+          <span class="scroll-title-wrapper">Gap in Giving.</span>
+        </h2>
+        <p class="reveal mt-6 text-lg text-zinc-600 max-w-lg leading-relaxed" style="font-family: Inter, sans-serif;">
+          While digital adoption in Nepal is growing rapidly, many families still rely on fragmented personal networks during crises. Donate2Cause centralizes the spirit of "Sewa" (service) through a verified, transparent, and secure digital donation system designed for both local and global donors.
+        </p>
+        <div class="reveal mt-10 space-y-6">
+          <div class="border-l-2 border-lime-400 pl-6">
+            <h4 class="text-xl font-semibold tracking-tight text-zinc-900" style="font-family: 'Playfair Display', serif;">Growing Digital Adoption</h4>
+            <p class="mt-2 text-base text-zinc-600">Tapping into the 30% of the population already using digital payments natively.</p>
+          </div>
+          <div class="border-l-2 border-zinc-200 pl-6 hover:border-lime-400 transition-colors duration-500">
+            <h4 class="text-xl font-semibold tracking-tight text-zinc-900" style="font-family: 'Playfair Display', serif;">Diaspora Connection</h4>
+            <p class="mt-2 text-base text-zinc-600">A dedicated, trusted bridge for the global Nepali community to contribute to the motherland.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reveal gsap-image-scale relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-zinc-200 aspect-[4/5] lg:aspect-square group" style="transition-delay: 200ms;">
+         <img src="assets/diaspora_connection.png" alt="Diaspora Connection Split Screen" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 gsap-img-scale" decoding="async" loading="lazy">
+         <!-- Accent border for premium look -->
+         <div class="absolute inset-5 rounded-3xl border border-white/20 pointer-events-none z-10"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="start" class="relative py-40 px-6 lg:px-8 z-10 overflow-hidden flex items-center justify-center">
+    <div class="absolute inset-0 -z-10 bg-zinc-950">
+       <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(163,230,53,0.12),transparent_70%)] opacity-60"></div>
+       <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-5xl mx-auto text-center">
+      <div class="parallax-layer inline-flex items-center justify-center mb-10" data-speed="0.03">
+         <div class="relative h-24 w-24">
+            <div class="absolute inset-0 rounded-full bg-lime-400 blur-2xl opacity-20 animate-pulse"></div>
+            <div class="relative flex h-full w-full items-center justify-center rounded-full bg-zinc-900 border border-zinc-800 text-lime-300 shadow-2xl">
+               <iconify-icon icon="solar:stars-minimalistic-bold" class="text-4xl"></iconify-icon>
+            </div>
+         </div>
+      </div>
+
+      <h2 class="text-5xl lg:text-[6rem] font-bold tracking-tighter text-white leading-[0.9] mb-8" style="font-family: 'Playfair Display', serif;">
+        <span class="scroll-title-wrapper">Start your ripple</span>
+        <span class="scroll-title-wrapper">of change today.</span>
+      </h2>
+      
+      <p class="reveal mt-8 text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed mb-12" style="font-family: Inter, sans-serif;">
+        Join thousands of Nepalis working together to preserve our future. Whether it's a medical emergency or a local project, every cause matters.
+      </p>
+
+      <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-6">
+        <button class="group inline-flex items-center gap-4 rounded-full bg-lime-300 px-10 py-5 text-lg font-bold text-emerald-950 transition duration-500 hover:-translate-y-1 hover:bg-white hover:shadow-[0_20px_50px_-10px_rgba(163,230,53,0.4)]">
+          Start a Fundraiser
+          <iconify-icon icon="solar:arrow-right-linear" class="text-xl transition group-hover:translate-x-1"></iconify-icon>
+        </button>
+        <button class="inline-flex items-center gap-4 rounded-full bg-zinc-900 border border-zinc-800 px-10 py-5 text-lg font-bold text-white transition duration-500 hover:bg-zinc-800">
+          Explore All Causes
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-zinc-950 text-zinc-400 py-16 px-6 lg:px-8 overflow-hidden relative z-10 dark-section">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-emerald-900/20 blur-[120px] rounded-full pointer-events-none"></div>
+    
+    <div class="mx-auto max-w-7xl w-full flex flex-col items-center text-center relative z-10">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-950 text-lime-300 shadow-sm border border-emerald-900/50">
+          <iconify-icon icon="solar:hand-heart-linear" class="text-xl"></iconify-icon>
+        </div>
+        <span class="text-2xl font-bold tracking-tight text-white" style="font-family: Inter, sans-serif;">Donate2Cause</span>
+      </div>
+      <p class="text-xl mb-12 text-zinc-300 font-medium max-w-md" style="font-family: 'Playfair Display', serif;">
+        Building a stronger, more resilient Nepal together.
+      </p>
+      
+      <div class="w-full max-w-md bg-zinc-900/50 p-8 rounded-[2rem] border border-zinc-800/80 mb-12 shadow-2xl">
+        <p class="text-white font-medium mb-4 text-lg" style="font-family: 'Playfair Display', serif;">Join our Impact List for monthly updates on lives changed.</p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input type="email" placeholder="Email address" class="flex-1 rounded-full bg-zinc-950 border border-zinc-800 px-6 py-3 text-sm text-white focus:outline-none focus:border-lime-400 transition" />
+          <button class="bg-lime-400 text-emerald-950 px-6 py-3 rounded-full text-sm font-medium hover:bg-lime-300 transition">Subscribe</button>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-8 border-t border-zinc-900 pt-8 w-full justify-center">
+        <a href="#" class="hover:text-lime-300 transition text-sm">Terms of Service</a>
+        <a href="#" class="hover:text-lime-300 transition text-sm">Privacy Policy</a>
+        <a href="#" class="hover:text-lime-300 transition text-sm">Verification Process</a>
+        <a href="#" class="hover:text-lime-300 transition text-sm">Contact Us</a>
+      </div>
+      <p class="mt-8 text-sm text-zinc-600">© 2026 Donate2Cause. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+
+</body></html>

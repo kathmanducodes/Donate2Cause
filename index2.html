@@ -1,0 +1,556 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immersive Charity Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-stone-50 text-zinc-900 antialiased relative">
+
+    <canvas id="noise-canvas" class="noise-overlay"></canvas>
+
+
+
+    <!-- Hero Section (Fits Screen) -->
+    <div class="relative min-h-[100svh] flex flex-col overflow-hidden z-10">
+        <header class="relative z-20 border-b border-zinc-200/70 bg-stone-50/80 backdrop-blur">
+            <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-950 text-lime-200 shadow-sm">
+                        <iconify-icon icon="solar:heart-angle-linear" class="text-xl"></iconify-icon>
+                    </div>
+                    <span class="text-xl font-semibold tracking-tight text-zinc-900"
+                        style="font-family: Inter, sans-serif;">Pracima</span>
+                </div>
+
+                <nav class="hidden items-center gap-8 md:flex">
+                    <a href="#"
+                        class="relative text-base font-medium text-zinc-900 after:absolute after:-bottom-5 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-zinc-900">Home</a>
+                    <a href="#health"
+                        class="text-base font-medium text-zinc-500 transition hover:text-zinc-900">Health</a>
+                    <a href="#education"
+                        class="text-base font-medium text-zinc-500 transition hover:text-zinc-900">Education</a>
+                    <a href="#community"
+                        class="text-base font-medium text-zinc-500 transition hover:text-zinc-900">Community</a>
+                </nav>
+
+                <button
+                    class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-700 shadow-sm transition hover:bg-zinc-50">
+                    <iconify-icon icon="solar:hamburger-menu-linear" class="text-xl"></iconify-icon>
+                </button>
+            </div>
+        </header>
+
+        <main class="relative flex-1 flex flex-col justify-center py-8">
+            <div
+                class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(190,242,100,0.18),transparent_32%),radial-gradient(circle_at_left,rgba(16,185,129,0.08),transparent_28%),linear-gradient(to_bottom,#fafaf9,#f8f7f3)] opacity-70">
+            </div>
+
+            <!-- 3D Parallax Objects: Hero -->
+            <div class="parallax-layer absolute top-[15%] left-[10%] z-0" data-speed="0.08">
+                <div class="blob-container">
+                    <div class="blob-3d" style="border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;"></div>
+                </div>
+            </div>
+            <div class="parallax-layer absolute top-[60%] right-[10%] z-0 opacity-80" data-speed="-0.05">
+                <div class="blob-container" style="transform: scale(0.6)">
+                    <div class="blob-3d blob-alt" style="border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;"></div>
+                </div>
+            </div>
+            <div class="parallax-layer absolute bottom-[10%] left-[25%] z-0 opacity-60" data-speed="0.04">
+                <div class="blob-container" style="transform: scale(0.8)">
+                    <div class="blob-3d blob-alt2" style="border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;"></div>
+                </div>
+            </div>
+
+            <section class="mx-auto w-full max-w-7xl px-6 lg:px-8">
+                <div class="parallax-layer mx-auto max-w-4xl text-center animate-[fadeInUp_0.9s_ease-out_forwards]"
+                    style="opacity:0;transform:translateY(1.5rem);" data-speed="0.015">
+                    <div
+                        class="mb-4 inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/80 px-4 py-2 text-sm font-medium text-zinc-600 shadow-sm backdrop-blur">
+                        <span class="h-2 w-2 rounded-full bg-lime-400"></span>
+                        Make everyday giving feel meaningful
+                    </div>
+
+                    <h1 class="mx-auto max-w-4xl text-5xl font-semibold leading-none tracking-tight text-zinc-950 sm:text-6xl"
+                        style="font-family: 'Playfair Display', serif;">
+                        <span class="hero-title-wrapper">Great futures are built</span>
+                        <span class="hero-title-wrapper">with a small charity</span>
+                    </h1>
+
+                    <p class="mx-auto mt-4 max-w-2xl text-lg font-normal leading-8 text-zinc-600 sm:text-xl"
+                        style="font-family: Inter, sans-serif;">
+                        The world’s largest social fundraising platform, optimized to help your charity create real
+                        impact in a simpler, more human way.
+                    </p>
+
+                    <div class="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                        <a href="#disaster-relief"
+                            class="group inline-flex items-center gap-3 rounded-full bg-zinc-950 px-6 py-3.5 text-base font-medium text-white shadow-lg shadow-zinc-950/10 transition duration-300 hover:-translate-y-0.5 hover:bg-zinc-800">
+                            Donate now
+                            <iconify-icon icon="solar:arrow-right-linear"
+                                class="text-base transition group-hover:translate-x-1"></iconify-icon>
+                        </a>
+                        <a href="#let-them-be-heard"
+                            class="group inline-flex items-center gap-3 rounded-full border border-zinc-200 bg-white/90 px-6 py-3.5 text-base font-medium text-zinc-800 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white">
+                            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-zinc-950 text-white">
+                                <iconify-icon icon="solar:play-linear" class="text-sm fill-current"></iconify-icon>
+                            </span>
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative mt-10 grid grid-cols-1 gap-4 lg:grid-cols-12">
+                    <!-- Card 1 & 2 Wrapper -->
+                    <div class="space-y-4 lg:col-span-2">
+                        <div class="parallax-layer" data-speed="0.03">
+                            <a href="#disaster-relief"
+                                class="group block rounded-[2rem] bg-emerald-950 p-5 text-white shadow-[0_20px_60px_-20px_rgba(6,78,59,0.55)] transition duration-500 hover:-translate-y-1.5 hover:rotate-[-1deg] hover:shadow-[0_30px_80px_-24px_rgba(6,78,59,0.65)] animate-[fadeInUp_1s_ease-out_0.1s_forwards]"
+                                style="opacity:0;transform:translateY(1.5rem);">
+                                <div
+                                    class="mb-6 h-20 rounded-[1.5rem] bg-[linear-gradient(135deg,rgba(163,230,53,0.08),rgba(255,255,255,0.02)),radial-gradient(circle_at_top_left,rgba(163,230,53,0.12),transparent_45%)]">
+                                </div>
+                                <div class="text-4xl font-semibold tracking-tight text-lime-200">65%</div>
+                                <p class="mt-2 text-sm leading-6 text-emerald-50/80 line-clamp-2">
+                                    17 Thousand People Died, Thousands Injured...
+                                </p>
+                                <div class="mt-4 flex items-center justify-between">
+                                    <span class="text-sm font-medium text-white/90">Donate now</span>
+                                    <span
+                                        class="flex h-9 w-9 items-center justify-center rounded-full bg-lime-300 text-emerald-950 transition group-hover:rotate-45">
+                                        <iconify-icon icon="solar:arrow-right-up-linear" class="text-lg"></iconify-icon>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="parallax-layer" data-speed="-0.02">
+                            <a href="#let-them-be-heard"
+                                class="group block rounded-[2rem] bg-zinc-950 p-5 text-white shadow-[0_20px_60px_-20px_rgba(24,24,27,0.5)] transition duration-500 hover:-translate-y-1.5 hover:rotate-[1deg] hover:shadow-[0_30px_80px_-24px_rgba(24,24,27,0.6)] animate-[fadeInUp_1s_ease-out_0.2s_forwards]"
+                                style="opacity:0;transform:translateY(1.5rem);">
+                                <div
+                                    class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 text-white">
+                                    <iconify-icon icon="solar:question-square-linear" class="text-2xl"></iconify-icon>
+                                </div>
+                                <h3 class="text-2xl font-semibold leading-tight tracking-tight"
+                                    style="font-family: 'Playfair Display', serif;">Let them be heard</h3>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="lg:col-span-3 lg:pt-12">
+                        <div class="parallax-layer h-full" data-speed="0.04">
+                            <a href="#health"
+                                class="group block relative h-full overflow-hidden rounded-[2rem] bg-zinc-900 shadow-[0_20px_60px_-20px_rgba(24,24,27,0.45)] transition duration-500 hover:-translate-y-1.5 hover:rotate-[-1deg] hover:shadow-[0_30px_80px_-24px_rgba(24,24,27,0.55)] animate-[fadeInUp_1s_ease-out_0.25s_forwards] gsap-image-scale"
+                                style="opacity:0;transform:translateY(1.5rem);">
+                                <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                                    alt="Child portrait"
+                                    class="h-[20rem] lg:h-full w-full object-cover transition duration-700 group-hover:scale-105 gsap-img-scale">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent">
+                                </div>
+                                <div
+                                    class="absolute left-5 top-5 rounded-full bg-black/25 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+                                    Health
+                                </div>
+                                <div class="absolute bottom-5 left-5 right-5">
+                                    <h3 class="max-w-xs text-3xl font-semibold leading-tight tracking-tight text-white"
+                                        style="font-family: 'Playfair Display', serif;">
+                                        Lifeskills for 2,587 Children
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="lg:col-span-2 lg:pt-24">
+                        <div class="parallax-layer" data-speed="-0.03">
+                            <a href="#community"
+                                class="group block relative overflow-hidden rounded-[2rem] border border-zinc-200/70 bg-slate-200/80 p-5 shadow-[0_20px_60px_-20px_rgba(113,113,122,0.25)] backdrop-blur transition duration-500 hover:-translate-y-1.5 hover:rotate-[1deg] hover:shadow-[0_30px_80px_-24px_rgba(113,113,122,0.32)] animate-[fadeInUp_1s_ease-out_0.35s_forwards]"
+                                style="opacity:0;transform:translateY(1.5rem);">
+                                <div
+                                    class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.65),transparent_50%)]">
+                                </div>
+                                <div class="relative flex h-[12rem] flex-col justify-between">
+                                    <div>
+                                        <h3 class="text-3xl font-semibold leading-tight tracking-tight text-zinc-800"
+                                            style="font-family: 'Playfair Display', serif;">
+                                            Join 5000+ Donors
+                                        </h3>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm font-medium text-zinc-600">Join community</span>
+                                        <span
+                                            class="flex h-9 w-9 items-center justify-center rounded-full bg-zinc-950 text-white transition group-hover:rotate-45">
+                                            <iconify-icon icon="solar:arrow-right-up-linear"
+                                                class="text-lg"></iconify-icon>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="lg:col-span-3 lg:pt-12">
+                        <div class="parallax-layer h-full" data-speed="0.035">
+                            <a href="#education"
+                                class="group block relative h-full overflow-hidden rounded-[2rem] bg-zinc-800 shadow-[0_20px_60px_-20px_rgba(24,24,27,0.45)] transition duration-500 hover:-translate-y-1.5 hover:rotate-[1deg] hover:shadow-[0_30px_80px_-24px_rgba(24,24,27,0.55)] animate-[fadeInUp_1s_ease-out_0.45s_forwards] gsap-image-scale"
+                                style="opacity:0;transform:translateY(1.5rem);">
+                                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                                    alt="Children smiling"
+                                    class="h-[20rem] lg:h-full w-full object-cover transition duration-700 group-hover:scale-105 gsap-img-scale">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent">
+                                </div>
+                                <div
+                                    class="absolute left-5 top-5 rounded-full bg-black/25 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+                                    Education
+                                </div>
+                                <div class="absolute bottom-5 left-5 right-5">
+                                    <h3 class="max-w-xs text-3xl font-semibold leading-tight tracking-tight text-white"
+                                        style="font-family: 'Playfair Display', serif;">
+                                        Sponsor food education
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 & 7 Wrapper -->
+                    <div class="space-y-4 lg:col-span-2">
+                        <div class="parallax-layer" data-speed="-0.025">
+                            <a href="#explore"
+                                class="group block relative overflow-hidden rounded-[2rem] bg-lime-300 shadow-[0_20px_60px_-20px_rgba(132,204,22,0.45)] transition duration-500 hover:-translate-y-1.5 hover:rotate-[1deg] hover:shadow-[0_30px_80px_-24px_rgba(132,204,22,0.52)] animate-[fadeInUp_1s_ease-out_0.55s_forwards]"
+                                style="opacity:0;transform:translateY(1.5rem);">
+                                <div
+                                    class="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.28),transparent_35%),radial-gradient(circle_at_bottom,rgba(255,255,255,0.16),transparent_40%)]">
+                                </div>
+                                <div class="relative h-[16rem]">
+                                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                                        alt="Helping hands"
+                                        class="absolute inset-0 h-full w-full object-cover mix-blend-multiply grayscale transition duration-700 group-hover:scale-105">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-b from-transparent via-lime-100/10 to-lime-200/30">
+                                    </div>
+                                    <div class="absolute bottom-5 left-5 right-5 flex items-center justify-between">
+                                        <span class="text-sm font-medium text-zinc-900">Explore more</span>
+                                        <span
+                                            class="flex h-9 w-9 items-center justify-center rounded-full bg-zinc-950 text-lime-300 transition group-hover:rotate-45">
+                                            <iconify-icon icon="solar:arrow-right-up-linear"
+                                                class="text-lg"></iconify-icon>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="parallax-layer" data-speed="0.02">
+                            <a href="#explore"
+                                class="group block rounded-[2rem] bg-emerald-950 p-5 text-lime-100 shadow-[0_20px_60px_-20px_rgba(6,78,59,0.55)] transition duration-500 hover:-translate-y-1.5 hover:rotate-[-1deg] hover:shadow-[0_30px_80px_-24px_rgba(6,78,59,0.65)] animate-[fadeInUp_1s_ease-out_0.65s_forwards]"
+                                style="opacity:0;transform:translateY(1.5rem);">
+                                <div
+                                    class="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-lime-200/10 text-lime-200">
+                                    <iconify-icon icon="solar:heart-linear" class="text-xl"></iconify-icon>
+                                </div>
+                                <h3 class="text-2xl font-semibold leading-tight tracking-tight"
+                                    style="font-family: 'Playfair Display', serif;">
+                                    Your home for help
+                                </h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Sections with Scroll Reveal -->
+
+    <section id="disaster-relief"
+        class="relative min-h-[90svh] flex items-center bg-emerald-950/90 text-white py-24 px-6 lg:px-8 z-10 overflow-hidden dark-section">
+        <div
+            class="absolute top-0 right-0 -mr-48 -mt-48 w-96 h-96 rounded-full bg-emerald-900/40 blur-3xl pointer-events-none">
+        </div>
+
+        <!-- 3D Parallax Objects: Disaster Relief -->
+        <div class="parallax-layer absolute top-[20%] right-[10%] z-0 opacity-50" data-speed="0.06">
+            <div class="blob-container" style="transform: scale(1.2)">
+                <div class="blob-3d blob-alt" style="border-radius: 50% 50% 60% 40% / 60% 40% 50% 60%;"></div>
+            </div>
+        </div>
+        <div class="parallax-layer absolute bottom-[15%] left-[5%] z-0 opacity-40" data-speed="-0.04">
+            <div class="blob-container" style="transform: scale(0.7)">
+                <div class="blob-3d" style="border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;"></div>
+            </div>
+        </div>
+        <div class="mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div>
+                <div
+                    class="reveal inline-flex items-center gap-2 rounded-full border border-emerald-800/50 bg-emerald-900/30 px-4 py-2 text-sm font-medium text-emerald-200 backdrop-blur mb-8">
+                    <span class="h-2 w-2 rounded-full bg-lime-400"></span>
+                    Emergency Response
+                </div>
+                <h2 class="text-5xl lg:text-7xl font-semibold tracking-tight text-lime-200 leading-tight"
+                    style="font-family: 'Playfair Display', serif;">
+                    <span class="scroll-title-wrapper">Rebuilding lives</span>
+                    <span class="scroll-title-wrapper">after disaster.</span>
+                </h2>
+                <p class="reveal mt-6 text-lg text-emerald-50/70 max-w-lg leading-relaxed"
+                    style="font-family: Inter, sans-serif;">
+                    When disaster strikes, thousands are left without homes, medical care, or hope. Your immediate
+                    response helps us provide emergency aid, temporary shelter, and long-term rebuilding efforts to
+                    those affected.
+                </p>
+                <div class="reveal mt-10 flex items-center gap-6">
+                    <button
+                        class="rounded-full bg-lime-300 px-8 py-4 text-base font-medium text-emerald-950 transition hover:bg-lime-400">
+                        Contribute Now
+                    </button>
+                    <button
+                        class="text-sm font-medium text-white transition hover:text-lime-200 flex items-center gap-2">
+                        Read full report <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="reveal gsap-image-scale relative rounded-3xl overflow-hidden shadow-2xl bg-emerald-900/50 aspect-square lg:aspect-[4/3]"
+                style="transition-delay: 200ms;">
+                <img src="https://images.unsplash.com/photo-1579227114347-15d08fc37cae?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                    alt="Relief aid"
+                    class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-80 gsap-img-scale">
+            </div>
+        </div>
+    </section>
+
+    <section id="let-them-be-heard"
+        class="relative min-h-[70svh] flex items-center bg-zinc-950/95 text-white py-24 px-6 lg:px-8 border-t border-zinc-800 z-10 overflow-hidden dark-section">
+        <!-- 3D Parallax Objects: Let Them Be Heard -->
+        <div class="parallax-layer absolute top-[30%] left-[15%] z-0 opacity-60" data-speed="0.05">
+            <div class="blob-container" style="transform: scale(0.9)">
+                <div class="blob-3d blob-alt2" style="border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;"></div>
+            </div>
+        </div>
+        <div class="parallax-layer absolute bottom-[20%] right-[15%] z-0 opacity-50" data-speed="-0.03">
+            <div class="blob-container" style="transform: scale(1.1)">
+                <div class="blob-3d" style="border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;"></div>
+            </div>
+        </div>
+
+        <div class="mx-auto max-w-4xl text-center z-10 relative">
+            <iconify-icon icon="solar:question-square-linear" class="reveal text-5xl text-zinc-500 mb-8"></iconify-icon>
+            <h2 class="text-4xl lg:text-6xl font-semibold tracking-tight leading-tight"
+                style="font-family: 'Playfair Display', serif;">
+                <span class="scroll-title-wrapper">Amplify the voices of</span>
+                <span class="scroll-title-wrapper">those who need it most.</span>
+            </h2>
+            <p class="reveal mt-8 text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed"
+                style="font-family: Inter, sans-serif;">
+                Through advocacy and community outreach, we ensure marginalized communities are represented, heard, and
+                supported by global initiatives that drive policy changes and systemic improvements.
+            </p>
+        </div>
+    </section>
+
+    <section id="health"
+        class="relative min-h-screen flex items-center bg-transparent text-zinc-900 py-24 px-6 lg:px-8 z-10 overflow-hidden">
+        <!-- 3D Parallax Objects: Health -->
+        <div class="parallax-layer absolute top-[10%] right-[20%] z-0 opacity-70" data-speed="0.07">
+            <div class="blob-container">
+                <div class="blob-3d blob-alt" style="border-radius: 50% 50% 60% 40% / 60% 40% 50% 60%;"></div>
+            </div>
+        </div>
+        <div class="parallax-layer absolute bottom-[10%] left-[8%] z-0 opacity-60" data-speed="-0.05">
+            <div class="blob-container" style="transform: scale(0.8)">
+                <div class="blob-3d" style="border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;"></div>
+            </div>
+        </div>
+
+        <div class="mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center z-10 relative">
+            <div
+                class="reveal gsap-image-scale order-2 lg:order-1 relative rounded-[2rem] overflow-hidden shadow-2xl aspect-[4/5] lg:aspect-square group">
+                <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                    alt="Child portrait"
+                    class="absolute inset-0 w-full h-full object-cover transition duration-1000 group-hover:scale-105 gsap-img-scale">
+            </div>
+            <div class="order-1 lg:order-2" style="transition-delay: 200ms;">
+                <h2 class="text-5xl lg:text-6xl font-semibold tracking-tight text-zinc-950 leading-tight"
+                    style="font-family: 'Playfair Display', serif;">
+                    <span class="scroll-title-wrapper">Health &amp; Lifeskills</span>
+                    <span class="scroll-title-wrapper">for 2,587 Children.</span>
+                </h2>
+                <p class="reveal mt-6 text-lg text-zinc-600 max-w-lg leading-relaxed"
+                    style="font-family: Inter, sans-serif;">
+                    In South Africa, access to basic health education and life skills can change the trajectory of a
+                    child's entire future. Our grassroots programs focus on holistic development and well-being.
+                </p>
+                <ul class="reveal mt-10 space-y-4">
+                    <li class="flex items-center gap-3 text-base text-zinc-700 font-medium">
+                        <span
+                            class="flex h-6 w-6 items-center justify-center rounded-full bg-lime-200 text-emerald-950"><iconify-icon
+                                icon="solar:check-read-linear"></iconify-icon></span>
+                        Daily nutritional support
+                    </li>
+                    <li class="flex items-center gap-3 text-base text-zinc-700 font-medium">
+                        <span
+                            class="flex h-6 w-6 items-center justify-center rounded-full bg-lime-200 text-emerald-950"><iconify-icon
+                                icon="solar:check-read-linear"></iconify-icon></span>
+                        Mental health workshops
+                    </li>
+                    <li class="flex items-center gap-3 text-base text-zinc-700 font-medium">
+                        <span
+                            class="flex h-6 w-6 items-center justify-center rounded-full bg-lime-200 text-emerald-950"><iconify-icon
+                                icon="solar:check-read-linear"></iconify-icon></span>
+                        Essential medical supplies
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="community"
+        class="relative min-h-[80svh] flex flex-col justify-center bg-slate-200/30 backdrop-blur-sm py-24 px-6 lg:px-8 border-y border-zinc-200/60 z-10 overflow-hidden">
+        <!-- 3D Parallax Objects: Community -->
+        <div class="parallax-layer absolute top-[15%] left-[20%] z-0 opacity-50" data-speed="0.04">
+            <div class="blob-container" style="transform: scale(0.8)">
+                <div class="blob-3d blob-alt2" style="border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;"></div>
+            </div>
+        </div>
+        <div class="parallax-layer absolute top-[60%] right-[5%] z-0 opacity-80" data-speed="-0.06">
+            <div class="blob-container" style="transform: scale(1.1)">
+                <div class="blob-3d" style="border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;"></div>
+            </div>
+        </div>
+
+        <div class="mx-auto max-w-5xl text-center z-10 relative">
+            <h2 class="text-4xl lg:text-5xl font-semibold tracking-tight text-zinc-900 leading-tight"
+                style="font-family: 'Playfair Display', serif;">
+                <span class="scroll-title-wrapper">Join 5,000+ donors</span>
+                <span class="scroll-title-wrapper">making an impact today.</span>
+            </h2>
+            <p class="reveal mt-6 text-lg text-zinc-600 max-w-2xl mx-auto leading-relaxed"
+                style="font-family: Inter, sans-serif;">
+                A collective effort brings monumental changes. Our community of monthly donors provides the stable
+                foundation needed to sustain long-term charity initiatives globally.
+            </p>
+            <div class="reveal mt-12 flex flex-wrap justify-center gap-4">
+                <button
+                    class="rounded-full bg-zinc-950 px-8 py-4 text-base font-medium text-white transition hover:bg-zinc-800 shadow-lg shadow-zinc-900/20">
+                    Become a member
+                </button>
+                <button
+                    class="rounded-full bg-white px-8 py-4 text-base font-medium text-zinc-900 border border-zinc-200 transition hover:bg-zinc-50 shadow-sm">
+                    View donor wall
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="education"
+        class="relative min-h-screen flex items-center bg-transparent text-zinc-900 py-24 px-6 lg:px-8 z-10 overflow-hidden">
+        <!-- 3D Parallax Objects: Education -->
+        <div class="parallax-layer absolute top-[40%] right-[5%] z-0 opacity-60" data-speed="-0.04">
+            <div class="blob-container" style="transform: scale(0.9)">
+                <div class="blob-3d blob-alt" style="border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;"></div>
+            </div>
+        </div>
+        <div class="parallax-layer absolute bottom-[20%] left-[8%] z-0 opacity-80" data-speed="0.08">
+            <div class="blob-container" style="transform: scale(1.2)">
+                <div class="blob-3d" style="border-radius: 50% 50% 60% 40% / 60% 40% 50% 60%;"></div>
+            </div>
+        </div>
+
+        <div class="mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center z-10 relative">
+            <div>
+                <div
+                    class="reveal inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/50 backdrop-blur px-4 py-2 text-sm font-medium text-zinc-600 mb-8 shadow-sm">
+                    Kenya Programs
+                </div>
+                <h2 class="text-5xl lg:text-6xl font-semibold tracking-tight text-zinc-950 leading-tight"
+                    style="font-family: 'Playfair Display', serif;">
+                    <span class="scroll-title-wrapper">Sponsor food</span>
+                    <span class="scroll-title-wrapper">education.</span>
+                </h2>
+                <p class="reveal mt-6 text-lg text-zinc-600 max-w-lg leading-relaxed"
+                    style="font-family: Inter, sans-serif;">
+                    Education goes beyond the classroom. By sponsoring food education for orphans in Kenya, you equip
+                    them with sustainable farming knowledge, nutritional literacy, and the tools to feed their
+                    communities tomorrow.
+                </p>
+                <div class="reveal mt-10 border-l-2 border-lime-300 pl-6">
+                    <p class="text-xl font-medium text-zinc-800 italic" style="font-family: 'Playfair Display', serif;">
+                        "Teaching a child how to grow their own food is planting the seed for generations of
+                        independence."
+                    </p>
+                </div>
+            </div>
+            <div class="reveal gsap-image-scale relative rounded-[2rem] overflow-hidden shadow-2xl aspect-[4/5] lg:aspect-square group bg-zinc-100"
+                style="transition-delay: 200ms;">
+                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                    alt="Children smiling"
+                    class="absolute inset-0 w-full h-full object-cover transition duration-1000 group-hover:scale-105 gsap-img-scale">
+            </div>
+        </div>
+    </section>
+
+    <section id="explore"
+        class="relative min-h-[70svh] flex flex-col justify-center items-center bg-lime-300/90 backdrop-blur text-emerald-950 py-24 px-6 lg:px-8 overflow-hidden text-center z-10">
+        <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4),transparent_60%)] pointer-events-none">
+        </div>
+
+        <!-- 3D Parallax Objects: Explore -->
+        <div class="parallax-layer absolute top-[10%] left-[10%] z-0 opacity-40" data-speed="0.05">
+            <div class="blob-container" style="transform: scale(1.1)">
+                <div class="blob-3d blob-alt2" style="border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;"></div>
+            </div>
+        </div>
+        <div class="parallax-layer absolute bottom-[15%] right-[15%] z-0 opacity-30 cursor-pointer" data-speed="-0.06">
+            <div class="blob-container" style="transform: scale(0.9)">
+                <div class="blob-3d" style="border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;"></div>
+            </div>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <iconify-icon icon="solar:heart-linear" class="reveal text-5xl mb-8 opacity-80"></iconify-icon>
+            <h2 class="text-5xl lg:text-7xl font-semibold tracking-tight leading-none"
+                style="font-family: 'Playfair Display', serif;">
+                <span class="scroll-title-wrapper">Your home</span>
+                <span class="scroll-title-wrapper">for help.</span>
+            </h2>
+            <p class="reveal mt-6 text-xl text-emerald-900/80 max-w-2xl mx-auto leading-relaxed"
+                style="font-family: Inter, sans-serif;">
+                There are countless ways to make a difference. Explore our other programs, volunteer locally, or share
+                our mission with the world.
+            </p>
+            <div class="reveal mt-12">
+                <button
+                    class="inline-flex items-center gap-3 rounded-full bg-emerald-950 px-8 py-4 text-lg font-medium text-lime-100 transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-900 shadow-xl shadow-emerald-950/20">
+                    Explore all programs
+                    <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="relative bg-stone-50/80 backdrop-blur py-12 border-t border-zinc-200/60 text-center z-10">
+        <p class="text-sm font-medium text-zinc-500" style="font-family: Inter, sans-serif;">© 2024 Pracima Foundation.
+            All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
