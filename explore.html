@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Causes | Donate2Cause</title>
+  <meta name="description" content="Discover and support verified fundraising campaigns in Nepal. Medical, Education, Community, and Emergency causes.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css">
+  <script defer src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+  <script defer>
+    (function () {
+      const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) return;
+      if (typeof Lenis === 'undefined') return;
+
+      const hasGSAP = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
+
+      const lenis = new Lenis({
+        autoRaf: !hasGSAP,
+        duration: 1.15,
+        smoothWheel: true,
+        smoothTouch: false,
+        wheelMultiplier: 1,
+        touchMultiplier: 1.15
+      });
+
+      if (hasGSAP) {
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((t) => lenis.raf(t * 1000));
+        gsap.ticker.lagSmoothing(0);
+      }
+
+      document.addEventListener('click', (e) => {
+        const anchor = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+        if (!anchor) return;
+
+        const href = anchor.getAttribute('href');
+        if (!href || href === '#') return;
+
+        const target = document.querySelector(href);
+        if (!target) return;
+
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        lenis.scrollTo(target, { offset: 0, duration: 1.1, easing: (t) => 1 - Math.pow(1 - t, 3) });
+      }, true);
+
+      window.lenis = lenis;
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-stone-50 text-zinc-900 antialiased relative">
+
+  <canvas id="noise-canvas" class="noise-overlay"></canvas>
+
+  <header class="relative z-20 bg-white/70 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+      <div class="flex items-center gap-2">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-950 text-lime-300">
+            <iconify-icon icon="solar:hand-heart-bold" class="text-xl"></iconify-icon>
+          </div>
+          <span class="text-2xl font-bold tracking-tighter text-zinc-950" style="font-family: Inter, sans-serif;">Donate2Cause</span>
+        </a>
+      </div>
+      
+      <nav class="hidden lg:flex items-center gap-10">
+        <a href="index.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Home</a>
+        <a href="index.html#about" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">About</a>
+        <a href="explore.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Causes</a>
+        <a href="index.html#how-it-works" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">How It Works</a>
+        <a href="index.html#start" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Contact</a>
+      </nav>
+
+      <button data-mobile-nav-toggle class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-zinc-100 transition">
+        <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl text-zinc-900"></iconify-icon>
+      </button>
+    </div>
+  </header>
+
+  <div data-mobile-nav class="fixed inset-0 z-50 bg-zinc-950/95 backdrop-blur-lg transform translate-x-full transition-transform duration-500 lg:hidden">
+    <div class="flex flex-col h-full p-8">
+      <div class="flex items-center justify-between mb-12">
+        <div class="flex items-center gap-2">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-lime-400 text-emerald-950">
+            <iconify-icon icon="solar:hand-heart-bold" class="text-xl"></iconify-icon>
+          </div>
+          <span class="text-2xl font-bold tracking-tighter text-white" style="font-family: Inter, sans-serif;">Donate2Cause</span>
+        </div>
+        <button data-mobile-nav-close class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-zinc-800 transition">
+          <iconify-icon icon="solar:close-linear" class="text-2xl text-white"></iconify-icon>
+        </button>
+      </div>
+      
+      <nav class="flex flex-col gap-6">
+        <a href="index.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Home</a>
+        <a href="index.html#about" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">About</a>
+        <a href="explore.html" class="text-xl font-semibold text-lime-400">Causes</a>
+        <a href="index.html#how-it-works" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">How It Works</a>
+        <a href="index.html#start" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Contact</a>
+      </nav>
+
+      <div class="mt-auto">
+        <a href="explore.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-lime-400 w-full px-6 py-4 text-base font-bold text-emerald-950 transition hover:bg-lime-300">
+          Donate Now
+          <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="relative z-10">
+    <section class="relative py-16 lg:py-24 px-6 lg:px-8 overflow-hidden">
+      <div class="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-lime-100/60 blur-[100px] pointer-events-none"></div>
+      
+      <div class="mx-auto max-w-7xl relative z-10">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl lg:text-6xl font-semibold tracking-tight text-zinc-950 mb-4" style="font-family: 'Playfair Display', serif;">
+            Discover Causes That Matter
+          </h1>
+          <p class="text-lg text-zinc-500 max-w-2xl mx-auto mb-8">
+            Join thousands of donors making a real difference in Nepal. Every contribution brings hope.
+          </p>
+          <div class="flex flex-wrap justify-center gap-8 text-sm">
+            <span class="flex items-center gap-2 text-zinc-600">
+              <iconify-icon icon="solar:money-bold" class="text-lime-500"></iconify-icon>
+              <span class="font-semibold text-zinc-900">Rs48M+</span> raised
+            </span>
+            <span class="flex items-center gap-2 text-zinc-600">
+              <iconify-icon icon="solar:users-group-rounded" class="text-lime-500"></iconify-icon>
+              <span class="font-semibold text-zinc-900">2,587</span> families helped
+            </span>
+            <span class="flex items-center gap-2 text-zinc-600">
+              <iconify-icon icon="solar:folder-opened-bold" class="text-lime-500"></iconify-icon>
+              <span class="font-semibold text-zinc-900">450+</span> projects
+            </span>
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10">
+          <div id="category-filters" class="flex flex-wrap gap-3">
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <div class="flex items-center gap-2">
+              <label for="date-filter" class="text-sm text-zinc-500">Time:</label>
+              <select id="date-filter" class="bg-white border border-zinc-200 rounded-full px-4 py-2.5 text-sm text-zinc-700 focus:outline-none focus:border-lime-400 transition">
+                <option value="all">All Time</option>
+                <option value="ending-7">Ending in 7 days</option>
+                <option value="ending-30">Ending in 30 days</option>
+                <option value="new-this-week">New this week</option>
+                <option value="new-this-month">New this month</option>
+              </select>
+            </div>
+            <div class="flex items-center gap-2">
+              <label for="sort-select" class="text-sm text-zinc-500">Sort:</label>
+              <select id="sort-select" class="bg-white border border-zinc-200 rounded-full px-4 py-2.5 text-sm text-zinc-700 focus:outline-none focus:border-lime-400 transition">
+                <option value="featured">Featured</option>
+                <option value="newest">Newest</option>
+                <option value="most-funded">Most Funded</option>
+                <option value="ending-soon">Ending Soon</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div id="causes-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </div>
+
+        <div id="pagination-container"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-zinc-950 text-zinc-400 py-16 px-6 lg:px-8 overflow-hidden relative z-10">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-emerald-900/20 blur-[120px] rounded-full pointer-events-none"></div>
+    
+    <div class="mx-auto max-w-7xl w-full flex flex-col items-center text-center relative z-10">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-950 text-lime-300 shadow-sm border border-emerald-900/50">
+          <iconify-icon icon="solar:hand-heart-linear" class="text-xl"></iconify-icon>
+        </div>
+        <span class="text-2xl font-bold tracking-tight text-white" style="font-family: Inter, sans-serif;">Donate2Cause</span>
+      </div>
+      <p class="text-xl mb-12 text-zinc-300 font-medium max-w-md" style="font-family: 'Playfair Display', serif;">
+        Building a stronger, more resilient Nepal together.
+      </p>
+      
+      <div class="w-full max-w-md bg-zinc-900/50 p-8 rounded-[2rem] border border-zinc-800/80 mb-12 shadow-2xl">
+        <p class="text-white font-medium mb-4 text-lg" style="font-family: 'Playfair Display', serif;">Join our Impact List for monthly updates on lives changed.</p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input type="email" placeholder="Email address" class="flex-1 rounded-full bg-zinc-950 border border-zinc-800 px-6 py-3 text-sm text-white focus:outline-none focus:border-lime-400 transition" />
+          <button class="bg-lime-400 text-emerald-950 px-6 py-3 rounded-full text-sm font-medium hover:bg-lime-300 transition">Subscribe</button>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-8 border-t border-zinc-900 pt-8 w-full justify-center">
+        <a href="#" class="hover:text-lime-300 transition text-sm">Terms of Service</a>
+        <a href="#" class="hover:text-lime-300 transition text-sm">Privacy Policy</a>
+        <a href="#" class="hover:text-lime-300 transition text-sm">Verification Process</a>
+        <a href="#" class="hover:text-lime-300 transition text-sm">Contact Us</a>
+      </div>
+      <p class="mt-8 text-sm text-zinc-600">© 2026 Donate2Cause. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script src="js/explore.js"></script>
+
+</body>
+</html>

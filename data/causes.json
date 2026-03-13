@@ -1,0 +1,619 @@
+{
+  "causes": [
+    {
+      "id": "cause-001",
+      "title": "Emergency Surgery for 8-Year-Old Priya",
+      "shortDescription": "Help young Priya get the life-saving surgery she needs",
+      "fullStory": "<p>Priya Sharma is an 8-year-old girl from Kavrepalanchok district. She was diagnosed with a severe heart condition that requires immediate surgery.</p><p>Her father, Ram Shrestha, is a farmer who earns a modest income. The cost of the surgery is beyond what the family can afford. Priya's condition has been worsening, and doctors have advised that the surgery be done within the next two weeks.</p><p>Your donation can help save Priya's life and give her a chance to live a healthy life. Every contribution, no matter how small, makes a difference.</p>",
+      "category": "medical",
+      "goalAmount": 500000,
+      "raisedAmount": 325000,
+      "donorCount": 142,
+      "daysLeft": 12,
+      "status": "active",
+      "featured": true,
+      "beneficiary": {
+        "name": "Priya Sharma",
+        "age": 8,
+        "location": "Kavrepalanchok, Bagmati"
+      },
+      "organizer": {
+        "name": "Ram Shrestha",
+        "relationship": "Father",
+        "verified": true
+      },
+      "imageUrl": "assets/medical_emergency.png",
+      "createdAt": "2026-03-01",
+      "updates": [
+        {
+          "date": "2026-03-10",
+          "title": "Surgery scheduled",
+          "content": "Good news! The surgery has been scheduled for next week. Thank you all for your support!"
+        },
+        {
+          "date": "2026-03-05",
+          "title": "Medical reports confirmed",
+          "content": "All medical reports have been verified by the hospital. We're ready to proceed with the surgery."
+        }
+      ]
+    },
+    {
+      "id": "cause-002",
+      "title": "Education Supplies for Kaski Rural School",
+      "shortDescription": "Provide books, uniforms, and supplies for 100 students",
+      "fullStory": "<p>Kaski Rural School lacks basic educational supplies. With over 100 students from economically disadvantaged families, many children go without proper learning materials.</p><p>This campaign aims to provide books, uniforms, stationery, and basic furniture to create a better learning environment for these children.</p><p>Your support can help these young minds reach their full potential through education.</p>",
+      "category": "education",
+      "goalAmount": 150000,
+      "raisedAmount": 89000,
+      "donorCount": 67,
+      "daysLeft": 24,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "Kaski Rural School",
+        "age": null,
+        "location": "Kaski, Gandaki"
+      },
+      "organizer": {
+        "name": "Teacher Maya Rai",
+        "relationship": "School Principal",
+        "verified": true
+      },
+      "imageUrl": "assets/education_rural.png",
+      "createdAt": "2026-02-20",
+      "updates": [
+        {
+          "date": "2026-03-08",
+          "title": "Books ordered",
+          "content": "We've ordered 200 books for the library. Thank you for making this possible!"
+        }
+      ]
+    },
+    {
+      "id": "cause-003",
+      "title": "Clean Water Project for Sindhuli Village",
+      "shortDescription": "Build a clean water well for 50 families",
+      "fullStory": "<p>The village of Sindhuli has no access to clean drinking water. Families currently walk 3 kilometers to fetch water from a river that is contaminated.</p><p>This project will build a deep well with a pump, providing clean water to 50 families. The water will be tested and certified safe for drinking.</p><p>Clean water is a basic necessity. Help us bring this essential resource to those in need.</p>",
+      "category": "community",
+      "goalAmount": 300000,
+      "raisedAmount": 45000,
+      "donorCount": 28,
+      "daysLeft": 45,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "Sindhuli Village Community",
+        "age": null,
+        "location": "Sindhuli, Province 3"
+      },
+      "organizer": {
+        "name": "Village Headman",
+        "relationship": "Community Leader",
+        "verified": true
+      },
+      "imageUrl": "assets/community_development.png",
+      "createdAt": "2026-02-15",
+      "updates": []
+    },
+    {
+      "id": "cause-004",
+      "title": "Flood Relief - Sindhuli District",
+      "shortDescription": "Emergency relief for families affected by monsoon floods",
+      "fullStory": "<p>Monsoon floods have devastated the Sindhuli district. Over 200 families have lost their homes and belongings. They are in urgent need of food, shelter, and medical supplies.</p><p>This campaign provides emergency relief packages including food, blankets, medicines, and temporary shelter materials to the affected families.</p><p>Every donation helps families get back on their feet during this difficult time.</p>",
+      "category": "emergency",
+      "goalAmount": 1000000,
+      "raisedAmount": 720000,
+      "donorCount": 389,
+      "daysLeft": 8,
+      "status": "active",
+      "featured": true,
+      "beneficiary": {
+        "name": "Flood Affected Families",
+        "age": null,
+        "location": "Sindhuli, Province 3"
+      },
+      "organizer": {
+        "name": "Nepal Red Cross - Sindhuli",
+        "relationship": "NGO Partner",
+        "verified": true
+      },
+      "imageUrl": "assets/diaspora_connection.png",
+      "createdAt": "2026-03-05",
+      "updates": [
+        {
+          "date": "2026-03-12",
+          "title": "Relief distribution completed in Ward 5",
+          "content": "We've successfully distributed relief packages to 80 families in Ward 5. Thank you all!"
+        },
+        {
+          "date": "2026-03-09",
+          "title": "Medical camp organized",
+          "content": "A medical camp was organized today. 120 patients received free medical consultation and medicines."
+        }
+      ]
+    },
+    {
+      "id": "cause-005",
+      "title": "Scholarship Fund for 10 Students",
+      "shortDescription": "Support bright students from low-income families with full scholarships",
+      "fullStory": "<p>Many talented students in Nepal cannot continue their education due to financial constraints. This scholarship fund will support 10 promising students from low-income families to complete their secondary education.</p><p>Each scholarship covers school fees, books, uniform, and monthly stipend for transportation.</p><p>Invest in the future of these bright young minds. Education transforms lives.</p>",
+      "category": "education",
+      "goalAmount": 200000,
+      "raisedAmount": 34000,
+      "donorCount": 23,
+      "daysLeft": 60,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "10 Students",
+        "age": 14,
+        "location": "Various Districts"
+      },
+      "organizer": {
+        "name": "Shikshya Foundation",
+        "relationship": "NGO",
+        "verified": true
+      },
+      "imageUrl": "assets/education_rural.png",
+      "createdAt": "2026-02-01",
+      "updates": []
+    },
+    {
+      "id": "cause-006",
+      "title": "Cancer Treatment for Radhika",
+      "shortDescription": "Help Radhika afford life-saving cancer treatment",
+      "fullStory": "<p>Radhika, a 32-year-old mother of two, was diagnosed with stage 2 breast cancer. She needs immediate chemotherapy and surgery.</p><p>Her husband works as a daily wage laborer and cannot afford the treatment cost. The total estimated cost is Rs800,000.</p><p>Your donation can give Radhika a chance to watch her children grow up. Please help us save a mother.</p>",
+      "category": "medical",
+      "goalAmount": 800000,
+      "raisedAmount": 456000,
+      "donorCount": 234,
+      "daysLeft": 18,
+      "status": "active",
+      "featured": true,
+      "beneficiary": {
+        "name": "Radhika Tamang",
+        "age": 32,
+        "location": "Kathmandu"
+      },
+      "organizer": {
+        "name": "Suraj Tamang",
+        "relationship": "Husband",
+        "verified": true
+      },
+      "imageUrl": "assets/medical_emergency.png",
+      "createdAt": "2026-02-25",
+      "updates": [
+        {
+          "date": "2026-03-11",
+          "title": "First chemo session completed",
+          "content": "Radhika has successfully completed her first chemotherapy session. Thank you all for your prayers and support!"
+        }
+      ]
+    },
+    {
+      "id": "cause-007",
+      "title": "Rural Road Construction Project",
+      "shortDescription": "Build access road to connect remote village to main town",
+      "fullStory": "<p>The village of Gorkha has no road connectivity. Villagers must walk 15 kilometers to reach the nearest town for market access and medical facilities.</p><p>This project aims to construct a 5-kilometer gravel road connecting the village to the main highway. This will transform the community's access to healthcare, education, and economic opportunities.</p><p>Help us bring development to this remote community.</p>",
+      "category": "community",
+      "goalAmount": 500000,
+      "raisedAmount": 12000,
+      "donorCount": 15,
+      "daysLeft": 90,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "Gorkha Village Community",
+        "age": null,
+        "location": "Gorkha, Gandaki"
+      },
+      "organizer": {
+        "name": "Village Development Committee",
+        "relationship": "Local Government",
+        "verified": true
+      },
+      "imageUrl": "assets/community_development.png",
+      "createdAt": "2026-01-15",
+      "updates": []
+    },
+    {
+      "id": "cause-008",
+      "title": "Elderly Care Home - Monthly Support",
+      "shortDescription": "Provide food, medicine, and care for 20 elderly residents",
+      "fullStory": "<p>Shanti Old Age Home cares for 20 elderly people who have been abandoned or have no family to care for them. The home struggles to meet monthly expenses for food, medicine, and basic necessities.</p><p>Your monthly contribution will help provide nutritious meals, medical care, and a dignified life for these elderly citizens.</p><p>Let's ensure our elders are cared for with love and respect.</p>",
+      "category": "medical",
+      "goalAmount": 250000,
+      "raisedAmount": 178000,
+      "donorCount": 89,
+      "daysLeft": 30,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "Shanti Old Age Home",
+        "age": null,
+        "location": "Lalitpur"
+      },
+      "organizer": {
+        "name": "Shanti Foundation",
+        "relationship": "NGO",
+        "verified": true
+      },
+      "imageUrl": "assets/medical_emergency.png",
+      "createdAt": "2026-02-10",
+      "updates": [
+        {
+          "date": "2026-03-07",
+          "title": "Medical checkup completed",
+          "content": "Monthly medical checkup completed for all residents. Everyone is in good health!"
+        }
+      ]
+    },
+    {
+      "id": "cause-009",
+      "title": "Bagmati River Basin Cleanup - Shankhamul",
+      "shortDescription": "Community-led waste management and beautification of the Bagmati banks.",
+      "fullStory": "<p>Inspired by the Bagmati River Basin Improvement Project (BRBIP), this community drive focuses on the Shankhamul section. We aim to clear solid waste, install bins, and plant 50 saplings.</p>",
+      "category": "community",
+      "goalAmount": 45000,
+      "raisedAmount": 12000,
+      "donorCount": 38,
+      "daysLeft": 15,
+      "status": "active",
+      "featured": true,
+      "beneficiary": {
+        "name": "Shankhamul River Community",
+        "location": "Lalitpur/Kathmandu Border"
+      },
+      "organizer": {
+        "name": "HPCIDBC Volunteers",
+        "verified": true
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1621451537084-482c73073a0f",
+      "createdAt": "2026-03-01",
+      "updates": []
+    },
+    {
+      "id": "cause-010",
+      "title": "Mobile Blood Bus Operation - Bagmati Province",
+      "shortDescription": "Fuel and maintenance for the NRNA-donated mobile blood collection bus.",
+      "fullStory": "<p>The Mobile Blood Bus, handed over to the Nepal Red Cross (Chitwan unit), allows us to reach remote neighborhoods for emergency blood collection. Your funds support daily operations and snacks for donors.</p>",
+      "category": "medical",
+      "goalAmount": 120000,
+      "raisedAmount": 45000,
+      "donorCount": 56,
+      "daysLeft": 20,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "Blood Transfusion Center",
+        "location": "Bharatpur, Chitwan"
+      },
+      "organizer": {
+        "name": "Nepal Red Cross Society",
+        "verified": true
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1615461066841-6116ecaabb04",
+      "createdAt": "2026-03-05",
+      "updates": []
+    },
+    {
+      "id": "cause-011",
+      "title": "Nutritious 'Lito' Flour for Rural Families",
+      "shortDescription": "Provide life-saving super flour to combat child malnutrition.",
+      "fullStory": "<p>Based on the Nepal Youth Foundation's nutrition model, we distribute 'Lito' (super flour) to families in the Mahottari district where malnutrition rates are high.</p>",
+      "category": "medical",
+      "goalAmount": 85000,
+      "raisedAmount": 30000,
+      "donorCount": 72,
+      "daysLeft": 10,
+      "status": "active",
+      "featured": true,
+      "beneficiary": {
+        "name": "Underprivileged Children",
+        "location": "Mahottari District"
+      },
+      "organizer": {
+        "name": "Nutritional Rehabilitation Home",
+        "verified": true
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1594498259353-60a51566df39",
+      "createdAt": "2026-02-28",
+      "updates": []
+    },
+    {
+      "id": "cause-012",
+      "title": "School Infrastructure Repair - Solukhumbu",
+      "shortDescription": "Repairing classroom roofs and installing water taps at Bumburi School.",
+      "fullStory": "<p>The Bumburi Village School needs urgent roof repairs before the 2026 monsoon. We are also adding 5 clean drinking water taps for 70 households and students.</p>",
+      "category": "education",
+      "goalAmount": 250000,
+      "raisedAmount": 95000,
+      "donorCount": 44,
+      "daysLeft": 40,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "Bumburi School Students",
+        "location": "Solukhumbu"
+      },
+      "organizer": {
+        "name": "Moving Mountains Nepal",
+        "verified": true
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1509062522246-3755977927d7",
+      "createdAt": "2026-02-15",
+      "updates": []
+    },
+    {
+      "id": "cause-013",
+      "title": "Street Dog Anti-Rabies & First Aid",
+      "shortDescription": "Vaccination and first aid for street animals in Kathmandu valley.",
+      "fullStory": "<p>As temperatures rise in March, we are conducting a mass vaccination drive across Lalitpur to ensure community safety and animal welfare.</p>",
+      "category": "community",
+      "goalAmount": 35000,
+      "raisedAmount": 15000,
+      "donorCount": 89,
+      "daysLeft": 12,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "Kathmandu Street Dogs",
+        "location": "Patan & Jawalakhel"
+      },
+      "organizer": {
+        "name": "KAT Centre Volunteer Group",
+        "verified": true
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b",
+      "createdAt": "2026-03-07",
+      "updates": []
+    },
+    {
+      "id": "cause-014",
+      "title": "Women Empowerment: Micro-MSME Innovation",
+      "shortDescription": "Grants for women-led small businesses in garlic and sugarcane farming.",
+      "fullStory": "<p>Helping women in Saptari district transition to flood-resistant crops like sugarcane, providing them with seeds and modern farming tools.</p>",
+      "category": "community",
+      "goalAmount": 100000,
+      "raisedAmount": 25000,
+      "donorCount": 19,
+      "daysLeft": 60,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "Local Women Cooperatives",
+        "location": "Saptari District"
+      },
+      "organizer": {
+        "name": "Oxfam Partner Network",
+        "verified": true
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8",
+      "createdAt": "2026-03-01",
+      "updates": []
+    },
+    {
+      "id": "cause-015",
+      "title": "Cataract Screening Camp - Gorkha Rural",
+      "shortDescription": "Free eye checkups and surgical referrals for 200 elderly residents.",
+      "fullStory": "<p>Bringing specialized eye care to remote Gorkha. This fund covers medical staff transport and free spectacles for the elderly.</p>",
+      "category": "medical",
+      "goalAmount": 150000,
+      "raisedAmount": 110000,
+      "donorCount": 130,
+      "daysLeft": 5,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "Elderly Villagers",
+        "location": "Barpak, Gorkha"
+      },
+      "organizer": {
+        "name": "Vision Nepal Foundation",
+        "verified": true
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
+      "createdAt": "2026-03-08",
+      "updates": []
+    },
+    {
+      "id": "cause-016",
+      "title": "Emergency Medicine Revolving Fund",
+      "shortDescription": "Ensure Bir Hospital emergency patients never run out of critical drugs.",
+      "fullStory": "<p>This fund provides instant access to life-saving drugs for low-income patients arriving at the emergency ward of Kathmandu's Bir Hospital.</p>",
+      "category": "medical",
+      "goalAmount": 75000,
+      "raisedAmount": 40000,
+      "donorCount": 92,
+      "daysLeft": 18,
+      "status": "active",
+      "featured": true,
+      "beneficiary": {
+        "name": "Emergency Ward Patients",
+        "location": "Ratnapark, Kathmandu"
+      },
+      "organizer": {
+        "name": "Bir Social Service Unit",
+        "verified": true
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae",
+      "createdAt": "2026-03-01",
+      "updates": []
+    },
+    {
+      "id": "cause-017",
+      "title": "Disaster-Resilient Classroom Construction",
+      "shortDescription": "Building 6 earthquake-safe classrooms at Shree Basic School.",
+      "fullStory": "<p>Replacing unsafe learning structures with modern, disaster-resilient classrooms to get 220 students back to a safe learning environment.</p>",
+      "category": "education",
+      "goalAmount": 400000,
+      "raisedAmount": 280000,
+      "donorCount": 210,
+      "daysLeft": 14,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "Shree Basic School",
+        "location": "Jhunga"
+      },
+      "organizer": {
+        "name": "Relief Nepal",
+        "verified": true
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b",
+      "createdAt": "2026-03-01",
+      "updates": []
+    },
+    {
+      "id": "cause-018",
+      "title": "Solar Street Lighting - Nuwakot",
+      "shortDescription": "Installing 12 solar lights to secure village roads at night.",
+      "fullStory": "<p>Villagers in high-risk zones face safety issues at night. Solar lighting provides a one-time investment for years of safety without electricity bills.</p>",
+      "category": "community",
+      "goalAmount": 120000,
+      "raisedAmount": 45000,
+      "donorCount": 35,
+      "daysLeft": 25,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "Ward 5 Residents",
+        "location": "Nuwakot"
+      },
+      "organizer": {
+        "name": "Bright Village Initiative",
+        "verified": true
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1509391366360-fe5bb658582f",
+      "createdAt": "2026-02-20",
+      "updates": []
+    },
+    {
+      "id": "cause-019",
+      "title": "Heritage Rest House (Falcha) Restoration",
+      "shortDescription": "Restoring an ancient resting place in Bungamati village.",
+      "fullStory": "<p>A traditional Falcha used by community elders is on the verge of collapse. We are using traditional materials to restore it to its former glory.</p>",
+      "category": "community",
+      "goalAmount": 180000,
+      "raisedAmount": 30000,
+      "donorCount": 14,
+      "daysLeft": 55,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "Bungamati Community",
+        "location": "Lalitpur"
+      },
+      "organizer": {
+        "name": "Heritage Conservation Group",
+        "verified": true
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1540959733332-e94e270b2d42",
+      "createdAt": "2026-02-25",
+      "updates": []
+    },
+    {
+      "id": "cause-020",
+      "title": "Digital Literacy for Vocational Students",
+      "shortDescription": "Refurbished laptops and basic IT training for 20 disabled youth.",
+      "fullStory": "<p>Empowering differently-abled students with computer skills so they can work remotely and gain financial independence.</p>",
+      "category": "education",
+      "goalAmount": 90000,
+      "raisedAmount": 12000,
+      "donorCount": 8,
+      "daysLeft": 30,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "Vocational Training Hub",
+        "location": "Kathmandu Valley"
+      },
+      "organizer": {
+        "name": "Ability Nepal Foundation",
+        "verified": true
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+      "createdAt": "2026-03-05",
+      "updates": []
+    },
+    {
+      "id": "cause-021",
+      "title": "Sanitary Hygiene in Public Schools",
+      "shortDescription": "Vending machines and biodegradable pads for Pokhara girls' schools.",
+      "fullStory": "<p>Addressing the 'period poverty' that forces girls to miss school. We are installing machines in 5 schools across Kaski district.</p>",
+      "category": "education",
+      "goalAmount": 55000,
+      "raisedAmount": 42000,
+      "donorCount": 95,
+      "daysLeft": 8,
+      "status": "active",
+      "featured": true,
+      "beneficiary": {
+        "name": "Pokhara School Girls",
+        "location": "Kaski"
+      },
+      "organizer": {
+        "name": "Girls First Nepal",
+        "verified": true
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae",
+      "createdAt": "2026-03-10",
+      "updates": []
+    },
+    {
+      "id": "cause-022",
+      "title": "Oxygen Refill Fund for Solu Health Post",
+      "shortDescription": "Ensuring a steady oxygen supply for high-altitude medical emergencies.",
+      "fullStory": "<p>Supporting the Waswang Health Post with transportation and refill costs for oxygen cylinders, vital for local residents and trekking emergencies.</p>",
+      "category": "emergency",
+      "goalAmount": 60000,
+      "raisedAmount": 28000,
+      "donorCount": 31,
+      "daysLeft": 12,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "Solu Health Post",
+        "location": "Solukhumbu"
+      },
+      "organizer": {
+        "name": "Himalayan Health Care",
+        "verified": true
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144",
+      "createdAt": "2026-03-02",
+      "updates": []
+    },
+    {
+      "id": "cause-023",
+      "title": "All-Terrain Wheelchairs for Students",
+      "shortDescription": "5 heavy-duty wheelchairs for students in hilly regions.",
+      "fullStory": "<p>Traditional wheelchairs break easily on rough rural roads. These 5 all-terrain units will help students commute to their schools independently.</p>",
+      "category": "medical",
+      "goalAmount": 140000,
+      "raisedAmount": 35000,
+      "donorCount": 22,
+      "daysLeft": 45,
+      "status": "active",
+      "featured": false,
+      "beneficiary": {
+        "name": "Mobility Impaired Students",
+        "location": "Sindhupalchowk"
+      },
+      "organizer": {
+        "name": "Inclusion Nepal",
+        "verified": true
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289",
+      "createdAt": "2026-03-10",
+      "updates": []
+    }
+  ],
+  "categories": [
+    { "id": "all", "name": "All Causes", "icon": "solar:grid-bold" },
+    { "id": "medical", "name": "Medical", "icon": "solar:health-bold" },
+    { "id": "education", "name": "Education", "icon": "solar:book-bold" },
+    { "id": "community", "name": "Community", "icon": "solar:users-group-two-rounded" },
+    { "id": "emergency", "name": "Emergency", "icon": "solar:alert-bold" }
+  ]
+}

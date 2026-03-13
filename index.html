@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donate2Cause | Nepal's Trusted Crowdfunding Platform</title>
   <meta name="description" content="Empowering Nepal through verified crowdfunding for medical emergencies, education, and community development. Secure donations via eSewa, Khalti, and international gateways.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,21 +78,50 @@
         </div>
         
         <nav class="hidden lg:flex items-center gap-10">
-          <a href="#" class="text-sm font-semibold text-zinc-950 border-b-2 border-zinc-950 pb-1">Home</a>
+          <a href="index.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Home</a>
           <a href="#about" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">About</a>
-          <a href="#medical" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Causes</a>
+          <a href="explore.html" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Causes</a>
           <a href="#how-it-works" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">How It Works</a>
           <a href="#start" class="text-sm font-medium text-zinc-400 hover:text-zinc-950 transition">Contact</a>
         </nav>
 
         <div class="flex items-center">
-          <button class="flex h-10 w-12 flex-col items-center justify-center gap-1.5 rounded-full hover:bg-zinc-100 transition">
-            <div class="h-[2px] w-6 bg-zinc-900"></div>
-            <div class="h-[2px] w-6 bg-zinc-900"></div>
-          </button>
+          <button data-mobile-nav-toggle class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-zinc-100 transition">
+        <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl text-zinc-900"></iconify-icon>
+      </button>
+    </div>
+  </header>
+
+  <div data-mobile-nav class="fixed inset-0 z-50 bg-zinc-950/95 backdrop-blur-lg transform translate-x-full transition-transform duration-500 lg:hidden">
+    <div class="flex flex-col h-full p-8">
+      <div class="flex items-center justify-between mb-12">
+        <div class="flex items-center gap-2">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-lime-400 text-emerald-950">
+            <iconify-icon icon="solar:hand-heart-bold" class="text-xl"></iconify-icon>
+          </div>
+          <span class="text-2xl font-bold tracking-tighter text-white" style="font-family: Inter, sans-serif;">Donate2Cause</span>
         </div>
+        <button data-mobile-nav-close class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-zinc-800 transition">
+          <iconify-icon icon="solar:close-linear" class="text-2xl text-white"></iconify-icon>
+        </button>
       </div>
-    </header>
+      
+      <nav class="flex flex-col gap-6">
+        <a href="index.html" class="text-xl font-semibold text-lime-400">Home</a>
+        <a href="#about" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">About</a>
+        <a href="explore.html" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Causes</a>
+        <a href="#how-it-works" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">How It Works</a>
+        <a href="#start" class="text-xl font-medium text-zinc-300 hover:text-lime-400 transition">Contact</a>
+      </nav>
+
+      <div class="mt-auto">
+        <a href="explore.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-lime-400 w-full px-6 py-4 text-base font-bold text-emerald-950 transition hover:bg-lime-300">
+          Donate Now
+          <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+        </a>
+      </div>
+    </div>
+  </div>
 
     <main class="relative flex-1 flex flex-col">
       <div class="absolute inset-0 -z-10">
@@ -133,10 +163,10 @@
           </p>
 
           <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <button class="group inline-flex items-center gap-3 rounded-full bg-zinc-950 px-6 py-3.5 text-base font-medium text-white shadow-2xl transition duration-300 hover:-translate-y-0.5 hover:bg-zinc-800">
+            <a href="explore.html" class="group inline-flex items-center gap-3 rounded-full bg-zinc-950 px-6 py-3.5 text-base font-medium text-white shadow-2xl transition duration-300 hover:-translate-y-0.5 hover:bg-zinc-800">
               Donate now
               <iconify-icon icon="solar:arrow-right-linear" class="text-base transition group-hover:translate-x-1"></iconify-icon>
-            </button>
+            </a>
             <button class="group inline-flex items-center gap-3 rounded-full bg-zinc-100 px-6 py-3.5 text-base font-medium text-zinc-900 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-zinc-200">
               <span class="flex h-7 w-7 items-center justify-center rounded-full bg-white text-zinc-900 shadow-sm group-hover:scale-110 transition">
                 <iconify-icon icon="solar:play-bold" class="text-sm"></iconify-icon>
@@ -150,7 +180,7 @@
           <div class="space-y-4 lg:col-span-2">
             <!-- Card 1: Stat Card -->
             <div class="parallax-layer" data-speed="0.03">
-              <a href="#medical" class="group block rounded-[2.5rem] bg-[#062e24] p-6 text-white shadow-2xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[-1deg] animate-[fadeInUp_1s_ease-out_0.1s_forwards]" style="opacity:0;transform:translateY(1.5rem);">
+              <a href="explore.html?category=medical" class="group block rounded-[2.5rem] bg-[#062e24] p-6 text-white shadow-2xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[-1deg] animate-[fadeInUp_1s_ease-out_0.1s_forwards]" style="opacity:0;transform:translateY(1.5rem);">
                 <div class="mb-4">
                   <span class="text-xs font-semibold uppercase tracking-widest text-lime-400 opacity-80">Success Rate</span>
                 </div>
@@ -186,7 +216,7 @@
           <!-- Card 3: Large Image Card -->
           <div class="lg:col-span-3 lg:pt-12">
             <div class="parallax-layer h-full" data-speed="0.04">
-              <a href="#medical" class="group block relative h-full overflow-hidden rounded-[2.5rem] bg-zinc-900 shadow-2xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[-0.5deg] animate-[fadeInUp_1s_ease-out_0.25s_forwards] gsap-image-scale" style="opacity:0;transform:translateY(1.5rem);">
+              <a href="explore.html?category=medical" class="group block relative h-full overflow-hidden rounded-[2.5rem] bg-zinc-900 shadow-2xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[-0.5deg] animate-[fadeInUp_1s_ease-out_0.25s_forwards] gsap-image-scale" style="opacity:0;transform:translateY(1.5rem);">
                 <img src="assets/medical_emergency.png" alt="Medical emergency relief" class="h-[20rem] lg:h-full w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 gsap-img-scale">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
                 <div class="absolute left-6 top-6">
@@ -205,7 +235,7 @@
           <!-- Card 4: Community Support Card -->
           <div class="lg:col-span-2 lg:pt-24 mt-auto">
             <div class="parallax-layer" data-speed="-0.03">
-              <a href="#community" class="group block relative overflow-hidden rounded-[2.5rem] bg-zinc-100 p-8 shadow-xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[1deg] animate-[fadeInUp_1s_ease-out_0.35s_forwards] text-center" style="opacity:0;transform:translateY(1.5rem);">
+              <a href="explore.html?category=community" class="group block relative overflow-hidden rounded-[2.5rem] bg-zinc-100 p-8 shadow-xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[1deg] animate-[fadeInUp_1s_ease-out_0.35s_forwards] text-center" style="opacity:0;transform:translateY(1.5rem);">
                 <div class="relative z-10 h-[12rem] flex flex-col justify-between">
                   <div>
                     <h3 class="text-3xl font-bold leading-tight tracking-tight text-zinc-900 mb-4" style="font-family: 'Playfair Display', serif;">
@@ -226,7 +256,7 @@
           <!-- Card 5: Large Image Card -->
           <div class="lg:col-span-3 lg:pt-12">
             <div class="parallax-layer h-full" data-speed="0.035">
-              <a href="#education" class="group block relative h-full overflow-hidden rounded-[2.5rem] bg-zinc-800 shadow-2xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[0.5deg] animate-[fadeInUp_1s_ease-out_0.45s_forwards] gsap-image-scale" style="opacity:0;transform:translateY(1.5rem);">
+              <a href="explore.html?category=education" class="group block relative h-full overflow-hidden rounded-[2.5rem] bg-zinc-800 shadow-2xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[0.5deg] animate-[fadeInUp_1s_ease-out_0.45s_forwards] gsap-image-scale" style="opacity:0;transform:translateY(1.5rem);">
                 <img src="assets/education_rural.png" alt="Education development" class="h-[20rem] lg:h-full w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 gsap-img-scale">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
                 <div class="absolute left-6 top-6">
@@ -246,7 +276,7 @@
           <div class="space-y-4 lg:col-span-2">
             <!-- Card 6: Image Card -->
             <div class="parallax-layer" data-speed="-0.025">
-              <a href="#about" class="group block relative overflow-hidden rounded-[2.5rem] bg-lime-400 p-0 shadow-2xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[1deg] animate-[fadeInUp_1s_ease-out_0.55s_forwards]" style="opacity:0;transform:translateY(1.5rem);">
+              <a href="explore.html" class="group block relative overflow-hidden rounded-[2.5rem] bg-lime-400 p-0 shadow-2xl transition duration-500 hover:-translate-y-1.5 hover:rotate-[1deg] animate-[fadeInUp_1s_ease-out_0.55s_forwards]" style="opacity:0;transform:translateY(1.5rem);">
                 <div class="relative h-[16rem]">
                   <img src="assets/community_development.png" alt="Explore more" class="absolute inset-0 h-full w-full object-cover mix-blend-multiply opacity-40 grayscale group-hover:grayscale-0 transition duration-700">
                   <div class="absolute inset-0 bg-gradient-to-t from-lime-600/60 to-transparent"></div>
@@ -341,7 +371,7 @@
         <img src="assets/medical_emergency.png" alt="Family in need" class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale transition-transform duration-500 group-hover:scale-105 gsap-img-scale">
         <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent"></div>
         <div class="absolute bottom-10 left-10 right-10">
-          <div class="text-lime-400 text-6xl font-bold mb-2">₹2.4B</div>
+          <div class="text-lime-400 text-6xl font-bold mb-2">Rs 2.4B</div>
           <p class="text-zinc-400 text-sm">Estimated informal giving annually with little to no transparency</p>
         </div>
       </div>
@@ -689,10 +719,10 @@
       </p>
 
       <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-6">
-        <button class="group inline-flex items-center gap-4 rounded-full bg-lime-300 px-10 py-5 text-lg font-bold text-emerald-950 transition duration-500 hover:-translate-y-1 hover:bg-white hover:shadow-[0_20px_50px_-10px_rgba(163,230,53,0.4)]">
+        <a href="explore.html" class="group inline-flex items-center gap-4 rounded-full bg-lime-300 px-10 py-5 text-lg font-bold text-emerald-950 transition duration-500 hover:-translate-y-1 hover:bg-white hover:shadow-[0_20px_50px_-10px_rgba(163,230,53,0.4)]">
           Start a Fundraiser
           <iconify-icon icon="solar:arrow-right-linear" class="text-xl transition group-hover:translate-x-1"></iconify-icon>
-        </button>
+        </a>
         <button class="inline-flex items-center gap-4 rounded-full bg-zinc-900 border border-zinc-800 px-10 py-5 text-lg font-bold text-white transition duration-500 hover:bg-zinc-800">
           Become a Partner
         </button>

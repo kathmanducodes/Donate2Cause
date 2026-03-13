@@ -278,4 +278,86 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Mobile Navigation Toggle
+  const mobileNavToggle = document.querySelector('[data-mobile-nav-toggle]');
+  const mobileNav = document.querySelector('[data-mobile-nav]');
+  const mobileNavClose = document.querySelector('[data-mobile-nav-close]');
+
+  if (mobileNavToggle && mobileNav) {
+    mobileNavToggle.addEventListener('click', () => {
+      mobileNav.classList.remove('translate-x-full');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  if (mobileNavClose && mobileNav) {
+    mobileNavClose.addEventListener('click', () => {
+      mobileNav.classList.add('translate-x-full');
+      document.body.style.overflow = '';
+    });
+  }
+
+  // Close mobile nav on link click
+  if (mobileNav) {
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // Set active navigation state
+  const setActiveNav = () => {
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const currentHash = window.location.hash;
+    
+    // Desktop nav
+    const desktopNav = document.querySelector('header nav');
+    if (desktopNav) {
+      desktopNav.querySelectorAll('a').forEach(link => {
+        const href = link.getAttribute('href');
+        let isActive = false;
+        
+        if (href === 'index.html' && (currentPath === 'index.html' || currentPath === '')) {
+          isActive = true;
+        } else if ((href === 'explore.html' || href === 'cause.html') && (currentPath === 'explore.html' || currentPath === 'cause.html')) {
+          isActive = true;
+        } else if (href.startsWith('#') && href === currentHash && currentPath === 'index.html') {
+          isActive = true;
+        }
+        
+        if (isActive) {
+          link.classList.remove('text-zinc-400', 'hover:text-zinc-950', 'font-medium');
+          link.classList.add('text-zinc-950', 'font-semibold', 'border-b-2', 'border-zinc-950');
+          link.style.borderBottom = '2px solid currentColor';
+        }
+      });
+    }
+    
+    // Mobile nav
+    const mobileNavEl = document.querySelector('[data-mobile-nav]');
+    if (mobileNavEl) {
+      mobileNavEl.querySelectorAll('a').forEach(link => {
+        const href = link.getAttribute('href');
+        let isActive = false;
+        
+        if (href === 'index.html' && (currentPath === 'index.html' || currentPath === '')) {
+          isActive = true;
+        } else if ((href === 'explore.html' || href === 'cause.html') && (currentPath === 'explore.html' || currentPath === 'cause.html')) {
+          isActive = true;
+        } else if (href.startsWith('#') && href === currentHash && currentPath === 'index.html') {
+          isActive = true;
+        }
+        
+        if (isActive) {
+          link.classList.remove('text-zinc-300', 'hover:text-lime-400', 'font-medium');
+          link.classList.add('text-lime-400', 'font-semibold');
+        }
+      });
+    }
+  };
+
+  setActiveNav();
 });
