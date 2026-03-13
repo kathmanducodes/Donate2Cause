@@ -12,53 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css">
-  <script defer src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
-  <script defer>
-    // Lenis smooth scroll (gated by reduced motion) + GSAP/ScrollTrigger integration.
-    (function () {
-      const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReducedMotion) return;
-      if (typeof Lenis === 'undefined') return;
-
-      const hasGSAP = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
-
-      // When GSAP is present, drive Lenis via gsap.ticker to keep ScrollTrigger scrubbing smooth.
-      const lenis = new Lenis({
-        autoRaf: !hasGSAP,
-        duration: 1.15,
-        smoothWheel: true,
-        smoothTouch: false,
-        wheelMultiplier: 1,
-        touchMultiplier: 1.15
-      });
-
-      if (hasGSAP) {
-        lenis.on('scroll', ScrollTrigger.update);
-        gsap.ticker.add((t) => lenis.raf(t * 1000));
-        gsap.ticker.lagSmoothing(0);
-      }
-
-      // Prevent "double smooth" with the existing anchor handler in scripts.js.
-      document.addEventListener('click', (e) => {
-        const anchor = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
-        if (!anchor) return;
-
-        const href = anchor.getAttribute('href');
-        if (!href || href === '#') return;
-
-        const target = document.querySelector(href);
-        if (!target) return;
-
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        lenis.scrollTo(target, { offset: 0, duration: 1.1, easing: (t) => 1 - Math.pow(1 - t, 3) });
-      }, true);
-
-      // Expose for debugging.
-      window.lenis = lenis;
-    })();
-  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-stone-50 text-zinc-900 antialiased relative">
@@ -526,11 +479,11 @@
           Impact & Traction
         </div>
         <h2 class="text-5xl lg:text-7xl font-semibold tracking-tight text-zinc-950 leading-tight mb-6" style="font-family: 'Playfair Display', serif;">
-          <span class="scroll-title-wrapper">Proof you can</span>
-          <span class="scroll-title-wrapper">feel and follow.</span>
+          <span class="scroll-title-wrapper">Results that speak</span>
+          <span class="scroll-title-wrapper">to our mission.</span>
         </h2>
         <p class="reveal mt-6 text-lg text-zinc-600 max-w-lg leading-relaxed" style="font-family: Inter, sans-serif;">
-          Transparent fundraising with verified beneficiaries, clear progress updates, and secure transfers that keep donors informed.
+          In just 18 months, we've built trust and delivered measurable change across Nepal.
         </p>
         
         <div class="reveal mt-12 grid grid-cols-2 gap-8">
@@ -540,14 +493,14 @@
           </div>
           <div class="text-center">
             <div class="text-5xl font-bold text-lime-500 mb-2">2,587</div>
-            <p class="text-zinc-600 text-sm">Beneficiaries helped<br>directly</p>
+            <p class="text-zinc-600 text-sm">Families supported<br>directly</p>
           </div>
           <div class="text-center">
             <div class="text-5xl font-bold text-lime-500 mb-2">450+</div>
-            <p class="text-zinc-600 text-sm">Community projects<br>backed</p>
+            <p class="text-zinc-600 text-sm">Local initiatives<br>funded</p>
           </div>
           <div class="text-center">
-            <div class="text-5xl font-bold text-lime-500 mb-2">NPR 48M+</div>
+            <div class="text-5xl font-bold text-lime-500 mb-2">₹48M+</div>
             <p class="text-zinc-600 text-sm">Total funds<br>transferred</p>
           </div>
         </div>
